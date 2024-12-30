@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{biblatex} % Imports biblatex package
+\addbibresource{citations.bib}
+\usepackage{changepage}
+\usepackage{parskip}
+
+\title{Creating More Meaningful Explanations for Audio Deepfake Detection}
+\date{2024-10-01} 
+\author{Jacob LaRock\\1667321}
+\linespread{1.5}
+
+\def\Institute{Universität Siegen}
+\def\KindOfWork{Bachelorarbeit}
+\def\Studiengang{Wirtschaftsinformatik}
+\def\Fakultaet{Fakultät III: Wirtschaftswissenschaften, Wirtschaftsinformatik und Wirtschaftsrecht}
+ 
+\def\Title{Creating More Meaningful Explanations for Audio Deepfake Detection}
+\def\Subtitle{}
+ 
+\def\student{Jaocb LaRock}
+\def\studentno{1667321}
+\def\place{Siegen}
+\def\Date{31.03.2025} 
+\def\semester{6}
+ 
+\def\erstpruefer{Gunnar Stevens}
+\def\erstprueferMail{Gunnar.Stevens@uni-siegen.de}
+
+\begin{document}
+	\begin{titlepage}
+        \begin{minipage}{0.9\linewidth}
+			\centering
+			\includegraphics [width=0.35\textwidth]{images/LogoSiegen}
+        \end{minipage}
+
+		\vspace{2cm}
+
+		\centering
+
+		{\Large\bfseries \Title\par}
+		{\large\bfseries \Subtitle\par}
+		\vspace{2cm}
+
+		{\large \textbf{\KindOfWork}\par}
+
+		\vspace{1.5cm}
+
+		{\normalsize im Studiengang \\
+			\Studiengang  im \semester. Semester \\
+		}
+		\vspace{0.5cm}
+		{\normalsize vorgelegt von}
+		\vspace{0.5cm}
+
+		{\normalsize \textbf{\student} \\
+			Matr.-Nr.: \studentno  \\}
+		{am \normalsize \Date\par}
+
+		\vspace{0.5cm}
+
+		{\Institute} \par
+		{\Fakultaet}\par
+
+		\vspace{1cm}
+
+    {\begin{table}[h]
+			\centering
+			\begin{tabular}{lll}
+				{Erstprüfer:} & \erstpruefer & \erstprueferMail \\
+			\end{tabular}
+		\end{table}}     
+		\vfill
+	\end{titlepage}
+    \newpage
+    \section{Abstract}
+    Abstract filler text blablabla!
+    \section{Introduction}
+    As the use of generative methods for the creation of synthetic voices becomes more widespread,
+    so grows the need for reliable and usable detection methods for the protection of the security
+    of people and businesses alike. The field of Explainable AI (XAI) shows promise for producing
+    useful and interpretable results from such models Much of the existing research, further
+    discussed in the next section, follows the path of producing a model with the best possible
+    benchmarks against datasets of samples, without taking into account if the results can be
+    usefully interpreted, while existing explorations into making audio deepfake detection
+    explainable have produced results that often require a lot of background knowledge to
+    meaningfully interpret With the context of the research discussed in the next section, I would
+    like to use new combinations of features with a novel model architecture to generate
+    explanations for fake or real audio classification that are potentially more useful to their
+    end user.
+\end{document}
