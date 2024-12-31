@@ -16,5 +16,147 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{albahar_deepfakes_2005}{article}{}
+      \name{author}{2}{}{%
+        {{hash=31a7abaa00eaf077fe1dafc7fbc3733a}{%
+           family={Albahar},
+           familyi={A\bibinitperiod},
+           given={Marwan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=22be84ebd44505d4d4c4cdd7defd1eb9}{%
+           family={Almalki},
+           familyi={A\bibinitperiod},
+           given={Jameel},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd71a14fdfab8d7d4e0c326fb540fa53}
+      \strng{fullhash}{cd71a14fdfab8d7d4e0c326fb540fa53}
+      \strng{bibnamehash}{cd71a14fdfab8d7d4e0c326fb540fa53}
+      \strng{authorbibnamehash}{cd71a14fdfab8d7d4e0c326fb540fa53}
+      \strng{authornamehash}{cd71a14fdfab8d7d4e0c326fb540fa53}
+      \strng{authorfullhash}{cd71a14fdfab8d7d4e0c326fb540fa53}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deepfake, a machine learning-based software tool, has made it easy to alter or manipulate images and videos. Images are frequently used as evidence in investigations and in court. However, technological developments, and deepfake in particular, have potentially made these pieces of evidence unreliable. Altered images and videos are not only surprisingly convincing but are also difficult to identify as fake or real. Deepfakes have been used to blackmail, fake terrorism events, disseminate fake news, defame individuals, and to create political distress. To gain in-depth insight into the deepfake technology, the present research examines its origin and history while assessing how deepfake videos and photos are created. Moreover, the research also focuses on the impact deepfake has made on society in terms of how it has been applied. Different methods have been developed for detecting deepfakes including face detection, multimedia forensics, watermarking, and convolutional neural networks ({CNNs}). Each method uses machine learning, a technique from the field of artificial intelligence, to detect any kind of manipulation in photos and videos.}
+      \field{journaltitle}{. Vol.}
+      \field{langid}{english}
+      \field{number}{22}
+      \field{title}{{DEEPFAKES}: {THREATS} {AND} {COUNTERMEASURES} {SYSTEMATIC} {REVIEW}}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/8VKR24HG/Albahar and Almalki - 2005 - DEEPFAKES THREATS AND COUNTERMEASURES SYSTEMATIC REVIEW.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{hind_explaining_2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=79965ab18066c72febb431453b9c5292}{%
+           family={Hind},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{79965ab18066c72febb431453b9c5292}
+      \strng{fullhash}{79965ab18066c72febb431453b9c5292}
+      \strng{bibnamehash}{79965ab18066c72febb431453b9c5292}
+      \strng{authorbibnamehash}{79965ab18066c72febb431453b9c5292}
+      \strng{authornamehash}{79965ab18066c72febb431453b9c5292}
+      \strng{authorfullhash}{79965ab18066c72febb431453b9c5292}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{How good are you at explaining your decisions? Are you better than a machine? Today, {AI} systems are being asked to explain their decisions. This article explores the challenges in solving this problem and approaches researchers are pursuing.}
+      \field{day}{10}
+      \field{issn}{1528-4972, 1528-4980}
+      \field{journaltitle}{{XRDS}: Crossroads, The {ACM} Magazine for Students}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{3}
+      \field{shortjournal}{{XRDS}}
+      \field{title}{Explaining explainable {AI}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{16\bibrangedash 19}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/3313096
+      \endverb
+      \verb{file}
+      \verb Hind - 2019 - Explaining explainable AI.pdf:/home/jacob/Zotero/storage/MGIAIRCD/Hind - 2019 - Explaining explainable AI.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3313096
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3313096
+      \endverb
+    \endentry
+    \entry{veerasamy_rising_2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9e5ad9f8585ec9c2a2480e48f3d5acb0}{%
+           family={Veerasamy},
+           familyi={V\bibinitperiod},
+           given={Namosha},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b0a12c4cc69bd80845a14bac6d0f30ed}{%
+           family={Pieterse},
+           familyi={P\bibinitperiod},
+           given={Heloise},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{09a8ffb1d0d88e30db537bb4801181f3}
+      \strng{fullhash}{09a8ffb1d0d88e30db537bb4801181f3}
+      \strng{bibnamehash}{09a8ffb1d0d88e30db537bb4801181f3}
+      \strng{authorbibnamehash}{09a8ffb1d0d88e30db537bb4801181f3}
+      \strng{authornamehash}{09a8ffb1d0d88e30db537bb4801181f3}
+      \strng{authorfullhash}{09a8ffb1d0d88e30db537bb4801181f3}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Misinformation can be rapidly spread in cyberspace. It thrives in the social media landscape as well as news platforms. Misinformation can readily gain momentum in the race to influence people or intentionally deceive. With the use of bots, misinformation can be easily shared, especially in environments like Twitter and Facebook. While, some measures are taken to stop the spread of misinformation, threats like Deepfakes are posing a higher challenge. Deepfakes provide a means to generate fake digital content in order to impersonate a person. With the use of audio, images and videos, artificial intelligence is used to depict the speech and actions of people. Deepfakes are typically made of presidents or influential businessmen such as Donald Trump and Mark Zuckerberg. Deep Fakes can be very realistic and convincing as this form of synthetic media is raising concerns about its possible misuse. The effects of Deepfakes are to spread disinformation, confuse users or create influence. This can lead to further effects like political factions, blackmail, harassment and extortion. Deepfakes could lead to a distrust in digital content as many may feel that anything we see is actually just a manipulation. Deepfakes has arisen as a new generation of misinformation through the manipulation of digital media in order to create realistic videos. This paper looks at the governing, communal and technical issues relating to Deepfakes. At the technical level, the use of audio and text analysis used to create Deepfake videos is advancing at a rapid pace which has also made its affordability and accessibility easier. An evaluation of the threats stemming from Deepfakes reveals that there are various mental, monetary and group dynamics involved. In this paper, the various types of threats emanating from Deepfakes is discussed. This paper also looks at five factors in the field of Deepfakes that should be taken into consideration (Technical Source Dissemination Victim Viewers). The paper discussed these five factors in order to help identify measures to help curb the spread of Deepfakes. A combination of these measures can help limit the spread of Deepfakes and support mitigation of the threat. Due to prominence and power that digital media has, it is imperative that this threat not be overlooked. The paper provides a holistic approach to understanding the risk and impact of Deepfakes, as well measures to help mitigate abuse thereof.}
+      \field{day}{2}
+      \field{issn}{2048-9889, 2048-9870}
+      \field{journaltitle}{International Conference on Cyber Warfare and Security}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{1}
+      \field{shortjournal}{iccws}
+      \field{title}{Rising Above Misinformation and Deepfakes}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2024}
+      \field{volume}{17}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{340\bibrangedash 348}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.34190/iccws.17.1.25
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/CQRFPGQR/Veerasamy and Pieterse - 2022 - Rising Above Misinformation and Deepfakes.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.academic-conferences.org/index.php/iccws/article/view/25
+      \endverb
+      \verb{url}
+      \verb https://papers.academic-conferences.org/index.php/iccws/article/view/25
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
