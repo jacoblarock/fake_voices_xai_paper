@@ -53,6 +53,159 @@
       \verb PDF:/home/jacob/Zotero/storage/8VKR24HG/Albahar and Almalki - 2005 - DEEPFAKES THREATS AND COUNTERMEASURES SYSTEMATIC REVIEW.pdf:application/pdf
       \endverb
     \endentry
+    \entry{chaiwongyen_contribution_2022}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=42521ea24adaec882b181915a6538f01}{%
+           family={Chaiwongyen},
+           familyi={C\bibinitperiod},
+           given={Anuwat},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9493826f5cfdc83e079dcb7d8687118e}{%
+           family={Songsriboonsit},
+           familyi={S\bibinitperiod},
+           given={Norranat},
+           giveni={N\bibinitperiod}}}%
+        {{hash=20e15c2d0b6fc9782cab2bf2eb901435}{%
+           family={Duangpummet},
+           familyi={D\bibinitperiod},
+           given={Suradej},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9b9c5c068537f9b646f6b30903a19628}{%
+           family={Karnjana},
+           familyi={K\bibinitperiod},
+           given={Jessada},
+           giveni={J\bibinitperiod}}}%
+        {{hash=761ad5c9d266473da4561c2d594cf80f}{%
+           family={Kongprawechnon},
+           familyi={K\bibinitperiod},
+           given={Waree},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1a677a016fbf747bece9e819abf02f80}{%
+           family={Unoki},
+           familyi={U\bibinitperiod},
+           given={Masashi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chiang Mai, Thailand}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{fullhash}{458f4a08b20e39899ce954e527c624d9}
+      \strng{bibnamehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{authorbibnamehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{authornamehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{authorfullhash}{458f4a08b20e39899ce954e527c624d9}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{ÐAdvanced deep-learning techniques can generate natural and synthetic voices that might be close to someone’s voice. Nevertheless, misuse of such technologies is of great concern. Hence, researchers focus on detecting these malicious synthetic voices, called ªdeepfake speech.º Although many feature extractions and classifications have been proposed, the accuracy of deepfake detection is still unreliable. In addition, most of the current features are computed in the frequency domain. To this end, we conducted experiments to investigate the contribution of two acoustic features and deepfake speech signals. The acoustic features are timbre and shimmer, which represent our auditory perception in the time domain. We point out that eight timbre components and four shimmer components significantly contribute to discriminating deepfake speech from genuine speech. We also propose a method for detecting deepfake speech based on these timbre and shimmer features. The method was evaluated by using a dataset from the Audio Deep Synthesis Detection Challenge ({ADD} 2022). The results suggest that combining these eight timbre components and four shimmer components with a simple classifier using multilayer perceptron neural networks can enable deepfake speech to be detected potentially effectively.}
+      \field{booktitle}{2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
+      \field{day}{7}
+      \field{eventtitle}{2022 Asia Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
+      \field{isbn}{978-616-590-477-3}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Contribution of Timbre and Shimmer Features to Deepfake Speech Detection}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{97\bibrangedash 103}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.23919/APSIPAASC55919.2022.9980281
+      \endverb
+      \verb{file}
+      \verb Chaiwongyen et al. - 2022 - Contribution of Timbre and Shimmer Features to Dee.pdf:/home/jacob/Zotero/storage/PK9YUPJB/Chaiwongyen et al. - 2022 - Contribution of Timbre and Shimmer Features to Dee.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9980281/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9980281/
+      \endverb
+    \endentry
+    \entry{chaiwongyen_deepfake-speech_2023}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=42521ea24adaec882b181915a6538f01}{%
+           family={Chaiwongyen},
+           familyi={C\bibinitperiod},
+           given={Anuwat},
+           giveni={A\bibinitperiod}}}%
+        {{hash=20e15c2d0b6fc9782cab2bf2eb901435}{%
+           family={Duangpummet},
+           familyi={D\bibinitperiod},
+           given={Suradej},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9b9c5c068537f9b646f6b30903a19628}{%
+           family={Karnjana},
+           familyi={K\bibinitperiod},
+           given={Jessada},
+           giveni={J\bibinitperiod}}}%
+        {{hash=761ad5c9d266473da4561c2d594cf80f}{%
+           family={Kongprawechnon},
+           familyi={K\bibinitperiod},
+           given={Waree},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1a677a016fbf747bece9e819abf02f80}{%
+           family={Unoki},
+           familyi={U\bibinitperiod},
+           given={Masashi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Taipei, Taiwan}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{fullhash}{a7ca6065e1acf152e77ab456369f8550}
+      \strng{bibnamehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{authorbibnamehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{authornamehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
+      \strng{authorfullhash}{a7ca6065e1acf152e77ab456369f8550}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deepfake speech, a misuse of speech technology, is of great concern since it seems natural and is difﬁcult to detect. Although many methods using various speech features have been proposed, deepfake-speech detection accuracy must be improved, especially in real-world scenarios. Therefore, this paper presents a method for detecting deepfake speech on the basis of pathological features used by pathologists for assessing voice quality. The six-pathological features, including jitter, shimmer, harmonicsto-noise ratio, cepstral-harmonics-to-noise ratio, normalized noise energy, and glottal-to-noise excitation ratio, are fed to a multilayer perceptron neural network. We evaluated the proposed method using the Audio Deep Synthesis Detection Challenge dataset. The results indicate that the proposed model can be used for detecting deepfake speech. The proposed method’s accuracy, precision, recall, and F1-score were over 98\% on the development set, and it outperformed the baseline method on the adaptation set.}
+      \field{booktitle}{2023 Asia Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
+      \field{day}{31}
+      \field{eventtitle}{2023 Asia Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
+      \field{isbn}{9798350300673}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Deepfake-speech Detection with Pathological Features and Multilayer Perceptron Neural Network}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2182\bibrangedash 2188}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/APSIPAASC58517.2023.10317331
+      \endverb
+      \verb{file}
+      \verb Chaiwongyen et al. - 2023 - Deepfake-speech Detection with Pathological Featur.pdf:/home/jacob/Zotero/storage/JPYE4FYL/Chaiwongyen et al. - 2023 - Deepfake-speech Detection with Pathological Featur.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10317331/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10317331/
+      \endverb
+    \endentry
     \entry{hind_explaining_2019}{article}{}
       \name{author}{1}{}{%
         {{hash=79965ab18066c72febb431453b9c5292}{%
@@ -100,6 +253,366 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3313096
+      \endverb
+    \endentry
+    \entry{khanjani_learning_2023}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=b5515f5b97ca9393489d586fe900b88a}{%
+           family={Khanjani},
+           familyi={K\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=270c44ab924c0209ee06c2087c30d34e}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Lavon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=df0f5d5624e823a291284c20457fabfc}{%
+           family={Tuz},
+           familyi={T\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=65e293a64a764c1c105ced46d0e45f5d}{%
+           family={Nwosu},
+           familyi={N\bibinitperiod},
+           given={Kifekachukwu},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d0297c74f8979b7d08608f52e71cc436}{%
+           family={Mallinson},
+           familyi={M\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e7edee1b36ef8cc0859f777181c19de2}{%
+           family={Janeja},
+           familyi={J\bibinitperiod},
+           given={Vandana\bibnamedelima P.},
+           giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Charlotte, {NC}, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f6dc1213e588b707599535a8739400fc}
+      \strng{fullhash}{96236e812373b068bf8bc0a80c6b1ae7}
+      \strng{bibnamehash}{f6dc1213e588b707599535a8739400fc}
+      \strng{authorbibnamehash}{f6dc1213e588b707599535a8739400fc}
+      \strng{authornamehash}{f6dc1213e588b707599535a8739400fc}
+      \strng{authorfullhash}{96236e812373b068bf8bc0a80c6b1ae7}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Spoofed audio, both human or machine generated, causes deception and disinformation and as such is a societal challenge. This study advances the detection of spoofed audio through a novel approach that augments knowledge about audio data by incorporating linguistic information. Using perceptual methods, for English audio samples, experts in sociolinguistics listened for audio cues, and used binary labels to indicate the perceived authenticity of a set of speech samples, based on phonetic and phonological features that occur frequently in spoken English. These Expert Defined Linguistic Features ({EDLFs}) were then used in supervised spoofed audio detection methods to augment {AI} models. An ensemble method based on multi-domain features both from the audio data itself and the {EDLFs} was also created to evaluate the spoofed audio detection, and to demonstrate how {EDLFs} can improve traditional methods of spoofed audio detection. We found that augmenting the audio data with expertinformed linguistic annotation increased the accuracy of spoofed audio detection significantly in both the training and testing datasets across the evaluated single and ensemble models. Our findings indicate the promising avenue of augmenting audio data with perceptual linguistic techniques, as a method of human discernment, to enhance {AI}-based approaches for spoofed audio detection. These features also establish a foundation for direct linguistic annotations on new audio clips for robust spoofed audio detection.}
+      \field{booktitle}{2023 {IEEE} International Conference on Intelligence and Security Informatics ({ISI})}
+      \field{day}{2}
+      \field{eventtitle}{2023 {IEEE} International Conference on Intelligence and Security Informatics ({ISI})}
+      \field{isbn}{9798350337730}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{shorttitle}{Learning to Listen and Listening to Learn}
+      \field{title}{Learning to Listen and Listening to Learn: Spoofed Audio Detection Through Linguistic Data Augmentation}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{01\bibrangedash 06}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ISI58743.2023.10297267
+      \endverb
+      \verb{file}
+      \verb Khanjani et al. - 2023 - Learning to Listen and Listening to Learn Spoofed.pdf:/home/jacob/Zotero/storage/MDJK3BG3/Khanjani et al. - 2023 - Learning to Listen and Listening to Learn Spoofed.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10297267/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10297267/
+      \endverb
+    \endentry
+    \entry{li_comparative_2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=5901c226c53534aca632190241eeddf8}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Menglu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eab0a54dfca9537fc95645990576b4e7}{%
+           family={Ahmadiadli},
+           familyi={A\bibinitperiod},
+           given={Yasaman},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ac8341e3048fc04a833bb65a5d1f7961}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiao-Ping},
+           giveni={X\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Lisboa Portugal}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{fullhash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{bibnamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{authorbibnamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{authornamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{authorfullhash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Audio content synthesis has stepped into a new era and brought a great threat to daily life since the development of deep learning techniques. The {ASVSpoof} Challenge and the {ADD} Challenge have been launched to motivate the development of Deepfake audio detection algorithms. Currently, the detection models, which consist of front-end feature extractors and back-end classifiers, utilize the physical features mainly, rather than the perceptual features that relate to natural emotions or breathiness. Therefore, we provide a comprehensive study on 16 physical and perceptual features and evaluate their effectiveness in both Track 1 and Track 2 of the {ADD} Challenge. Based on results, {PLP}, as a perceptual feature, outperforms the rest of the features in Track 1, while {CQCC} has the best performance in Track 2. Our experiments demonstrate the significance of perceptual features in detecting Deepfake audios. We also seek to explore the underlying characteristics of features that can distinguish Deepfake audio from a real one. We perform statistical analysis on each feature to show its distribution differences on real and synthesized audios. This paper will provide a potential direction in selecting appropriate feature extraction methods for the future implementation of detection models.}
+      \field{booktitle}{Proceedings of the 1st International Workshop on Deepfake Detection for Audio Multimedia}
+      \field{day}{14}
+      \field{eventtitle}{{MM} '22: The 30th {ACM} International Conference on Multimedia}
+      \field{isbn}{978-1-4503-9496-3}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{A Comparative Study on Physical and Perceptual Features for Deepfake Audio Detection}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{35\bibrangedash 41}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1145/3552466.3556523
+      \endverb
+      \verb{file}
+      \verb Li et al. - 2022 - A Comparative Study on Physical and Perceptual Fea.pdf:/home/jacob/Zotero/storage/RPQU57UG/Li et al. - 2022 - A Comparative Study on Physical and Perceptual Fea.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3552466.3556523
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3552466.3556523
+      \endverb
+    \endentry
+    \entry{tensorflow2015-whitepaper}{misc}{}
+      \name{author}{40}{}{%
+        {{hash=396d6419316ec52f4c63b2f85912b61b}{%
+           family={Martín\bibnamedelima Abadi},
+           familyi={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f337a7c116835c22bb206d2f0d7c70e0}{%
+           family={Ashish\bibnamedelima Agarwal},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=84ac9fcb6c15dcd79c092bc8e20586ba}{%
+           family={Paul\bibnamedelima Barham},
+           familyi={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=d8574748e3086e0b279a58cdba71763d}{%
+           family={Eugene\bibnamedelima Brevdo},
+           familyi={E\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=c0b56f741b5a5bddfe77f1881c3cc67a}{%
+           family={Zhifeng\bibnamedelima Chen},
+           familyi={Z\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=8b8dd2e01366c855f42e47027cf23e98}{%
+           family={Craig\bibnamedelima Citro},
+           familyi={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=978a7d9601bf09e03d1bb3f6cce7a0ce}{%
+           family={Greg\bibnamedelima S.\bibnamedelimi Corrado},
+           familyi={G\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=3b500b0dfd88e6e151d29108fdcb82f0}{%
+           family={Andy\bibnamedelima Davis},
+           familyi={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=2fd376ea3b3a3da11704c0ee86753dcf}{%
+           family={Jeffrey\bibnamedelima Dean},
+           familyi={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=5b34e641dd8a00f97c6242ae0353eb90}{%
+           family={Matthieu\bibnamedelima Devin},
+           familyi={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=5b4490947d4e91359646ce3c93cbd2f7}{%
+           family={Sanjay\bibnamedelima Ghemawat},
+           familyi={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=1fdef10b94ee122ef6136197f99e3df3}{%
+           family={Ian\bibnamedelima Goodfellow},
+           familyi={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=166ae8a0b435eded68e39e9e2d2a1ee8}{%
+           family={Andrew\bibnamedelima Harp},
+           familyi={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7e9f7006151cf312bc133568336c68c6}{%
+           family={Geoffrey\bibnamedelima Irving},
+           familyi={G\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=08c1890e1c33279b8c63c71fa8f19263}{%
+           family={Michael\bibnamedelima Isard},
+           familyi={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=9fce03efe6b3331a1b93ed2e7c0da9d5}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Yangqing},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c0c0eea5379268c0c5b68732c90984b6}{%
+           family={Rafal\bibnamedelima Jozefowicz},
+           familyi={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=cff46cb4603a73d83b11ea7a9ded9d79}{%
+           family={Lukasz\bibnamedelima Kaiser},
+           familyi={L\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=d088e0f635523b8b5b18662331e4f44a}{%
+           family={Manjunath\bibnamedelima Kudlur},
+           familyi={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=1c24291ae15b979c82aa09a33790cb62}{%
+           family={Josh\bibnamedelima Levenberg},
+           familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=796a3a98ff7545fe10f6a4c17ba016fa}{%
+           family={Dandelion\bibnamedelima Mané},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1ee98d232eb1fc1208a8f8ca649e970b}{%
+           family={Rajat\bibnamedelima Monga},
+           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b2a15ec3d90955ece50ea26d31100b9a}{%
+           family={Sherry\bibnamedelima Moore},
+           familyi={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1494c573fadad736c58cf1119ac59239}{%
+           family={Derek\bibnamedelima Murray},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ecf58eb1684af6cba2c1f126405eedab}{%
+           family={Chris\bibnamedelima Olah},
+           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=9f43befd94cd09a9aaa7ea8489405a83}{%
+           family={Mike\bibnamedelima Schuster},
+           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=4712800a228b1179529b9f6e0d1b1838}{%
+           family={Jonathon\bibnamedelima Shlens},
+           familyi={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=41ad6ff6c026d5a3730269072b31caf1}{%
+           family={Benoit\bibnamedelima Steiner},
+           familyi={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b02f7871db6fc5524cec4ce38e104410}{%
+           family={Ilya\bibnamedelima Sutskever},
+           familyi={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=63288446e47b1d383f522ede84aa6fcc}{%
+           family={Kunal\bibnamedelima Talwar},
+           familyi={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=1dec75595b55bf77971f6a932d146b81}{%
+           family={Paul\bibnamedelima Tucker},
+           familyi={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=b6680dbb0176cb9bd87a3b26fa6f5cfb}{%
+           family={Vincent\bibnamedelima Vanhoucke},
+           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=e030c9d199c66657e26138be29814d81}{%
+           family={Vijay\bibnamedelima Vasudevan},
+           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=04426b798803cfaf3e8aa9280a5d0a58}{%
+           family={Fernanda\bibnamedelima Viégas},
+           familyi={F\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=fa7242e11c7d955de2ac1be94ca29073}{%
+           family={Oriol\bibnamedelima Vinyals},
+           familyi={O\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=8c9ee8f70a3c3d97f85efd01c4e9cbe6}{%
+           family={Pete\bibnamedelima Warden},
+           familyi={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=8e4243c228c72a5e5279e31252887b32}{%
+           family={Martin\bibnamedelima Wattenberg},
+           familyi={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=c6a6eb2597f23589fc9141bdda275996}{%
+           family={Martin\bibnamedelima Wicke},
+           familyi={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=3ea39e6dc6ef47029ae996c7e63f1a48}{%
+           family={Yuan\bibnamedelima Yu},
+           familyi={Y\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=b69feb3a3d59a312b20dbef0b1d2d6de}{%
+           family={Xiaoqiang\bibnamedelima Zheng},
+           familyi={X\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fdd865be502254047a3b2638dc0cfeb}
+      \strng{fullhash}{9b332dc9b33a2f6316d71d525269bd0f}
+      \strng{bibnamehash}{7fdd865be502254047a3b2638dc0cfeb}
+      \strng{authorbibnamehash}{7fdd865be502254047a3b2638dc0cfeb}
+      \strng{authornamehash}{7fdd865be502254047a3b2638dc0cfeb}
+      \strng{authorfullhash}{9b332dc9b33a2f6316d71d525269bd0f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Software available from tensorflow.org}
+      \field{title}{{TensorFlow}: Large-Scale Machine Learning on Heterogeneous Systems}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/
+      \endverb
+    \endentry
+    \entry{qais_deepfake_2022}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=19015c0f42127247f2b893de16c94ea7}{%
+           family={Qais},
+           familyi={Q\bibinitperiod},
+           given={Abu},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d28ea425923d3a9aa8632fa936789df5}{%
+           family={Rastogi},
+           familyi={R\bibinitperiod},
+           given={Akshar},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bae4f81ab2e9aff048c961a02f4c783f}{%
+           family={Saxena},
+           familyi={S\bibinitperiod},
+           given={Akash},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d2b49b0726d447e55f022429b820c996}{%
+           family={Rana},
+           familyi={R\bibinitperiod},
+           given={Arpit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0f754bf73e89c9a0204e5fa5452e5f3e}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Deependra},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hyderabad, India}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3f8af56b47b037a630306f30ab3642d8}
+      \strng{fullhash}{4dc319337717179c0b4cf5a25e2dec18}
+      \strng{bibnamehash}{3f8af56b47b037a630306f30ab3642d8}
+      \strng{authorbibnamehash}{3f8af56b47b037a630306f30ab3642d8}
+      \strng{authornamehash}{3f8af56b47b037a630306f30ab3642d8}
+      \strng{authorfullhash}{4dc319337717179c0b4cf5a25e2dec18}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, a speech spoofing detection system based on Convolutional neural networks using different audio features has been proposed to classify the human speech and synthetic voice, Worst-case scenarios can develop using deepfake audios as threat to assets and image of a person, it can also become a threat to the whole country by unethical uses intended for loss of other party. Using a small voice clip of a person an attacker can develop similar voices. Every audio signal can be represented on a 2D graph plotted by mathematical calculations. The processing of audios into {CNN} requires a lot of computation, to make a system that can detect deepfake voices with much less computation by conversion of audios to images of audio features (Spectrogram, {MFCC}, {FFT}, {STFT} ) and then obtaining the array values as a numeric format which are most suitable to feed. Different approaches for feeding data to model are applied for prediction individually as well as in a concatenated approach.}
+      \field{booktitle}{2022 International Conference on Intelligent Controller and Computing for Smart Power ({ICICCSP})}
+      \field{day}{21}
+      \field{eventtitle}{2022 International Conference on Intelligent Controller and Computing for Smart Power ({ICICCSP})}
+      \field{isbn}{978-1-66547-258-6}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{title}{Deepfake Audio Detection with Neural Networks Using Audio Features}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICICCSP53532.2022.9862519
+      \endverb
+      \verb{file}
+      \verb Qais et al. - 2022 - Deepfake Audio Detection with Neural Networks Usin.pdf:/home/jacob/Zotero/storage/U4Z3ZRM3/Qais et al. - 2022 - Deepfake Audio Detection with Neural Networks Usin.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9862519/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9862519/
       \endverb
     \endentry
     \entry{veerasamy_rising_2022}{article}{}
@@ -154,6 +667,98 @@
       \endverb
       \verb{url}
       \verb https://papers.academic-conferences.org/index.php/iccws/article/view/25
+      \endverb
+    \endentry
+    \entry{xue_audio_2022}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=f0167b0612cd81db280a86f41065c337}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b082666333651197826a9148f90f63a6}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Cunhang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c45e306bb766a0860d9d4d5f3d61e1fd}{%
+           family={Lv},
+           familyi={L\bibinitperiod},
+           given={Zhao},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c2d300d040a5480ff7359c84ff1b1eeb}{%
+           family={Tao},
+           familyi={T\bibinitperiod},
+           given={Jianhua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bf27030cff5f1171bae3a61f1d7436e8}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={Jiangyan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=005823916f4d904dcae676a6e0ce9d36}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Chengshi},
+           giveni={C\bibinitperiod}}}%
+        {{hash=91eb29740e2405d069a3462dbb5ec1b2}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Zhengqi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=9512f5434797c214711bac39939aa2c9}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Minmin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=584c02c8543e1d62c0c4977c7f704546}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Shegang},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Lisboa Portugal}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{e4f2d60673c6249493a55c99553663ac}
+      \strng{fullhash}{e93b95494254a610c382311e9d8ca6ad}
+      \strng{bibnamehash}{e4f2d60673c6249493a55c99553663ac}
+      \strng{authorbibnamehash}{e4f2d60673c6249493a55c99553663ac}
+      \strng{authornamehash}{e4f2d60673c6249493a55c99553663ac}
+      \strng{authorfullhash}{e93b95494254a610c382311e9d8ca6ad}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1st International Workshop on Deepfake Detection for Audio Multimedia}
+      \field{day}{14}
+      \field{eventtitle}{{MM} '22: The 30th {ACM} International Conference on Multimedia}
+      \field{isbn}{978-1-4503-9496-3}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Audio Deepfake Detection Based on a Combination of F0 Information and Real Plus Imaginary Spectrogram Features}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{19\bibrangedash 26}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3552466.3556526
+      \endverb
+      \verb{file}
+      \verb Xue et al. - 2022 - Audio Deepfake Detection Based on a Combination of.pdf:/home/jacob/Zotero/storage/H7BIS2GL/Xue et al. - 2022 - Audio Deepfake Detection Based on a Combination of.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3552466.3556526
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3552466.3556526
       \endverb
     \endentry
   \enddatalist
