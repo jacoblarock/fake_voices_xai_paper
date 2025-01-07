@@ -542,6 +542,74 @@
       \verb https://www.tensorflow.org/
       \endverb
     \endentry
+    \entry{muller_does_2022}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=ce747f3997da09ee5aba78667560b86e}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Nicolas\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=01ed7f2ae125ce1a0bb6783f2ec3e2f8}{%
+           family={Czempin},
+           familyi={C\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3d405cd67f1b2c08b488485dc603fbdd}{%
+           family={Dieckmann},
+           familyi={D\bibinitperiod},
+           given={Franziska},
+           giveni={F\bibinitperiod}}}%
+        {{hash=778f3d90354686c8b9a243cb7be30e4d}{%
+           family={Froghyar},
+           familyi={F\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e11d4fbec06848f5a66d796bae6da2bf}{%
+           family={Böttinger},
+           familyi={B\bibinitperiod},
+           given={Konstantin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{dae489c334e9ad367b2a2470ffb1409a}
+      \strng{fullhash}{e88dcae5c7b802e2986576d9f96c0df4}
+      \strng{bibnamehash}{dae489c334e9ad367b2a2470ffb1409a}
+      \strng{authorbibnamehash}{dae489c334e9ad367b2a2470ffb1409a}
+      \strng{authornamehash}{dae489c334e9ad367b2a2470ffb1409a}
+      \strng{authorfullhash}{e88dcae5c7b802e2986576d9f96c0df4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Current text-to-speech algorithms produce realistic fakes of human voices, making deepfake detection a much-needed area of research. While researchers have presented various deep learning models for audio spoofs detection, it is often unclear exactly why these architectures are successful: Preprocessing steps, hyperparameter settings, and the degree of ﬁne-tuning are not consistent across related work. Which factors contribute to success, and which are accidental? In this work, we address this problem: We systematize audio spooﬁng detection by re-implementing and uniformly evaluating twelve architectures from related work. We identify overarching features for successful audio deepfake detection, such as using cqtspec or logspec features instead of melspec features, which improves performance by 37\% {EER} on average, all other factors constant.}
+      \field{day}{21}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{{arXiv}:2203.16263}
+      \field{title}{Does Audio Deepfake Detection Generalize?}
+      \field{urlday}{4}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2203.16263 [cs, eess]
+      \endverb
+      \verb{file}
+      \verb Müller et al. - 2022 - Does Audio Deepfake Detection Generalize.pdf:/home/jacob/Zotero/storage/YBAF5V2M/Müller et al. - 2022 - Does Audio Deepfake Detection Generalize.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2203.16263
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2203.16263
+      \endverb
+      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Machine Learning}
+    \endentry
     \entry{qais_deepfake_2022}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=19015c0f42127247f2b893de16c94ea7}{%

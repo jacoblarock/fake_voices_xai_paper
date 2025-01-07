@@ -103,6 +103,10 @@
 	\section{Related Work}
 	\section{Experiments}
 		\subsection{Dataset}
+		The dataset used for these experiments is the "In-the-Wild" dataset, one which focuses on
+		the generalization of audio deepfake detection models by collecting real-world data, in
+		comparison to other examples that use more controlled laboratory conditions
+		\cite{muller_does_2022}.
 		\subsection{Black-Box Model}
 		The model used for this experiment was made, trained and evaluated using the tools
 		available in the TensorFlow and Keras libraries \cite{tensorflow2015-whitepaper}. This
@@ -197,7 +201,26 @@
 			add and remove features using pre-defined functions depending on feature type. This
 			kind of architecture also provides an advantage to the generation of explanations, as
 			only the terminus part of the entire must be explained to interpret the importance of
-			each input feature. Further explanation is in the following section.
+			each input feature. Further explanation is in the following section. Figure
+			\ref{fig:model_plot} represents the layout of the model layers.
+			\begin{figure}[htbp]
+				\begin{center}
+					\includegraphics[width=1\textwidth]{images/model_plot.png}
+					\caption{The architecture of the model used for the experiment.}
+					\label{fig:model_plot}
+				\end{center}
+			\end{figure}
+			\subsubsection{Training and Evaluation}
+			The black-box model described in the previous section was trained on the first 10,000
+			samples out of the aforementioned dataset, with evaluation being performed on the
+			remaining 21,778. Training batches consisted of 100 samples each with every window
+			position for each sample and an upper limit of 1,000,000 lines per batch. For each
+			batch, two epochs were performed. Because a single sample can have multiple input
+			lines, evaluation cannot be performed on a per-line basis, but must instead be
+			summarized. Two methods are possible: median and mean, with the difference in results
+			being negligible in my experiments. The default threshold is 0.5, meaning that a
+			result under 0.5 is a false result and over 0.5 is a true result. This threshold can
+			however be adjusted, useful for computing the EER.
 		\subsection{Explanations}
 	\section{Results}
 		\subsection{Black-Box Model Results}
@@ -205,5 +228,6 @@
 	\section{Discussion}
 	\section{Conclusion}
 	\newpage
+	\sloppy
 	\printbibliography
 \end{document}
