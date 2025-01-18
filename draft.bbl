@@ -273,6 +273,267 @@
       \verb https://ieeexplore.ieee.org/document/10317331/
       \endverb
     \endentry
+    \entry{cuccovillo_open_2022}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=41086a71c78e9c19888dbbd5d6edaa5a}{%
+           family={Cuccovillo},
+           familyi={C\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=998f589b52493cb0467150279d9f224d}{%
+           family={Papastergiopoulos},
+           familyi={P\bibinitperiod},
+           given={Christoforos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9f29cbcbea2d44317704ffd402e69d04}{%
+           family={Vafeiadis},
+           familyi={V\bibinitperiod},
+           given={Anastasios},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9541ae217d8a456cbe33198a3b918a27}{%
+           family={Yaroshchuk},
+           familyi={Y\bibinitperiod},
+           given={Artem},
+           giveni={A\bibinitperiod}}}%
+        {{hash=69555e12e7cf6944de9e39d0d807b4df}{%
+           family={Aichroth},
+           familyi={A\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=54c50aa80776f846db57f9f14d11739a}{%
+           family={Votis},
+           familyi={V\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5e944e52e93899644dffcd6cf718da88}{%
+           family={Tzovaras},
+           familyi={T\bibinitperiod},
+           given={Dimitrios},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e6d5946ba68828802a9b616158b9ff}
+      \strng{fullhash}{0ecb608398ad9a61462cbfe87e7b181b}
+      \strng{bibnamehash}{25e6d5946ba68828802a9b616158b9ff}
+      \strng{authorbibnamehash}{25e6d5946ba68828802a9b616158b9ff}
+      \strng{authornamehash}{25e6d5946ba68828802a9b616158b9ff}
+      \strng{authorfullhash}{0ecb608398ad9a61462cbfe87e7b181b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper the current status and open challenges of synthetic speech detection are addressed. The work comprises an initial analysis of available open datasets and of existing detection methods, a description of the requirements for new research datasets compliant with regulations and better representing real-case scenarios, and a discussion of the desired characteristics of future trustworthy detection methods in terms of both functional and non-functional requirements. Compared to other works, based on speciﬁc detection solutions or presenting single dataset of synthetic speeches, our paper is meant to orient future state-of-the-art research in the domain, to quickly lessen the current gap between synthesis and detection approaches.}
+      \field{booktitle}{2022 {IEEE} International Workshop on Information Forensics and Security ({WIFS})}
+      \field{day}{12}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{title}{Open Challenges in Synthetic Speech Detection}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/WIFS55849.2022.9975433
+      \endverb
+      \verb{eprint}
+      \verb 2209.07180 [eess]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/93FTPZLY/Cuccovillo et al. - 2022 - Open Challenges in Synthetic Speech Detection.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2209.07180
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2209.07180
+      \endverb
+      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
+    \endentry
+    \entry{ge_explaining_2024}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=1cf77b92b64c78769a179d2e97d20979}{%
+           family={Ge},
+           familyi={G\bibinitperiod},
+           given={Wanying},
+           giveni={W\bibinitperiod}}}%
+        {{hash=defbfe996a7c96e54a0fafcbc696e57a}{%
+           family={Patino},
+           familyi={P\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d9746848fcce379f30da4fa8db258240}{%
+           family={Todisco},
+           familyi={T\bibinitperiod},
+           given={Massimiliano},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e4022cbee16cd294b79b020fa73f9b9c}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{3a19713eddc87d6e478473387dce1e34}
+      \strng{fullhash}{7e094fa84551b1bc02c0e84c134e0d7a}
+      \strng{bibnamehash}{3a19713eddc87d6e478473387dce1e34}
+      \strng{authorbibnamehash}{3a19713eddc87d6e478473387dce1e34}
+      \strng{authornamehash}{3a19713eddc87d6e478473387dce1e34}
+      \strng{authorfullhash}{7e094fa84551b1bc02c0e84c134e0d7a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Substantial progress in spoofing and deepfake detection has been made in recent years. Nonetheless, the community has yet to make notable inroads in providing an explanation for how a classifier produces its output. The dominance of black box spoofing detection solutions is at further odds with the drive toward trustworthy, explainable artificial intelligence. This paper describes our use of {SHapley} Additive {exPlanations} ({SHAP}) to gain new insights in spoofing detection. We demonstrate use of the tool in revealing unexpected classifier behaviour, the artefacts that contribute most to classifier outputs and differences in the behaviour of competing spoofing detection models. The tool is both efficient and flexible, being readily applicable to a host of different architecture models in addition to related, different applications. All results reported in the paper are reproducible using open-source software.}
+      \field{day}{26}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{{arXiv}:2110.03309}
+      \field{title}{Explaining deep learning models for spoofing and deepfake detection with {SHapley} Additive {exPlanations}}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2110.03309
+      \endverb
+      \verb{eprint}
+      \verb 2110.03309 [eess]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/9R26CPNM/Ge et al. - 2024 - Explaining deep learning models for spoofing and deepfake detection with SHapley Additive exPlanatio.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2110.03309
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2110.03309
+      \endverb
+      \keyw{Electrical Engineering and Systems Science - Audio and Speech Processing}
+    \endentry
+    \entry{goodman_european_2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f9305f3f36e8c90dc85b316469bf4f88}{%
+           family={Goodman},
+           familyi={G\bibinitperiod},
+           given={Bryce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9fe7a1a56ab9795fdb8535efac14a01a}{%
+           family={Flaxman},
+           familyi={F\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{66f1fcbc09141a3634de7e5106fbbdef}
+      \strng{fullhash}{66f1fcbc09141a3634de7e5106fbbdef}
+      \strng{bibnamehash}{66f1fcbc09141a3634de7e5106fbbdef}
+      \strng{authorbibnamehash}{66f1fcbc09141a3634de7e5106fbbdef}
+      \strng{authornamehash}{66f1fcbc09141a3634de7e5106fbbdef}
+      \strng{authorfullhash}{66f1fcbc09141a3634de7e5106fbbdef}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We summarize the potential impact that the European Union’s new General Data Protection Regulation will have on the routine use of machine learning algorithms. Slated to take effect as law across the {EU} in 2018, it will restrict automated individual decision-making (that is, algorithms that make decisions based on userlevel predictors) which “signiﬁcantly affect” users. The law will also effectively create a “right to explanation,” whereby a user can ask for an explanation of an algorithmic decision that was made about them. We argue that while this law will pose large challenges for industry, it highlights opportunities for computer scientists to take the lead in designing algorithms and evaluation frameworks which avoid discrimination and enable explanation.}
+      \field{eprinttype}{arxiv}
+      \field{issn}{0738-4602, 2371-9621}
+      \field{journaltitle}{{AI} Magazine}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{{AI} Magazine}
+      \field{title}{European Union regulations on algorithmic decision-making and a "right to explanation"}
+      \field{urlday}{18}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{38}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{50\bibrangedash 57}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1609/aimag.v38i3.2741
+      \endverb
+      \verb{eprint}
+      \verb 1606.08813 [stat]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/92FH2PJU/Goodman and Flaxman - 2017 - European Union regulations on algorithmic decision-making and a right to explanation.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1606.08813
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1606.08813
+      \endverb
+      \keyw{Computer Science - Machine Learning,Computer Science - Computers and Society,Statistics - Machine Learning}
+    \endentry
+    \entry{haq_multimodal_2023}{article}{}
+      \name{author}{3}{}{%
+        {{hash=aca27aece4588465189dd0422af088c8}{%
+           family={Haq},
+           familyi={H\bibinitperiod},
+           given={Ijaz\bibnamedelima Ul},
+           giveni={I\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=b0bf6fc8e06b20e4f78ba4eb5876eebd}{%
+           family={Malik},
+           familyi={M\bibinitperiod},
+           given={Khalid\bibnamedelima Mahmood},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fc7891c81d834c5b7ced804c65d6560f}{%
+           family={Muhammad},
+           familyi={M\bibinitperiod},
+           given={Khan},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{e58e09b32a50b5f70fb183772c482801}
+      \strng{fullhash}{e58e09b32a50b5f70fb183772c482801}
+      \strng{bibnamehash}{e58e09b32a50b5f70fb183772c482801}
+      \strng{authorbibnamehash}{e58e09b32a50b5f70fb183772c482801}
+      \strng{authornamehash}{e58e09b32a50b5f70fb183772c482801}
+      \strng{authorfullhash}{e58e09b32a50b5f70fb183772c482801}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deepfake detection has become increasingly important in recent years owing to the widespread availability of deepfake generation technologies. Existing deepfake detection methods present two primary limitations i.e., trained on a specific type of deepfake dataset, which renders them vulnerable to unseen deepfakes; and they regard deepfakes as a black-box with limited explainability, making it difficult for non-{AI} experts to understand and trust the decisions. Hence, this paper proposes a novel neurosymbolic deepfake detection framework that exploits the fact that human emotions cannot be imitated easily owing to their complex nature. We argue that deep fakes typically exhibit inter- or intra- modality inconsistencies in the emotional expressions of the person being manipulated. Thus, the proposed framework performs inter- and intra- modality reasoning on emotions extracted from audio and visual modalities using a psychological and arousalvalence model for deepfake detection. In addition to fake detection, the proposed framework provides textual explanations for its decisions. The results obtained using Presidential Deepfakes Dataset and World Leaders Dataset of real and manipulated videos demonstrate the effectiveness of our approach in detecting deepfakes and highlight the potential of neurosymbolic approach for expandability.}
+      \field{day}{20}
+      \field{issn}{1551-6857, 1551-6865}
+      \field{journaltitle}{{ACM} Transactions on Multimedia Computing, Communications, and Applications}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{shortjournal}{{ACM} Trans. Multimedia Comput. Commun. Appl.}
+      \field{title}{Multimodal Neurosymbolic Approach for Explainable Deepfake Detection}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3624748}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/3624748
+      \endverb
+      \verb{file}
+      \verb Haq et al. - 2023 - Multimodal Neurosymbolic Approach for Explainable .pdf:/home/jacob/Zotero/storage/2XAC7A5W/Haq et al. - 2023 - Multimodal Neurosymbolic Approach for Explainable .pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3624748
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3624748
+      \endverb
+    \endentry
     \entry{hind_explaining_2019}{article}{}
       \name{author}{1}{}{%
         {{hash=79965ab18066c72febb431453b9c5292}{%

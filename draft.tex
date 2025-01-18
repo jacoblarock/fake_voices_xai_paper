@@ -88,18 +88,21 @@
 	shows promise for producing useful and interpretable results from such models. Explainable AI
 	refers to the ability of artificial intelligence systems, such as machine learning models and
 	neural networks, to provide understandable and interpretable explanations for their decisions
-	or predictions. This means that XAI systems can articulate why they made a particular
-	decision, what factors influenced it, and how confident they are in their conclusion
-	\cite{hind_explaining_2019}. For the detection of audio deepfakes, this could mean that the
-	model can justify its classification with feature-based evidence, allowing for verification of
-	the result by the end user. Much of the existing research, further discussed in the next
-	section, follows the path of producing a model with the best possible benchmarks against
-	datasets of samples, without taking into account if the results can be usefully interpreted,
-	while existing explorations into making audio deepfake detection explainable have produced
-	results that often require a lot of background knowledge to meaningfully interpret With the
-	context of the research discussed in the next section, I would like to use new combinations of
-	features with a novel model architecture to generate explanations for fake or real audio
-	classification that are potentially more useful to their end user.
+	or predictions \cite{hind_explaining_2019}. This means that XAI systems can articulate why
+	they made a particular decision, what factors influenced it, and how confident they are in
+	their conclusion \cite{hind_explaining_2019}. For the detection of audio deepfakes, this could
+	mean that the model can justify its classification with feature-based evidence, allowing for
+	verification of the result by the end user. Much of the existing research, further discussed
+	in the next section, follows the path of producing a model with the best possible benchmarks
+	against datasets of samples, without taking into account if the results can be usefully
+	interpreted, while existing explorations into making audio deepfake detection explainable have
+	produced results that often require a lot of background knowledge to meaningfully interpret.
+	Aside from this, explainability in the area of audio deepfake detection remains an open
+	challenge \cite{cuccovillo_open_2022}, one even promoted by regularatory bodies such as the 
+	European Union with the "right to explain" \cite{goodman_european_2017}. With the context of
+	the research discussed in the next section, I would like to use new combinations of features
+	with a novel model architecture to generate explanations for fake or real audio classification
+	that are potentially more useful to their end user.
 	\section{Related Work}
 	Several researchers have already followed similar or relevant directions to that of this work.
 	This section will summarize some efforts in previous research categorized by the use of
@@ -120,6 +123,14 @@
 	imperceptible features was able to produce the best performance results of the experiments
 	tried.
 	\subsection{Explainable Models}
+	One previous example of an implementation of an explainable model for use in audio deepfake
+	detection came from Ge et al. \cite{ge_explaining_2024}, who explain feature influence on
+	models using the SHAP (SHapley Additive exPlanations) method. They apply this method using
+	log-scaled power spectrograms as a feature.
+	\newline
+	Another example is presented by Haq et al. \cite{haq_multimodal_2023}, who use the changes in
+	emotional state as an input feature and represent "unlikely" changes on a graph so that it can
+	be understood by an eventual end user.
 	\section{Experiments}
 		\subsection{Dataset}
 		The dataset used for these experiments is the "In-the-Wild" dataset, one which focuses on
@@ -143,16 +154,17 @@
 					\sloppy
 					Harmonic-to-noise ratios: Inspired by previous research
 					\cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023,
-					li_comparative_2022} but slightly modified from the original concept, the HNRs
-					are the ratios of the strengths of harmonic frequencies to the strengths of
-					"noise", the total strength outside the harmonic frequencies. Unlike some
-					previously seen examples \cite{chaiwongyen_contribution_2022,
-					chaiwongyen_deepfake-speech_2023}, I calculate this ratio for each fundamental
-					frequency length, instead of using one value for the whole sample. Given that
-					 \(\gamma_{i}\) is the harmonic energy in a given fundamental frequency cycle
-					 and \(\iota_{i}\) is the residual energy in a given fundamental frequency
-					 cycle, the HNR at that cycle is calculated as follows:
-					 \[ 20log\frac{\gamma_{i}}{\iota_{i}} \]
+					li_comparative_2022} but done in a sliding window fashion instead of on the
+					whole file, the HNRs are the ratios of the strengths of harmonic frequencies
+					to the strengths of "noise", the total strength outside the harmonic
+					frequencies. Unlike some previously seen examples
+					\cite{chaiwongyen_contribution_2022, chaiwongyen_deepfake-speech_2023}, I
+					calculate this ratio for each fundamental frequency length, instead of using
+					one value for the whole sample. Given that \(\gamma_{i}\) is the harmonic
+					energy in a given fundamental frequency cycle and \(\iota_{i}\) is the
+					residual energy in a given fundamental frequency cycle, the HNR at that cycle
+					is calculated as follows:
+					\[ 20log\frac{\gamma_{i}}{\iota_{i}} \]
 				\item
 					Mel-spectrograms: A widely-used feature in synthetic audio detection, the
 					mel-spectrogram is a spectrographic representation of an audio sample
