@@ -53,6 +53,73 @@
       \verb PDF:/home/jacob/Zotero/storage/8VKR24HG/Albahar and Almalki - 2005 - DEEPFAKES THREATS AND COUNTERMEASURES SYSTEMATIC REVIEW.pdf:application/pdf
       \endverb
     \endentry
+    \entry{barrington_single_2023}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=68f52f5b350593deaf409c79c5b0a485}{%
+           family={Barrington},
+           familyi={B\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=44341ffb6f357e9f3867b0fde5e4250e}{%
+           family={Barua},
+           familyi={B\bibinitperiod},
+           given={Romit},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f20c03e188d9ad09d7dce94611a140aa}{%
+           family={Koorma},
+           familyi={K\bibinitperiod},
+           given={Gautham},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0b45ecc1a2f317d78df7c19f31fe4e4b}{%
+           family={Farid},
+           familyi={F\bibinitperiod},
+           given={Hany},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{a0dfffb7120c4f9c02da39d0bcce62e9}
+      \strng{fullhash}{05e0418574a275276d882d1a3c2673e2}
+      \strng{bibnamehash}{a0dfffb7120c4f9c02da39d0bcce62e9}
+      \strng{authorbibnamehash}{a0dfffb7120c4f9c02da39d0bcce62e9}
+      \strng{authornamehash}{a0dfffb7120c4f9c02da39d0bcce62e9}
+      \strng{authorfullhash}{05e0418574a275276d882d1a3c2673e2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Synthetic-voice cloning technologies have seen significant advances in recent years, giving rise to a range of potential harms. From small- and large-scale financial fraud to disinformation campaigns, the need for reliable methods to differentiate real and synthesized voices is imperative. We describe three techniques for differentiating a real from a cloned voice designed to impersonate a specific person. These three approaches differ in their feature extraction stage with lowdimensional perceptual features offering high interpretability but lower accuracy, to generic spectral features, and end-to-end learned features offering less interpretability but higher accuracy. We show the efficacy of these approaches when trained on a single speaker’s voice and when trained on multiple voices. The learned features consistently yield an equal error rate between 0\% and 4\%, and are reasonably robust to adversarial laundering.}
+      \field{day}{27}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{{arXiv}:2307.07683}
+      \field{shorttitle}{Single and Multi-Speaker Cloned Voice Detection}
+      \field{title}{Single and Multi-Speaker Cloned Voice Detection: From Perceptual to Learned Features}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2307.07683
+      \endverb
+      \verb{eprint}
+      \verb 2307.07683 [cs]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/EIMG2L3I/Barrington et al. - 2023 - Single and Multi-Speaker Cloned Voice Detection From Perceptual to Learned Features.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2307.07683
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2307.07683
+      \endverb
+      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Computation and Language}
+    \endentry
     \entry{chaiwongyen_contribution_2022}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=42521ea24adaec882b181915a6538f01}{%

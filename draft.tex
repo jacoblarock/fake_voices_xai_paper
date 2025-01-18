@@ -101,6 +101,25 @@
 	features with a novel model architecture to generate explanations for fake or real audio
 	classification that are potentially more useful to their end user.
 	\section{Related Work}
+	Several researchers have already followed similar or relevant directions to that of this work.
+	This section will summarize some efforts in previous research categorized by the use of
+	perceptible features or attempts to create explainable models.
+	\subsection{Perceptible Features}
+	The work of Barrington et al. \cite{barrington_single_2023} explores the idea of classification
+	using perceptible features, highlighting their potential for improving explainability in the
+	space of deepfake audio detection. They do, however also demonstrate a drop in performance in
+	comparison with imperceptible hand-crafted and deep-learning features.
+	\newline
+	Chaiwongyen et al. \cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023} also
+	approach using perceptible features for classification in their works, resulting in lackluster
+	performance in 2022, with better results using an expanded and improved feature set in 2023.
+	\newline
+	Li et al. \cite{li_comparative_2022} also approach perceptible features in their work,
+	combining them with imperceptible (referred to as physical in the work) features and using
+	various neural networks in their experiments. Overall, the combination of perceptible and
+	imperceptible features was able to produce the best performance results of the experiments
+	tried.
+	\subsection{Explainable Models}
 	\section{Experiments}
 		\subsection{Dataset}
 		The dataset used for these experiments is the "In-the-Wild" dataset, one which focuses on
