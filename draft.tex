@@ -242,16 +242,17 @@
 				\end{center}
 			\end{figure}
 			\subsubsection{Training and Evaluation}
-			The black-box model described in the previous section was trained on the first 10,000
-			samples out of the aforementioned dataset, with evaluation being performed on the
-			remaining 21,778. Training batches consisted of 100 samples each with every window
-			position for each sample and an upper limit of 1,000,000 lines per batch. For each
-			batch, two epochs were performed. Because a single sample can have multiple input
-			lines, evaluation cannot be performed on a per-line basis, but must instead be
-			summarized. Two methods are possible: median and mean, with the difference in results
-			being negligible in my experiments. The default threshold is 0.5, meaning that a
-			result under 0.5 is a false result and over 0.5 is a true result. This threshold can
-			however be adjusted, useful for computing the EER.
+			The black-box model described in the previous section was trained on the first 3474
+			samples in the dataset, with the stopping point being determined by finding the global
+			minimum of the validation accuracy during training. Evaluation was then performed on
+			the remaining samples in the dataset. Training batches consisted of 100 samples each
+			with every window position for each sample and an upper limit of 1,000,000 lines per
+			batch. For each batch, two epochs were performed. Because a single sample can have
+			multiple input lines, evaluation cannot be performed on a per-line basis, but must
+			instead be summarized. Two methods are possible: median and mean, with the difference
+			in results being negligible in my experiments. The default threshold is 0.5, meaning
+			that a result under 0.5 is a false result and over 0.5 is a true result. This
+			threshold can however be adjusted, useful for computing the EER.
 		\subsection{Explanations}
 		The explanations using the previously described surrogate model are generated with Local
 		Interpretable Model-agnostic Explanations (LIME). This section will describe in detail how
