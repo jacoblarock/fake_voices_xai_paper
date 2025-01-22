@@ -101,8 +101,9 @@
 	challenge \cite{cuccovillo_open_2022}, one even promoted by regularatory bodies such as the 
 	European Union with the "right to explain" \cite{goodman_european_2017}. With the context of
 	the research discussed in the next section, I would like to use new combinations of features
-	with a novel model architecture to generate explanations for fake or real audio classification
-	that are potentially more useful to their end user.
+	with a novel model architecture to generate explanations for fake or real audio
+	classification, with the goal of singling out features that are useful not only for an
+	accurate classification but also for an understandable explanation.
 	\section{Related Work}
 	Several researchers have already followed similar or relevant directions to that of this work.
 	This section will summarize some efforts in previous research categorized by the use of
@@ -111,26 +112,37 @@
 	The work of Barrington et al. \cite{barrington_single_2023} explores the idea of classification
 	using perceptible features, highlighting their potential for improving explainability in the
 	space of deepfake audio detection. They do, however also demonstrate a drop in performance in
-	comparison with imperceptible hand-crafted and deep-learning features.
-	\newline
+	comparison with imperceptible hand-crafted and deep-learning features in their experiments,
+	which were performed on a combination of synthetic and real audio datasets.
+	\par
 	Chaiwongyen et al. \cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023} also
-	approach using perceptible features for classification in their works, resulting in lackluster
-	performance in 2022, with better results using an expanded and improved feature set in 2023.
-	\newline
-	Li et al. \cite{li_comparative_2022} also approach perceptible features in their work,
-	combining them with imperceptible (referred to as physical in the work) features and using
-	various neural networks in their experiments. Overall, the combination of perceptible and
-	imperceptible features was able to produce the best performance results of the experiments
-	tried.
+	approach using perceptible features for classification in their works. They trained and tested
+	using the dataset of the ADD2022 Challenge \cite{yi_add_2024} and a simple model with a single
+	hidden layer, resulting in lackluster performance in 2022, with better results using an
+	expanded and improved feature set in 2023.
+	\par
+	Li et al. \cite{li_comparative_2022} also approach
+	perceptible features in their work, combining them with imperceptible (referred to as physical
+	in the work) features and using various neural networks in their experiments. Overall, the
+	combination of perceptible and imperceptible features was able to produce the best performance
+	results of the experiments, which were performed as well on the dataset of the ASV2022
+	Challenge \cite{yi_add_2024}.
 	\subsection{Explainable Models}
 	One previous example of an implementation of an explainable model for use in audio deepfake
 	detection came from Ge et al. \cite{ge_explaining_2024}, who explain feature influence on
 	models using the SHAP (SHapley Additive exPlanations) method. They apply this method using
-	log-scaled power spectrograms as a feature.
-	\newline
-	Another example is presented by Haq et al. \cite{haq_multimodal_2023}, who use the changes in
-	emotional state as an input feature and represent "unlikely" changes on a graph so that it can
-	be understood by an eventual end user.
+	log-scaled power spectrograms as a feature, training and testing using the datasets from the
+	ASV2019 challenge \cite{wang_asvspoof_2020}, they are able to determine and graphically
+	represent areas of importance on the spectrogram, as well as globally summarize the
+	SHAP-values.
+	\par
+	Another example is presented by Haq et al. \cite{haq_multimodal_2023}, who use
+	the changes in emotional state as an input feature and represent "unlikely" changes on a graph
+	so that it can be understood by an eventual end user. In this case, they achieved their
+	results by combining the output of fake video and fake audio classifiers in order to produce a
+	final classification for a video sample with audio. Testing against the presidential deepfake
+	dataset \cite{sankaranarayanan_presidential_nodate}, they achieve impressive results in
+	comparison to the standing benchmark on the dataset at the time.
 	\section{Experiments}
 		\subsection{Dataset}
 		The dataset used for these experiments is the "In-the-Wild" dataset, one which focuses on
@@ -192,12 +204,13 @@
 				\item
 					Pitch-fluctuations: Calculated for every sample in the audio as the difference
 					between pitch at the given point and the pitch at the previous point. Pitch is
-					estimated based on the maximum power harmonics. This feature is not identical
-					to, but is inspired by the use of summarized pitch fluctuations in previous
-					research \cite{khanjani_learning_2023}. This feature is also one-dimensional
-					with time as the axis. Given that \(H_{i}\) is the set of harmonic frequencies
-					at fundamental frequency cycle \(i\) and \(s(h_{i})\) is the power of a given
-					harmonic frequency at cycle \(i\), the pitch can be estimated as follows:
+					estimated based on the maximum power harmonics. This feature is similar to the
+					use of summarized pitch fluctuations in previous research
+					\cite{khanjani_learning_2023}. This feature is also one-dimensional with time
+					as the axis. Given that \(H_{i}\) is the set of harmonic frequencies at
+					fundamental frequency cycle \(i\) with \(h_{i} \in H_{i}\) as a frequency of
+					the set and \(s(h_{i})\) is the power of a given harmonic frequency at cycle
+					\(i\), the pitch can be estimated as follows:
 					\[p_{i} = s(max(H_{i}))\]
 					Then, given an offset \(x\), the pitch fluctuations can be calculated as
 					follows:
@@ -225,15 +238,16 @@
 			one final prediction, regardless of whether the individual features have the same
 			shape. This is achieved by using a separate model for each feature, with its own input
 			and output layers (further referred to as sub-models), which are then concatenated
-			together and pooled into a final output value (in what I will further refer to as the
-			terminus). This modular structure allows not only better performance and less memory
-			use, due to the fact that fewer transformations are required in input preparation, but
-			also allows for more flexibility in the construction of the model, making it easy to
-			add and remove features using pre-defined functions depending on feature type. This
-			kind of architecture also provides an advantage to the generation of explanations, as
-			only the terminus part of the entire must be explained to interpret the importance of
-			each input feature. Further explanation is in the following section. Figure
-			\ref{fig:model_plot} represents the layout of the model layers.
+			together, processed though a final model that pools into a final output value (which I
+			will further refer to as the terminus model). The modular structure allows not only
+			better performance and less memory use, due to the fact that fewer transformations are
+			required in input preparation, but also allows for more flexibility in the
+			construction of the model, making it easy to add and remove features using pre-defined
+			functions depending on feature type. This kind of architecture also provides an
+			advantage to the generation of explanations, as only the terminus part of the entire
+			must be explained to interpret the importance of each input feature. Further
+			explanation is in the following section. Figure \ref{fig:model_plot} represents the
+			layout of the model layers.
 			\begin{figure}[htbp]
 				\begin{center}
 					\includegraphics[width=1\textwidth]{images/model_plot.png}
@@ -242,22 +256,22 @@
 				\end{center}
 			\end{figure}
 			\subsubsection{Training and Evaluation}
-			The black-box model described in the previous section was trained on the first 3474
-			samples in the dataset, with the stopping point being determined by finding the global
-			minimum of the validation accuracy during training. Evaluation was then performed on
-			the remaining samples in the dataset. Training batches consisted of 100 samples each
-			with every window position for each sample and an upper limit of 1,000,000 lines per
-			batch. For each batch, two epochs were performed. Because a single sample can have
-			multiple input lines, evaluation cannot be performed on a per-line basis, but must
-			instead be summarized. Two methods are possible: median and mean, with the difference
-			in results being negligible in my experiments. The default threshold is 0.5, meaning
-			that a result under 0.5 is a false result and over 0.5 is a true result. This
-			threshold can however be adjusted, useful for computing the EER.
+			The black-box model described in the previous section was trained on the first //TODO//
+			samples in the dataset. Evaluation was then performed on the remaining samples in the
+			dataset. Training batches consisted of 100 samples each with every window position for
+			each sample and an upper limit of 1,000,000 lines per batch. For each batch, two
+			epochs were performed. Because a single sample can have multiple input lines,
+			evaluation cannot be performed on a per-line basis, but must instead be summarized.
+			Two methods are possible: median and mean, with the difference in results being
+			negligible in my experiments. The default threshold is 0.5, meaning that a result
+			under 0.5 is a false result and over 0.5 is a true result. This threshold can however
+			be adjusted, useful for computing the EER.
 		\subsection{Explanations}
-		The explanations using the previously described surrogate model are generated with Local
-		Interpretable Model-agnostic Explanations (LIME). This section will describe in detail how
-		individual explanations are generated at a local level for individual samples, as well as
-		how the usefulness of the explanations can be evaluated in general.
+		The explanations using the previously described surrogate model are generated with the
+		Local Interpretable Model-agnostic Explanation (LIME) method \cite{ribeiro_why_2016}. This
+		section will describe in detail how individual explanations are generated at a local level
+		for individual samples, as well as how the usefulness of the explanations can be evaluated
+		in general.
 			\subsubsection{Generation of the Explanations}
 			Because of the multi-shaped nature and independence of the input layers of the model,
 			the explanations cannot be generated directly from the input itself. However, because
@@ -275,7 +289,7 @@
 			contribution of each feature to the classification of the model. Because the
 			end-classification of the surrogate is also a mean, the means of the LIME-results are
 			an accurate representation of the aggregate influence.
-			\newline
+			\par
 			I approached the second problem by generating intermediate data for the
 			LIME-evaluation. Intermediate data was generated by first decomposing the surrogate
 			model into its component models, the sub-models and the terminus, and for each
@@ -284,6 +298,13 @@
 			not only for the sample explanation data but also for the training data, to use as an
 			input for the LIME explainer.
 			\subsubsection{Evaluation of the Explanations}
+			In order to determine if the explanations have the potential to be useful to an end
+			user, I pursued the goal of summarizing many explanations generated using the
+			previously described method together in a meaningful way, in order to make a
+			conclusion about the general usefulness of the individual features and the influence
+			and potential use of the perceptible features. However, due to a lack of existing
+			standardized metrics for the global evaluation of local metrics, I propose two
+			metrics, with which I will make conclusions about the usefulness of this method.
 	\section{Results}
 		\subsection{Black-Box Model Results}
 		\subsection{Explanation Results}

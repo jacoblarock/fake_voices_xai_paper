@@ -1011,6 +1011,108 @@
       \verb https://ieeexplore.ieee.org/document/9862519/
       \endverb
     \endentry
+    \entry{ribeiro_why_2016}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=9203dc724f298030e81ba470feb309af}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Marco\bibnamedelima Tulio},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=0b9694812f0dc77974d99bb875a76d48}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Sameer},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c9ab8ac486d7f85ac914b1a8e51e512b}{%
+           family={Guestrin},
+           familyi={G\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{70906198418f30a779bc9bda0f6ae1f1}
+      \strng{fullhash}{70906198418f30a779bc9bda0f6ae1f1}
+      \strng{bibnamehash}{70906198418f30a779bc9bda0f6ae1f1}
+      \strng{authorbibnamehash}{70906198418f30a779bc9bda0f6ae1f1}
+      \strng{authornamehash}{70906198418f30a779bc9bda0f6ae1f1}
+      \strng{authorfullhash}{70906198418f30a779bc9bda0f6ae1f1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Despite widespread adoption, machine learning models remain mostly black boxes. Understanding the reasons behind predictions is, however, quite important in assessing trust, which is fundamental if one plans to take action based on a prediction, or when choosing whether to deploy a new model. Such understanding also provides insights into the model, which can be used to transform an untrustworthy model or prediction into a trustworthy one. In this work, we propose {LIME}, a novel explanation technique that explains the predictions of any classiﬁer in an interpretable and faithful manner, by learning an interpretable model locally around the prediction. We also propose a method to explain models by presenting representative individual predictions and their explanations in a non-redundant way, framing the task as a submodular optimization problem. We demonstrate the ﬂexibility of these methods by explaining diﬀerent models for text (e.g. random forests) and image classiﬁcation (e.g. neural networks). We show the utility of explanations via novel experiments, both simulated and with human subjects, on various scenarios that require trust: deciding if one should trust a prediction, choosing between models, improving an untrustworthy classiﬁer, and identifying why a classiﬁer should not be trusted.}
+      \field{day}{9}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{{arXiv}:1602.04938}
+      \field{shorttitle}{"Why Should I Trust You?}
+      \field{title}{"Why Should I Trust You?": Explaining the Predictions of Any Classifier}
+      \field{urlday}{18}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1602.04938
+      \endverb
+      \verb{eprint}
+      \verb 1602.04938 [cs]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/KGW5D3MP/Ribeiro et al. - 2016 - Why Should I Trust You Explaining the Predictions of Any Classifier.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1602.04938
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1602.04938
+      \endverb
+      \keyw{Computer Science - Machine Learning,Statistics - Machine Learning,Computer Science - Artificial Intelligence}
+    \endentry
+    \entry{sankaranarayanan_presidential_nodate}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6aa7faa2cf5fe4f1f6a867d424c146ef}{%
+           family={Sankaranarayanan},
+           familyi={S\bibinitperiod},
+           given={Aruna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fd54e1cfc05f311f39082f00f60d2b84}{%
+           family={Groh},
+           familyi={G\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ac0de5814edee5857c479694c93b6b1a}{%
+           family={Picard},
+           familyi={P\bibinitperiod},
+           given={Rosalind},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7aaeaf6869aa48ec86c6c7eae4872b96}{%
+           family={Lippman},
+           familyi={L\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b206a3e90aa19c592e428c3b72eb1577}
+      \strng{fullhash}{d10846dae3946721c5c375878ef81627}
+      \strng{bibnamehash}{b206a3e90aa19c592e428c3b72eb1577}
+      \strng{authorbibnamehash}{b206a3e90aa19c592e428c3b72eb1577}
+      \strng{authornamehash}{b206a3e90aa19c592e428c3b72eb1577}
+      \strng{authorfullhash}{d10846dae3946721c5c375878ef81627}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{How do we evaluate media forensic techniques for detecting deepfakes? We present the Presidential Deepfakes Dataset ({PDD}), which consists of 32 videos, half of which are original videos and half of which are manipulated with audio impersonations, synthesized lip synchronizations, political misinformation, and situational artifacts. This dataset expands the context on which end-to-end media forensic systems can be evaluated. As an example, we evaluate the winning model of the {DeepFake} Detection Challenge on the {PDD} and find that it classifies 69\% of the videos in the {PDD} accurately. We share this dataset publicly for researchers to evaluate their techniques with the intention of pre-bunking future misinformation attempts.}
+      \field{langid}{english}
+      \field{title}{The Presidential Deepfakes Dataset}
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/BRLMG5C3/Sankaranarayanan et al. - The Presidential Deepfakes Dataset.pdf:application/pdf
+      \endverb
+    \endentry
     \entry{veerasamy_rising_2022}{article}{}
       \name{author}{2}{}{%
         {{hash=9e5ad9f8585ec9c2a2480e48f3d5acb0}{%
@@ -1064,6 +1166,250 @@
       \verb{url}
       \verb https://papers.academic-conferences.org/index.php/iccws/article/view/25
       \endverb
+    \endentry
+    \entry{wang_asvspoof_2020}{misc}{}
+      \name{author}{40}{}{%
+        {{hash=03d3e23852937fa39b0e34246c4ecd1d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=64bfb2b1761cc3077e7b25f2eaa562ee}{%
+           family={Yamagishi},
+           familyi={Y\bibinitperiod},
+           given={Junichi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d9746848fcce379f30da4fa8db258240}{%
+           family={Todisco},
+           familyi={T\bibinitperiod},
+           given={Massimiliano},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fe73c417f1a9889ba1609cb08d1a3f40}{%
+           family={Delgado},
+           familyi={D\bibinitperiod},
+           given={Hector},
+           giveni={H\bibinitperiod}}}%
+        {{hash=24d798af6af6148c6db71152253615f1}{%
+           family={Nautsch},
+           familyi={N\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e4022cbee16cd294b79b020fa73f9b9c}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=5312114af60e272aa8e7acde6e72a1a3}{%
+           family={Sahidullah},
+           familyi={S\bibinitperiod},
+           given={Md},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8e7fc71d439931c367915b88209d915f}{%
+           family={Vestman},
+           familyi={V\bibinitperiod},
+           given={Ville},
+           giveni={V\bibinitperiod}}}%
+        {{hash=0adea8b988e4a3eac751bcf14a5edf11}{%
+           family={Kinnunen},
+           familyi={K\bibinitperiod},
+           given={Tomi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4b1c8475d6ba863aeabd315d2f10c9cf}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kong\bibnamedelima Aik},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f8d23260ca0e7ae53de0c06aa353af80}{%
+           family={Juvela},
+           familyi={J\bibinitperiod},
+           given={Lauri},
+           giveni={L\bibinitperiod}}}%
+        {{hash=593ac9d9e9596471923b7e3953a8acff}{%
+           family={Alku},
+           familyi={A\bibinitperiod},
+           given={Paavo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=66009706e73f16f43ef977431dd73c71}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Yu-Huai},
+           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=86f883b13f572aae6ae7839a8b7c4f8c}{%
+           family={Hwang},
+           familyi={H\bibinitperiod},
+           given={Hsin-Te},
+           giveni={H\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=1f4dedf9b9690e5648804ba97f7dbbdd}{%
+           family={Tsao},
+           familyi={T\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=47e384462ad03a0c03ae0b911f31f833}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hsin-Min},
+           giveni={H\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=81229e9b50c4868b106bde00a9c6125a}{%
+           family={Maguer},
+           familyi={M\bibinitperiod},
+           given={Sebastien\bibnamedelima Le},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=289f7783ec708dc87fc345ccf5c8fb25}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9522dd3758c72de383ac0ad7713a02b9}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={Fergus},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8a4fb1a2f5260b08591cc3ee76e638ab}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9a4f4a1ff661cd600eb26523a5ba8bb4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e2068259fc5297e154f92a417136c922}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Quan},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=d3a49a660fa8a6c8a93b5273a70eae29}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3f119bb862e5bd7e1a358b23ab351e8a}{%
+           family={Onuma},
+           familyi={O\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c3fb1b1a9eca04a76c56038684f0918d}{%
+           family={Mushika},
+           familyi={M\bibinitperiod},
+           given={Koji},
+           giveni={K\bibinitperiod}}}%
+        {{hash=835bb591625e9b3c96059154497d2886}{%
+           family={Kaneda},
+           familyi={K\bibinitperiod},
+           given={Takashi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9796d9d3026f7277441de027ffa0a107}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=852ab61307cf97f4dbfcc919ba392164}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Li-Juan},
+           giveni={L\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=a14d0dfd650de219f2ad7ae72657ffa3}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yi-Chiao},
+           giveni={Y\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=ec17bfcf1b4f3219ae7da4e83dcaa9fc}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Wen-Chin},
+           giveni={W\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=d0fb328bc36d1a9a42b9a721d7909992}{%
+           family={Toda},
+           familyi={T\bibinitperiod},
+           given={Tomoki},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9a1de45c3184e849f0058a5404ce0c97}{%
+           family={Tanaka},
+           familyi={T\bibinitperiod},
+           given={Kou},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3bf91fd111e898901fb917bb72176535}{%
+           family={Kameoka},
+           familyi={K\bibinitperiod},
+           given={Hirokazu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a0f85eecc9026cbe95688ccd19ded274}{%
+           family={Steiner},
+           familyi={S\bibinitperiod},
+           given={Ingmar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=cda4a2ff26ac3bb713ade97f26692b42}{%
+           family={Matrouf},
+           familyi={M\bibinitperiod},
+           given={Driss},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8f3f7385c858767657c651692feb000a}{%
+           family={Bonastre},
+           familyi={B\bibinitperiod},
+           given={Jean-Francois},
+           giveni={J\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=900353279e4b66796b0ea6c0ae98070f}{%
+           family={Govender},
+           familyi={G\bibinitperiod},
+           given={Avashna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=20255f490ac740cbcd21c24b2b67a2fc}{%
+           family={Ronanki},
+           familyi={R\bibinitperiod},
+           given={Srikanth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3bff7ef13028e86d3d749795d8fd7ef0}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jing-Xuan},
+           giveni={J\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=6141208900447ed2b4f6d8bea7eae834}{%
+           family={Ling},
+           familyi={L\bibinitperiod},
+           given={Zhen-Hua},
+           giveni={Z\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{aeaae95a3851acdb0d7c761eee05b973}
+      \strng{fullhash}{bda8c7335ce8b8c3c9b7d0639085d976}
+      \strng{bibnamehash}{aeaae95a3851acdb0d7c761eee05b973}
+      \strng{authorbibnamehash}{aeaae95a3851acdb0d7c761eee05b973}
+      \strng{authornamehash}{aeaae95a3851acdb0d7c761eee05b973}
+      \strng{authorfullhash}{bda8c7335ce8b8c3c9b7d0639085d976}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Automatic speaker veriﬁcation ({ASV}) is one of the most natural and convenient means of biometric person recognition. Unfortunately, just like all other biometric systems, {ASV} is vulnerable to spooﬁng, also referred to as “presentation attacks.” These vulnerabilities are generally unacceptable and call for spooﬁng countermeasures or “presentation attack detection” systems. In addition to impersonation, {ASV} systems are vulnerable to replay, speech synthesis, and voice conversion attacks.}
+      \field{day}{14}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{{arXiv}:1911.01601}
+      \field{shorttitle}{{ASVspoof} 2019}
+      \field{title}{{ASVspoof} 2019: A large-scale public database of synthesized, converted and replayed speech}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1911.01601 [cs, eess]
+      \endverb
+      \verb{file}
+      \verb Wang et al. - 2020 - ASVspoof 2019 A large-scale public database of sy.pdf:/home/jacob/Zotero/storage/JVRQ5PHZ/Wang et al. - 2020 - ASVspoof 2019 A large-scale public database of sy.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1911.01601
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1911.01601
+      \endverb
+      \keyw{Computer Science - Cryptography and Security,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Electrical Engineering and Systems Science - Signal Processing}
     \endentry
     \entry{xue_audio_2022}{inproceedings}{}
       \name{author}{9}{}{%
@@ -1156,6 +1502,153 @@
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3552466.3556526
       \endverb
+    \endentry
+    \entry{yi_add_2024}{misc}{}
+      \name{author}{20}{}{%
+        {{hash=bf27030cff5f1171bae3a61f1d7436e8}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={Jiangyan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3328c8f5dd31f97a9c64c8d0d270cf16}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Ruibo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c2d300d040a5480ff7359c84ff1b1eeb}{%
+           family={Tao},
+           familyi={T\bibinitperiod},
+           given={Jianhua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d7c252d4d4f8bd98240139bc4f4ff56f}{%
+           family={Nie},
+           familyi={N\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1acf66a228af2a8ad66ae15a96c4777b}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Haoxin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=26b90c8cb6735654ece324f21187cd2e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chenglong},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ad1506e9f10da2cad4389eac16751647}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b8e5b1dfcf17ba03097f11b73d7811d2}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Zhengkun},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=76c4ac342426fb82f4a004c0cdbadd6d}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiaohui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c48c0fadc73abe7dbb186ce085b6de50}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b082666333651197826a9148f90f63a6}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Cunhang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f1d3af1a93e0011adb0689f9802f30cd}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Shan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=57008eb0fe8160dddbf1414ee8290504}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shiming},
+           giveni={S\bibinitperiod}}}%
+        {{hash=53eda2415f95a1d1f76572f661905aab}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=361b9840ac6987598c0099a7a4497198}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xinrui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0e4b43cc503b4583d4023aa2af56f914}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Le},
+           giveni={L\bibinitperiod}}}%
+        {{hash=91eb29740e2405d069a3462dbb5ec1b2}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Zhengqi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f397ee85433a25b75738faa0b764e496}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Haizhou},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5850ca95706865f0a04cef086dedd166}{%
+           family={Lian},
+           familyi={L\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=97396b63631c7b5155fe9e624a564950}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{fullhash}{8188299b7c733e10b749f6abddfab2d1}
+      \strng{bibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{authorbibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{authornamehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{authorfullhash}{8188299b7c733e10b749f6abddfab2d1}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Audio deepfake detection is an emerging topic, which was included in the {ASVspoof} 2021. However, the recent shared tasks have not covered many real-life and challenging scenarios. The ﬁrst Audio Deep synthesis Detection challenge ({ADD}) was motivated to ﬁll in the gap. The {ADD} 2022 includes three tracks: low-quality fake audio detection ({LF}), partially fake audio detection ({PF}) and audio fake game ({FG}). The {LF} track focuses on dealing with bona ﬁde and fully fake utterances with various real-world noises etc. The {PF} track aims to distinguish the partially fake audio from the real. The {FG} track is a rivalry game, which includes two tasks: an audio generation task and an audio fake detection task. In this paper, we describe the datasets, evaluation metrics, and protocols. We also report major ﬁndings that reﬂect the recent advances in audio deepfake detection tasks. The {ADD} 2022 dataset is publicly available, see Train\&Dev1, Adaption2, Track1 eval3, Track2 eval4, Track3.2 R1 eval5, Track3.2 R2 eval6.}
+      \field{day}{2}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{{arXiv}:2202.08433}
+      \field{shorttitle}{{ADD} 2022}
+      \field{title}{{ADD} 2022: the First Audio Deep Synthesis Detection Challenge}
+      \field{urlday}{22}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2202.08433
+      \endverb
+      \verb{eprint}
+      \verb 2202.08433 [cs]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/XI7CX9R9/Yi et al. - 2024 - ADD 2022 the First Audio Deep Synthesis Detection Challenge.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2202.08433
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2202.08433
+      \endverb
+      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Machine Learning}
     \endentry
   \enddatalist
 \endrefsection
