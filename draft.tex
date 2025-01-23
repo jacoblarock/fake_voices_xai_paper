@@ -297,14 +297,38 @@
 			predictions of the sub-models were stored and used for further analysis. This was done
 			not only for the sample explanation data but also for the training data, to use as an
 			input for the LIME explainer.
+			\par
+			The results of the LIME explainer are then summarized together on a per-feature basis
+			and normalized to produce a decimal number between -1 and 1 for every feature. In this
+			case, a negative value implies that the given feature pushed the result of the model
+			in the negative direction (i.e. not fake), while a positive value indicates the
+			opposite.
 			\subsubsection{Evaluation of the Explanations}
-			In order to determine if the explanations have the potential to be useful to an end
+			In order to assess if the explanations have the potential to be useful to an end
 			user, I pursued the goal of summarizing many explanations generated using the
 			previously described method together in a meaningful way, in order to make a
 			conclusion about the general usefulness of the individual features and the influence
 			and potential use of the perceptible features. However, due to a lack of existing
 			standardized metrics for the global evaluation of local metrics, I propose two
 			metrics, with which I will make conclusions about the usefulness of this method.
+			\par
+			In order to contextualize the metrics, I will make the following definitions.
+			\begin{itemize}
+				\item Let \(S\) be the set of samples with \(s \in S\) as an element of the set.
+				\item Let \(F\) be the set of features with \(f \in F\) as an element of the set.
+				\item Let \(w_{fs}\) be the weight value of feature \(f\) of sample \(s\) as
+					produced by the explainer.
+				\item Let \(l_{s}\) be the correct label of the sample \(s\).
+			\end{itemize}
+			The first metric I will define is the mean of the absolute values of the weights of
+			the explanations, summarized along the sample axis, delivering one value per feature.
+			I will further refer to this metric as importance, and it can be mathematically
+			defined as follows:
+			\[\frac{\sum_{s \in S} |w_{fs}|}{|S|}\]
+			The second metric I will define is the average aggregate correctness on a per-feature
+			basis, which I will further refer to as trust. The trust per feature can be defined as
+			follows:
+			\[\frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}\]
 	\section{Results}
 		\subsection{Black-Box Model Results}
 		\subsection{Explanation Results}
