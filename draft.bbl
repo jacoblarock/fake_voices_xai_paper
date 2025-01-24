@@ -1011,6 +1011,70 @@
       \verb https://ieeexplore.ieee.org/document/9862519/
       \endverb
     \endentry
+    \entry{ranjan_statnet_2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=0fe83fc6df993de5340a6394df1da40b}{%
+           family={Ranjan},
+           familyi={R\bibinitperiod},
+           given={Rishabh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a788daae7f431574d2a245c28060df6d}{%
+           family={Vatsa},
+           familyi={V\bibinitperiod},
+           given={Mayank},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5a8cad670a8eaf353bfba23cfed34359}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Richa},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Abu Dhabi, United Arab Emirates}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9ba6716a19b5859b47ff95c2a67e06e7}
+      \strng{fullhash}{9ba6716a19b5859b47ff95c2a67e06e7}
+      \strng{bibnamehash}{9ba6716a19b5859b47ff95c2a67e06e7}
+      \strng{authorbibnamehash}{9ba6716a19b5859b47ff95c2a67e06e7}
+      \strng{authornamehash}{9ba6716a19b5859b47ff95c2a67e06e7}
+      \strng{authorfullhash}{9ba6716a19b5859b47ff95c2a67e06e7}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{With the rise in mobile phone users and {VoIP}, voice has emerged as an easy and accessible biometric modality for identiﬁcation or veriﬁcation tasks. Given the increasing usage of voice biometrics, the security of these systems is also of paramount importance. Researchers have demonstrated that Automatic Speaker Veriﬁcation ({ASV}) systems are prone to spooﬁng attacks like synthetic speech or fake speech, which can be used maliciously for a variety of tasks such as impersonation, fake news spreading, and opinion formation. This research proposes a deep convolutionbased multi-task network which performs both spoof detection and source identiﬁcation for synthetic speech. The proposed model is evaluated on three datasets {ASVspoof}2019 {LA}, {FOR}-Norm and In-the-Wild Audio Deepfake dataset. The results demonstrate the {EER} of 2.456\%, 0.814\%, and 0.199\% on the {ASVspoof}2019 {LA}, {FOR}-Norm, and Inthe-Wild Audio Deepfake datasets. In addition, we have also demonstrated results for cross-dataset evaluation and speech source identiﬁcation.}
+      \field{booktitle}{2022 {IEEE} International Joint Conference on Biometrics ({IJCB})}
+      \field{day}{10}
+      \field{eventtitle}{2022 {IEEE} International Joint Conference on Biometrics ({IJCB})}
+      \field{isbn}{978-1-6654-6394-2}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{shorttitle}{{STATNet}}
+      \field{title}{{STATNet}: Spectral and Temporal features based Multi-Task Network for Audio Spoofing Detection}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/IJCB54206.2022.10007949
+      \endverb
+      \verb{file}
+      \verb Ranjan et al. - 2022 - STATNet Spectral and Temporal features based Mult.pdf:/home/jacob/Zotero/storage/VXRIW4Q4/Ranjan et al. - 2022 - STATNet Spectral and Temporal features based Mult.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10007949/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10007949/
+      \endverb
+    \endentry
     \entry{ribeiro_why_2016}{misc}{}
       \name{author}{3}{}{%
         {{hash=9203dc724f298030e81ba470feb309af}{%
@@ -1501,6 +1565,89 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3552466.3556526
+      \endverb
+    \endentry
+    \entry{yang_robust_2024}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=f1046d5d733461bf64c0366ddf71a664}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Yujie},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a093f0f981931d251d034050ad4b128b}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Haochen},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0c3d4b55e7357f9926f171ace018696d}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Hang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=eef82c3e8cb3788b441ceaaee8d212b8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chengcheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=63cf1c8dbce6b841475e186da5e5adf8}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Tianyu},
+           giveni={T\bibinitperiod}}}%
+        {{hash=735173e7254986d180bcb08fbac4266c}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2d4af83bc7b452c7129f47b07bbe1997}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yunhe},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Seoul, Korea, Republic of}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{56d421b632075b416a3a95cc89ba4dab}
+      \strng{fullhash}{69b0da2894fc2dad9ca70ced7af2ffc4}
+      \strng{bibnamehash}{56d421b632075b416a3a95cc89ba4dab}
+      \strng{authorbibnamehash}{56d421b632075b416a3a95cc89ba4dab}
+      \strng{authornamehash}{56d421b632075b416a3a95cc89ba4dab}
+      \strng{authorfullhash}{69b0da2894fc2dad9ca70ced7af2ffc4}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the advancement of generative modeling techniques, synthetic human speech becomes increasingly indistinguishable from real, and tricky challenges are elicited for the audio deepfake detection ({ADD}) system. In this paper, we exploit audio features to improve the generalizability of {ADD} systems. Investigation of the {ADD} task performance is conducted over a broad range of audio features, including various handcrafted features and learning-based features. Experiments show that learning-based audio features pretrained on a large amount of data generalize better than hand-crafted features on out-of-domain scenarios. Subsequently, we further improve the generalizability of the {ADD} system using proposed multi-feature approaches to incorporate complimentary information from features of different views. The model trained on {ASV}2019 data achieves an equal error rate of 24.27\% on the In-the-Wild dataset. The code will be released as soon 1.}
+      \field{booktitle}{{ICASSP} 2024 - 2024 {IEEE} International Conference on Acoustics, Speech and Signal Processing ({ICASSP})}
+      \field{day}{14}
+      \field{eventtitle}{{ICASSP} 2024 - 2024 {IEEE} International Conference on Acoustics, Speech and Signal Processing ({ICASSP})}
+      \field{isbn}{979-8-3503-4485-1}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{title}{A Robust Audio Deepfake Detection System via Multi-View Feature}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{13131\bibrangedash 13135}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/ICASSP48485.2024.10446560
+      \endverb
+      \verb{file}
+      \verb Yang et al. - 2024 - A Robust Audio Deepfake Detection System via Multi.pdf:/home/jacob/Zotero/storage/W9YJ42T9/Yang et al. - 2024 - A Robust Audio Deepfake Detection System via Multi.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10446560/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10446560/
       \endverb
     \endentry
     \entry{yi_add_2024}{misc}{}

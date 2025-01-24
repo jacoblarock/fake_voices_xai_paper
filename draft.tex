@@ -336,9 +336,11 @@
 	aggregate evaluation. This section will first discuss the results and performance of the
 	surrogate model, followed by an evaluation of the aggregated explanations.
 		\subsection{Black-Box Model Results}
-		A summary of some experiments based on the method described above is provided below. The
-		model that achieved the best results was trained and evaluated using the methods
-		previously described, has an evaluation accuracy of 96.3\% with the default threshold of
+		\sloppy
+		A summary of some experiments based on the method described above is provided in table
+		\ref{table:eval-results}. The model that achieved the best results was trained on the
+		first 10000 samples of the dataset and evaluated on the rest evaluated using the methods
+		previously described. It has an evaluation accuracy of 96.3\% with the default threshold of
 		0.5. EER is approximately 0.03214. This outperforms other results tested in the original
 		paper on this dataset \cite{muller_does_2022}. This result also exceeds some other results
 		tested on this dataset \cite{yang_robust_2024}, produced using a variety of imperceptible
@@ -346,6 +348,20 @@
 		\cite{ranjan_statnet_2022} that made use of raw waveform-based features, training on 70
 		percent of the data in the dataset, validating on 10 percent and testing on the remaining
 		20 percent.
+		\begin{table}[htbp]
+			\centering
+			\begin{tabular}{c | c | c | c}
+				Terminus & Training & Accuracy & EER \\
+				\hline
+				Simple & until 3474 & 95.02\% & 0.03702 \\
+				3 hidden layers & until 10000 & 96.27\% & 0.03214 \\
+				Simple & until 23833 2 epochs & 90.07\% & 0.90069 \\
+				Simple & until 10000 2 epochs & 94.43\% & 0.04408 \\
+				Simple & until 10000 & 94.28\% & 0.04840
+			\end{tabular}
+			\label{table:eval-results}
+			\caption{Summary of the evaluation results of the experiments}
+		\end{table}
 		\subsection{Explanation Results}
 	\section{Discussion}
 	\section{Conclusion}
