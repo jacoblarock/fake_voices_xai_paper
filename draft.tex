@@ -256,8 +256,9 @@
 				\end{center}
 			\end{figure}
 			\subsubsection{Training and Evaluation}
-			The black-box model described in the previous section was trained on the first //TODO//
-			samples in the dataset. Evaluation was then performed on the remaining samples in the
+			The black-box model described in the previous section was trained on the first portion
+			of the dataset, differing depending on the exact experiment (more details are provided
+			in the next section). Evaluation was then performed on the remaining samples in the
 			dataset. Training batches consisted of 100 samples each with every window position for
 			each sample and an upper limit of 1,000,000 lines per batch. For each batch, two
 			epochs were performed. Because a single sample can have multiple input lines,
@@ -330,7 +331,21 @@
 			follows:
 			\[\frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}\]
 	\section{Results}
+	Using the methods described in the previous section, I performed experiments training and
+	testing the surrogate model, as well as generating many explanations for the purpose of
+	aggregate evaluation. This section will first discuss the results and performance of the
+	surrogate model, followed by an evaluation of the aggregated explanations.
 		\subsection{Black-Box Model Results}
+		A summary of some experiments based on the method described above is provided below. The
+		model that achieved the best results was trained and evaluated using the methods
+		previously described, has an evaluation accuracy of 96.3\% with the default threshold of
+		0.5. EER is approximately 0.03214. This outperforms other results tested in the original
+		paper on this dataset \cite{muller_does_2022}. This result also exceeds some other results
+		tested on this dataset \cite{yang_robust_2024}, produced using a variety of imperceptible
+		features and trained on the ASV2019 dataset, while underperforming one other method
+		\cite{ranjan_statnet_2022} that made use of raw waveform-based features, training on 70
+		percent of the data in the dataset, validating on 10 percent and testing on the remaining
+		20 percent.
 		\subsection{Explanation Results}
 	\section{Discussion}
 	\section{Conclusion}
