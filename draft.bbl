@@ -1177,6 +1177,74 @@
       \verb PDF:/home/jacob/Zotero/storage/BRLMG5C3/Sankaranarayanan et al. - The Presidential Deepfakes Dataset.pdf:application/pdf
       \endverb
     \endentry
+    \entry{sharevski_blind_2024}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=7807336a8936db050450dfabe54ecaa8}{%
+           family={Sharevski},
+           familyi={S\bibinitperiod},
+           given={Filipo},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c3799e8d144f9068a889fd68beca3e75}{%
+           family={Zeidieh},
+           familyi={Z\bibinitperiod},
+           given={Aziz},
+           giveni={A\bibinitperiod}}}%
+        {{hash=034dd73067b8ca06f4ebdf7888f8b8f8}{%
+           family={Loop},
+           familyi={L\bibinitperiod},
+           given={Jennifer\bibnamedelima Vander},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=4f9da2c4eb45aa8b4aa12062dca3305f}{%
+           family={Jachim},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Salt Lake City {UT} {USA}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{669b9d009d457ed7b9a0dfcc987f8fc9}
+      \strng{fullhash}{2470f128070f166333d0b0d1dd75d295}
+      \strng{bibnamehash}{669b9d009d457ed7b9a0dfcc987f8fc9}
+      \strng{authorbibnamehash}{669b9d009d457ed7b9a0dfcc987f8fc9}
+      \strng{authornamehash}{669b9d009d457ed7b9a0dfcc987f8fc9}
+      \strng{authorfullhash}{2470f128070f166333d0b0d1dd75d295}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Audio deepfakes are a form of deception where convincing speech sentences are synthesized through machine learning means to give an impression of a human speaker. Audio deepfakes emerge as an attractive vector for targeting users that rely on audio accessibility, such as individuals who are blind or low vision. The critical reliance on speech both as a medium and an affordance puts this population at an undue risk of being deceived as they rely solely on themselves to detect whether a piece of audio is a deepfake or not. To better understand the nature of this risk considering the nuanced reliance on assistive technologies such as screen readers, we conducted a user study with n=16 blind and low vision individuals from the {US}. Our participants achieved an overall discernment accuracy of 59\%, and clips identified as deep fakes were only actually deepfakes in 50.8\% of the cases (precision). The participants that self-identified as “low vision” performed slightly better (accuracy of 61\%, precision of 64\%) compared to the ones that self-identified as “blind” (accuracy of 55\%, precision of 56\%). Our qualitative results show that the participants in the “blind” group mostly considered a combination of infliction, imperfections in the voice, and the intensity in the speech delivery as discernment factors. The participants in the “low vision” group mostly used the speaker’s pitch, enunciation, emotion, and the fluency and articulation of the speaker as discernment cues. Overall, participants felt that audio deepfakes have the potential to deceive visually impaired individuals with political disinformation, impersonate their voice in authentication and smart homes, and specifically target them with voice phishing and enhanced scams.}
+      \field{booktitle}{Proceedings of the 2024 on {ACM} {SIGSAC} Conference on Computer and Communications Security}
+      \field{day}{2}
+      \field{eventtitle}{{CCS} '24: {ACM} {SIGSAC} Conference on Computer and Communications Security}
+      \field{isbn}{979-8-4007-0636-3}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{title}{Blind and Low-Vision Individuals' Detection of Audio Deepfakes}
+      \field{urlday}{17}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{4867\bibrangedash 4881}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1145/3658644.3690305
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/E88FGDM8/Sharevski et al. - 2024 - Blind and Low-Vision Individuals' Detection of Audio Deepfakes.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3658644.3690305
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3658644.3690305
+      \endverb
+    \endentry
     \entry{veerasamy_rising_2022}{article}{}
       \name{author}{2}{}{%
         {{hash=9e5ad9f8585ec9c2a2480e48f3d5acb0}{%
