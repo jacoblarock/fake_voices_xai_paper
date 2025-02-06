@@ -174,15 +174,7 @@
 	final classification for a video sample with audio. Testing against the presidential deepfake
 	dataset \cite{sankaranarayanan_presidential_nodate}, they achieve impressive results in
 	comparison to the standing benchmark on the dataset at the time.
-	\section{Experiments}
-		\subsection{Dataset}
-		The dataset used for these experiments is the "In-the-Wild" dataset, one which focuses on
-		the generalization of audio deepfake detection models by collecting real-world data, in
-		comparison to other examples that use more controlled laboratory conditions
-		\cite{muller_does_2022}. We have chosen it for these experiments because of the
-		aforementioned focus on generalization, its relative recency, compared to some others and
-		the fact that it has also been used previously by some other experiments, which provides a
-		useful perspective against which we can compare our method.
+	\section{Method}
 		\subsection{Black-Box Model}
 		The model used for this experiment was made, trained and evaluated using the tools
 		available in the TensorFlow and Keras libraries \cite{tensorflow2015-whitepaper}. This
@@ -378,11 +370,19 @@
 			basis, which we will further refer to as trust. The trust per feature can be defined as
 			follows:
 			\[\frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}\]
-	\section{Results}
+	\section{Experimental Results}
 	Using the methods described in the previous section, we performed experiments training and
 	testing the surrogate model, as well as generating many explanations for the purpose of
 	aggregate evaluation. This section will first discuss the results and performance of the
 	surrogate model, followed by an evaluation of the aggregated explanations.
+		\subsection{Dataset}
+		The dataset used for these experiments is the "In-the-Wild" dataset, one which focuses on
+		the generalization of audio deepfake detection models by collecting real-world data, in
+		comparison to other examples that use more controlled laboratory conditions
+		\cite{muller_does_2022}. We have chosen it for these experiments because of the
+		aforementioned focus on generalization, its relative recency, compared to some others and
+		the fact that it has also been used previously by some other experiments, which provides a
+		useful perspective against which we can compare our method.
 		\subsection{Black-Box Model Results}
 		\begin{table}[htbp]
 			\centering\tiny
