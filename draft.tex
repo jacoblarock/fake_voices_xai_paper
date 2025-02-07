@@ -15,13 +15,7 @@
 \def\Studiengang{Wirtschaftsinformatik}
 \def\Fakultaet{Fakultät III: Wirtschaftswissenschaften, Wirtschaftsinformatik und Wirtschaftsrecht}
  
-\def\Title{
-	Creating More Meaningful Explanations of Audio Deepfake Detection
-	\newline\newline
-	Explaining Audio Deepfake Detection with Perceptible Features and LIME
-	\newline\newline
-	Understandable Explanations of Synthetic Voice Detection with Perceptible Features and LIME
-}
+\def\Title{Explaining Audio Deepfake Detection with Perceptible Features and LIME}
 \def\Subtitle{}
  
 \def\student{Jaocb LaRock}
@@ -32,6 +26,10 @@
  
 \def\erstpruefer{Gunnar Stevens}
 \def\erstprueferMail{Gunnar.Stevens@uni-siegen.de}
+
+\makeatletter
+\newcommand\notsotiny{\@setfontsize\notsotiny\@vipt\@viipt}
+\makeatother
 
 \begin{document}
 	\begin{titlepage}
@@ -197,12 +195,11 @@
 	hidden layer, resulting in lackluster performance in 2022, with better results using an
 	expanded and improved feature set in 2023.
 	\par
-	Li et al. \cite{li_comparative_2022} also approach
-	perceptible features in their work, combining them with imperceptible (referred to as physical
-	in the work) features and using various neural networks in their experiments. Overall, the
-	combination of perceptible and imperceptible features was able to produce the best performance
-	results of the experiments, which were performed as well on the dataset of the ASV2022
-	Challenge \cite{yi_add_2024}.
+	Li et al. \cite{li_comparative_2022} also approach perceptible features in their work,
+	combining them with imperceptible (referred to as physical in the work) features and using
+	various neural networks in their experiments. Overall, the combination of perceptible and
+	imperceptible features was able to produce the best performance results of the experiments,
+	which were performed as well on the dataset of the ASV2022 Challenge \cite{yi_add_2024}.
 	\subsection{Explainable Models}
 	One previous example of an implementation of an explainable model for use in audio deepfake
 	detection came from Ge et al. \cite{ge_explaining_2024}, who explain feature influence on
@@ -409,11 +406,11 @@
 			The first metric we will define is the mean of the absolute values of the weights of
 			the explanations, summarized along the sample axis, delivering one value per feature.
 			We will further refer to this metric as importance, and it can be mathematically
-			defined as follows:
+			defined as follows for every \(f \in F\):
 			\[\frac{\sum_{s \in S} |w_{fs}|}{|S|}\]
 			The second metric we will define is the average aggregate correctness on a per-feature
-			basis, which we will further refer to as trust. The trust per feature can be defined as
-			follows:
+			basis, which we will further refer to as trust. The trust per feature \(f \in F\) can
+			be defined as follows:
 			\[\frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}\]
 	\section{Experimental Results}
 	Using the methods described in the previous section, we performed experiments training and
@@ -430,18 +427,18 @@
 		useful perspective against which we can compare our method.
 		\subsection{Black-Box Model Results}
 		\begin{table}[htbp]
-			\centering\tiny
+			\centering\notsotiny
 			\begin{tabular}{c | c | c | c | c | c}
 				Terminus & Features & Training & Accuracy & EER & AUC \\
 				\hline
-				Simple & standard & until 3474 & 95.02\% & 0.03702 & 0.90297 \\
-				3 hidden layers & standard & until 10000 & 96.27\% & 0.03214 & 0.81763 \\
-				Simple & standard & until 23833 2 epochs & 90.07\% & 0.90069 & 0.78889 \\
-				Simple & standard & until 10000 2 epochs & 94.43\% & 0.04408 & 0.89445 \\
-				Simple & standard & until 10000 & 94.28\% & 0.04840 & 0.90182 \\
-				3 convolutional layers & standard & until 10000 & 62.80\% & 0.37198 & 0.50051 \\
-				Simple & expand pitch\-flucs & until 10000 & 93.31\% & 0.05661 & 0.92727 \\
-				3 hidden layers & expand pitch\-flucs & until 10000 & 93.87\% & 0.05317 & 0.83263
+				Simple & standard & 3474 & 95.02\% & 0.03702 & 0.90297 \\
+				3 hidden layers & standard & 10000 & 96.27\% & 0.03214 & 0.81763 \\
+				Simple & standard & 23833 2 epochs & 90.07\% & 0.90069 & 0.78889 \\
+				Simple & standard & 10000 2 epochs & 94.43\% & 0.04408 & 0.89445 \\
+				Simple & standard & 10000 & 94.28\% & 0.04840 & 0.90182 \\
+				3 convolutional layers & standard & 10000 & 62.80\% & 0.37198 & 0.50051 \\
+				Simple & expand pitch\-flucs & 10000 & 93.31\% & 0.05661 & 0.92727 \\
+				3 hidden layers & expand pitch\-flucs & 10000 & 93.87\% & 0.05317 & 0.83263
 			\end{tabular}
 			\caption{Summary of the evaluation results of the experiments}
 			\label{table:eval-results}
@@ -449,7 +446,8 @@
 		\begin{figure}[htbp]
 			\centering
 			\includegraphics[width=0.7\textwidth]{images/roc_cterm.png}
-			\caption{ROC curve of the best-performing model, with 3 hidden layers in the terminus and that standard feature set.}
+			\caption{ROC curve of the best-performing model, with 3 hidden layers in the terminus
+			and that standard feature set.}
 			\label{fig:roc_cterm}
 		\end{figure}
 		\begin{figure}[htbp]
@@ -461,15 +459,26 @@
 		\begin{figure}[htbp]
 			\centering
 			\includegraphics[width=0.7\textwidth]{images/roc_mpf_cterm.png}
-			\caption{ROC curve of the model with expanded pitch fluctuation features and a terminus with three hidden layers.}
+			\caption{ROC curve of the model with expanded pitch fluctuation features and a
+			terminus with three hidden layers.}
 			\label{fig:roc_mpf_cterm}
 		\end{figure}
 		\sloppy
 		A summary of some experiments based on the method described above is provided in table
-		\ref{table:eval-results}. The model that achieved the best results was trained on the
-		first 10000 samples of the dataset and evaluated on the rest evaluated using the methods
-		previously described. It has an evaluation accuracy of 96.3\% with the default threshold of
-		0.5, with an EER of approximately 0.03214. This outperforms other results tested in the
+		\ref{table:eval-results}. The table covers the type of terminus model used, where a
+		"simple" terminus model does not include hidden layers, the set of features used, where
+		"standard" is the feature set as described above, with expanded pitch fluctuations being
+		the same feature set with the addition of pitch fluctuation features with different
+		comparison distances, the training batch size and the number of epochs per batch if there
+		were more than one, followed by several metrics for comparison. Figures
+		\ref{fig:roc_cterm}, \ref{fig:roc_mpf} and \ref{fig:roc_mpf_cterm} depict the ROC curve of
+		three of the models, which were selected for use in explanation generation in the
+		following section.
+		\par
+		The model that achieved the best results was trained on the first
+		10000 samples of the dataset and evaluated on the rest evaluated using the methods
+		previously described. It has an evaluation accuracy of 96.3\% with the default threshold
+		of 0.5, with an EER of approximately 0.03214. This outperforms other results tested in the
 		original paper on this dataset \cite{muller_does_2022}. This result also exceeds some
 		other results tested on this dataset, such as an example \cite{yang_robust_2024} produced
 		using a variety of imperceptible features and trained on the ASV2019 dataset, while
