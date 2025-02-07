@@ -53,6 +53,79 @@
       \verb PDF:/home/jacob/Zotero/storage/8VKR24HG/Albahar and Almalki - 2005 - DEEPFAKES THREATS AND COUNTERMEASURES SYSTEMATIC REVIEW.pdf:application/pdf
       \endverb
     \endentry
+    \entry{anagha_audio_2023}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=068314028a6b055395fc4be81734a928}{%
+           family={Anagha},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=25890cf63f979014cbb30787414d3087}{%
+           family={Arya},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4945a263c18154e16d542cd8df8041c7}{%
+           family={Narayan},
+           familyi={N\bibinitperiod},
+           given={V.\bibnamedelimi Hari},
+           giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=79493ac2c653c752ed126f00f9321265}{%
+           family={Abhishek},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e8e813210f20828030aadabfe419727d}{%
+           family={Anjali},
+           familyi={A\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Moradabad, India}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e7c05049f5d6e0fa1303350a1e1210d3}
+      \strng{fullhash}{2f2f578e491b77c4985510eafdf66336}
+      \strng{bibnamehash}{e7c05049f5d6e0fa1303350a1e1210d3}
+      \strng{authorbibnamehash}{e7c05049f5d6e0fa1303350a1e1210d3}
+      \strng{authornamehash}{e7c05049f5d6e0fa1303350a1e1210d3}
+      \strng{authorfullhash}{2f2f578e491b77c4985510eafdf66336}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The capacity to identify real audio recordings from their modified counterparts is essential in the age of sophisticated digital manipulation for maintaining security and trust in a vari- ety of applications, from media forensics to voice authentication systems. This research aims to create a deep learning model that can distinguish between authentic and altered audio files, with an emphasis on identifying audio deepfakes. The study uses Mel spectrogram representations and data augmentation techniques to effectively extract features from the {ASVspoof} 2019 dataset and train models. Convolutional neural networks ({CNNs}) comprising a number of layers, including convolutional, pooling, batch normalization, {ReLU} activation, dropout, global average pooling, and a dense classification layer are used as the foundation of the design. The Adam optimizer is used to optimize the model once it has been trained using binary cross-entropy loss, and a variety of metrics, such as accuracy, F1 score, {ROC} curve, and {AUC}, are used to track its performance. By making it easier to identify audio deepfakes, this project will ultimately increase the security and integrity of audio data in the digital world.}
+      \field{booktitle}{2023 12th International Conference on System Modeling \& Advancement in Research Trends ({SMART})}
+      \field{day}{22}
+      \field{eventtitle}{2023 12th International Conference on System Modeling \& Advancement in Research Trends ({SMART})}
+      \field{isbn}{9798350369861 9798350369885}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{title}{Audio Deepfake Detection Using Deep Learning}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{176\bibrangedash 181}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/SMART59791.2023.10428163
+      \endverb
+      \verb{file}
+      \verb Anagha et al. - 2023 - Audio Deepfake Detection Using Deep Learning.pdf:/home/jacob/Zotero/storage/V9CKUJXV/Anagha et al. - 2023 - Audio Deepfake Detection Using Deep Learning.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10428163/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10428163/
+      \endverb
+    \endentry
     \entry{barrington_single_2023}{misc}{}
       \name{author}{4}{}{%
         {{hash=68f52f5b350593deaf409c79c5b0a485}{%
@@ -352,6 +425,86 @@
       \verb http://arxiv.org/abs/2209.07180
       \endverb
       \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
+    \endentry
+    \entry{delgado_asvspoof_2018}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=d2e27df6f9b4a74274d968103b276375}{%
+           family={Delgado},
+           familyi={D\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d9746848fcce379f30da4fa8db258240}{%
+           family={Todisco},
+           familyi={T\bibinitperiod},
+           given={Massimiliano},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5312114af60e272aa8e7acde6e72a1a3}{%
+           family={Sahidullah},
+           familyi={S\bibinitperiod},
+           given={Md},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e4022cbee16cd294b79b020fa73f9b9c}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0adea8b988e4a3eac751bcf14a5edf11}{%
+           family={Kinnunen},
+           familyi={K\bibinitperiod},
+           given={Tomi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4b1c8475d6ba863aeabd315d2f10c9cf}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kong\bibnamedelima Aik},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=64bfb2b1761cc3077e7b25f2eaa562ee}{%
+           family={Yamagishi},
+           familyi={Y\bibinitperiod},
+           given={Junichi},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ISCA}%
+      }
+      \strng{namehash}{f21be5da98babb4344eb956c7a79da9c}
+      \strng{fullhash}{3bc381d47bc87aa276d067c65c21517d}
+      \strng{bibnamehash}{f21be5da98babb4344eb956c7a79da9c}
+      \strng{authorbibnamehash}{f21be5da98babb4344eb956c7a79da9c}
+      \strng{authornamehash}{f21be5da98babb4344eb956c7a79da9c}
+      \strng{authorfullhash}{3bc381d47bc87aa276d067c65c21517d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The now-acknowledged vulnerabilities of automatic speaker veriﬁcation ({ASV}) technology to spooﬁng attacks have spawned interests to develop so-called spooﬁng countermeasures. By providing common databases, protocols and metrics for their assessment, the {ASVspoof} initiative was born to spearhead research in this area. The ﬁrst competitive {ASVspoof} challenge held in 2015 focused on the assessment of countermeasures to protect {ASV} technology from voice conversion and speech synthesis spooﬁng attacks. The second challenge switched focus to the consideration of replay spooﬁng attacks and countermeasures. This paper describes Version 2.0 of the {ASVspoof} 2017 database which was released to correct data anomalies detected post-evaluation. The paper contains as-yet unpublished meta-data which describes recording and playback devices and acoustic environments. These support the analysis of replay detection performance and limits. Also described are new results for the ofﬁcial {ASVspoof} baseline system which is based upon a constant Q cesptral coefﬁcient frontend and a Gaussian mixture model backend. Reported are enhancements to the baseline system in the form of log-energy coefﬁcients and cepstral mean and variance normalisation in addition to an alternative i-vector backend. The best results correspond to a 48\% relative reduction in equal error rate when compared to the original baseline system.}
+      \field{booktitle}{The Speaker and Language Recognition Workshop (Odyssey 2018)}
+      \field{day}{26}
+      \field{eventtitle}{The Speaker and Language Recognition Workshop (Odyssey 2018)}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{shorttitle}{{ASVspoof} 2017 Version 2.0}
+      \field{title}{{ASVspoof} 2017 Version 2.0: meta-data analysis and baseline enhancements}
+      \field{urlday}{7}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{296\bibrangedash 303}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.21437/Odyssey.2018-42
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/4H6MBJSX/Delgado et al. - 2018 - ASVspoof 2017 Version 2.0 meta-data analysis and baseline enhancements.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.isca-archive.org/odyssey_2018/delgado18_odyssey.html
+      \endverb
+      \verb{url}
+      \verb https://www.isca-archive.org/odyssey_2018/delgado18_odyssey.html
+      \endverb
     \endentry
     \entry{ge_explaining_2024}{misc}{}
       \name{author}{4}{}{%
@@ -723,6 +876,80 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3552466.3556523
+      \endverb
+    \endentry
+    \entry{liu_hidden--wave_2023}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=4f1e33032cdd17c1c4c17fe05bd0772d}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6dea9609491d789a75132d56a92ab69c}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=78918804c554f72abbbb3fbfdaeffcd6}{%
+           family={Hai},
+           familyi={H\bibinitperiod},
+           given={Xuan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0f67b7ef68a13a20be3d48556c04168c}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Qingchen},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=cb57f8d8cf4517cccc1c0e44575cae54}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Qingguo},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Florence, Italy}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e58ef8f444141f003125d39d6d0449b7}
+      \strng{fullhash}{854c5f4a6ea8e5f05d1221ad9db0c597}
+      \strng{bibnamehash}{e58ef8f444141f003125d39d6d0449b7}
+      \strng{authorbibnamehash}{e58ef8f444141f003125d39d6d0449b7}
+      \strng{authornamehash}{e58ef8f444141f003125d39d6d0449b7}
+      \strng{authorfullhash}{854c5f4a6ea8e5f05d1221ad9db0c597}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Voice is an essential medium for human communication and collaboration, and its trustworthiness is of great importance to humans. Synthesizing fake voices and detecting synthesized voices are two sides of a coin. Both sides have made great strides with the recently prospering deep learning techniques. Attackers started using {AI} techniques to synthesize, even clone, human voices. Researchers also proposed a series of {AIsynthesized} voice detection approaches and achieved promising results in laboratory environments.}
+      \field{booktitle}{2023 {IEEE} 34th International Symposium on Software Reliability Engineering ({ISSRE})}
+      \field{day}{9}
+      \field{eventtitle}{2023 {IEEE} 34th International Symposium on Software Reliability Engineering ({ISSRE})}
+      \field{isbn}{9798350315943}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{shorttitle}{Hidden-in-Wave}
+      \field{title}{Hidden-in-Wave: A Novel Idea to Camouflage {AI}-Synthesized Voices Based on Speaker-Irrelative Features}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{786\bibrangedash 794}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/ISSRE59848.2023.00029
+      \endverb
+      \verb{file}
+      \verb Liu et al. - 2023 - Hidden-in-Wave A Novel Idea to Camouflage AI-Synt.pdf:/home/jacob/Zotero/storage/URMFNINV/Liu et al. - 2023 - Hidden-in-Wave A Novel Idea to Camouflage AI-Synt.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10301243/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10301243/
       \endverb
     \endentry
     \entry{tensorflow2015-whitepaper}{misc}{}
@@ -1633,6 +1860,94 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3552466.3556526
+      \endverb
+    \endentry
+    \entry{yan_initial_2022}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=361b9840ac6987598c0099a7a4497198}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xinrui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=bf27030cff5f1171bae3a61f1d7436e8}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={Jiangyan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c2d300d040a5480ff7359c84ff1b1eeb}{%
+           family={Tao},
+           familyi={T\bibinitperiod},
+           given={Jianhua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=26b90c8cb6735654ece324f21187cd2e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chenglong},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1acf66a228af2a8ad66ae15a96c4777b}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Haoxin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ad1506e9f10da2cad4389eac16751647}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=57008eb0fe8160dddbf1414ee8290504}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shiming},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3328c8f5dd31f97a9c64c8d0d270cf16}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Ruibo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Lisboa Portugal}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{cce4deddbfcb73083877e358355df5aa}
+      \strng{fullhash}{def0d32ac8bde944cb0f531d2cea0731}
+      \strng{bibnamehash}{cce4deddbfcb73083877e358355df5aa}
+      \strng{authorbibnamehash}{cce4deddbfcb73083877e358355df5aa}
+      \strng{authornamehash}{cce4deddbfcb73083877e358355df5aa}
+      \strng{authorfullhash}{def0d32ac8bde944cb0f531d2cea0731}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many effective attempts have been made for fake audio detection. However, they can only provide detection results but no countermeasures to curb this harm. For many related practical applications, what model or algorithm generated the fake audio also is needed. Therefore, We propose a new problem for detecting vocoder fingerprints of fake audio. Experiments are conducted on the datasets synthesized by eight state-of-the-art vocoders. We have preliminarily explored the features and model architectures. The t-{SNE} visualization shows that different vocoders generate distinct vocoder fingerprints.}
+      \field{booktitle}{Proceedings of the 1st International Workshop on Deepfake Detection for Audio Multimedia}
+      \field{day}{14}
+      \field{eventtitle}{{MM} '22: The 30th {ACM} International Conference on Multimedia}
+      \field{isbn}{978-1-4503-9496-3}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{An Initial Investigation for Detecting Vocoder Fingerprints of Fake Audio}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{61\bibrangedash 68}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3552466.3556525
+      \endverb
+      \verb{file}
+      \verb Yan et al. - 2022 - An Initial Investigation for Detecting Vocoder Fin.pdf:/home/jacob/Zotero/storage/7369Q38A/Yan et al. - 2022 - An Initial Investigation for Detecting Vocoder Fin.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3552466.3556525
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3552466.3556525
       \endverb
     \endentry
     \entry{yang_robust_2024}{inproceedings}{}

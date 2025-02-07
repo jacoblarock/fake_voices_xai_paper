@@ -114,32 +114,77 @@
 	recordings that appear to be genuine statements made by public figures or to create
 	genuine-seeming recordings of events that never happened, which could have significant
 	consequences if used to spread misinformation, from defaming individuals to creating political
-	tension \cite{veerasamy_rising_2022,albahar_deepfakes_2005}. The field of Explainable AI (XAI)
-	shows promise for producing useful and interpretable results from such models. Explainable AI
-	refers to the ability of artificial intelligence systems, such as machine learning models and
-	neural networks, to provide understandable and interpretable explanations for their decisions
-	or predictions \cite{hind_explaining_2019}. This means that XAI systems can articulate why
-	they made a particular decision, what factors influenced it and how confident they are in
-	their conclusion \cite{hind_explaining_2019}. For the detection of audio deepfakes, this could
-	mean that the model can justify its classification with feature-based evidence, allowing for
-	verification of the result by the end user. Much of the existing research, further discussed
-	in the next section, follows the path of producing a model with the best possible benchmarks
-	against datasets of samples, without taking into account if the results can be usefully
-	interpreted, while existing explorations into making audio deepfake detection explainable have
-	produced results that often require a lot of background knowledge to meaningfully interpret.
-	Aside from this, explainability in the area of audio deepfake detection remains an open
-	challenge \cite{cuccovillo_open_2022}, one even promoted by regulatory bodies such as the
-	European Union with the "right to explain" \cite{goodman_european_2017}. With the context of
-	the research discussed in the next section, we would like to use new combinations of features,
-	most of which are perceptible, with a novel model architecture to generate explanations for
-	fake or real audio classification, with the goal of singling out features that are useful not
-	only for an accurate classification but also for an explanation that can be understood by the
-	average person, explained using features that can be heard by the human ear.
+	tension \cite{veerasamy_rising_2022,albahar_deepfakes_2005}.
+	\par
+	The field of Explainable AI (XAI) shows promise for producing useful and interpretable results
+	from such models. Explainable AI refers to the ability of artificial intelligence systems,
+	such as machine learning models and neural networks, to provide understandable and
+	interpretable explanations for their decisions or predictions \cite{hind_explaining_2019}.
+	This means that XAI systems can articulate why they made a particular decision, what factors
+	influenced it and how confident they are in their conclusion \cite{hind_explaining_2019}. For
+	the detection of audio deepfakes, this could mean that the model can justify its
+	classification with feature-based evidence, allowing for verification of the result by the end
+	user. Much of the existing research, further discussed in the next section, follows the path
+	of producing a model with the best possible benchmarks against datasets of samples, without
+	taking into account if the results can be usefully interpreted, while existing explorations
+	into making audio deepfake detection explainable have produced results that often require a
+	lot of background knowledge to meaningfully interpret. Aside from this, explainability in the
+	area of audio deepfake detection remains an open challenge \cite{cuccovillo_open_2022}, one
+	even promoted by regulatory bodies such as the European Union with the "right to explain"
+	\cite{goodman_european_2017}.
+	\par
+	In this work, we will make a distinction of two main categories of input features for a
+	synthetic voice detection model: perceptible and imperceptible features. Perceptible features
+	are features that can be perceived by the human ear, often vocal qualities such as jitter,
+	shimmer or pitch fluctuation that have a wide range of uses even outside of audio
+	classification such as diagnosis of disease \cite{chaiwongyen_deepfake-speech_2023}, while
+	imperceptible features are typically out of the range of human hearing, and may not be
+	directly reflect a vocal quality, otherwise referred to as "speaker-independent" features
+	\cite{liu_hidden--wave_2023}. We use a new combination of features for our method, with an
+	emphasis being placed on perceptible features, as we believe these to be the most likely to be
+	understood by the layperson.
+	\par
+	We then combine these features together using a novel model architecture, with separate
+	sub-models for each input feature that are combined and processed in a final model, referred
+	to as the terminus model, allowing us to process different kinds of features separately and
+	avoid unnecessary, costly preprocessing.
+	\par
+	Explanations are generated using the LIME method \cite{ribeiro_why_2016}, which allows us to,
+	for an individual classification assess the impact of each input feature on the final result.
+	In order to assess how useful the average local explanation is to a potential end user, and
+	due to a lack of such assessments in previous research, we also introduce two metrics for
+	aggregate evaluation of large number of generated LIME explanations, which we use to make a
+	conclusion about the value of the selected feature set for the purpose of sensible
+	explanations.
 	\section{Related Work}
 	Several researchers have already followed similar or relevant directions to that of this work.
-	This section will summarize some efforts in previous research categorized by the use of
-	perceptible features or attempts to create explainable models.
-	\subsection{Perceptible Features}
+	This section will summarize some efforts in previous research divided into categories of
+	perceptible and imperceptible features, as well as previous efforts at explainability in this
+	field.
+	\subsection{Synthetic Voice Detection With Imperceptible Features}
+	The most common approach in this field makes use of either learned or hand-crafted
+	imperceptible features. Examples include spectrographic features such as the mel-spectrogram
+	and its hand-crafted derivative the mel-frequency cepstral coefficients (MFCCs), both of which
+	are present in our method due to their widespread successful use.
+	\par
+	The work of Anagha et al. \cite{anagha_audio_2023} is an example that makes use of
+	mel-spectrograms in combination with convolutional neural networks, achieving well-performing
+	results on the ASVSpoof2019 dataset \cite{wang_asvspoof_2020}.
+	\par
+	\sloppy
+	A further work \cite{yan_initial_2022} makes use of MFCCs, in combination with other
+	hand-crafted imperceptible features such as linear frequency cepstral coefficients (LFCCs) to
+	not only classify audio samples as synthetic or authentic, but also to correctly classify the
+	vocoder used to produce the sample with nearly perfect accuracy on a handcrafted dataset.
+	\par
+	Other researchers, such as in the work of Qais et al. \cite{qais_deepfake_2022} make use of
+	Fourier transforms, such as the short term Fourier transform (STFT) to achieve accurate
+	reuslts on the ASVSpoof2017 dataset \cite{delgado_asvspoof_2018}.
+	\subsection{Synthetic Voice Detection With Perceptible Features}
+	There is also a smaller but still notable body of work encompassing the use of perceptible
+	features for the detection of synthetic voices, making use of a variety of features, some of
+	which were selected for use in our experiments.
+	\par
 	The work of Barrington et al. \cite{barrington_single_2023} explores the idea of classification
 	using perceptible features, highlighting their potential for improving explainability in the
 	space of deepfake audio detection. They do, however also demonstrate a drop in performance in
