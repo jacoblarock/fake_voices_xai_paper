@@ -328,7 +328,7 @@
 			functions depending on feature type. This kind of architecture also provides an
 			advantage to the generation of explanations, as only the terminus part of the entire
 			must be explained to interpret the importance of each input feature. Further
-			explanation is in the following section. Figure \ref{fig:model_plot} depicts the
+			clarification is in the following section. Figure \ref{fig:model_plot} depicts the
 			general structure of the model, with the submodel components being connected to the
 			terminus model for final processing. Figures \ref{fig:mel_model_plot} and
 			\ref{fig:term_model_plot} offer a further look into the architecture, being an example
@@ -360,16 +360,17 @@
 			\end{figure}
 			\subsubsection{Training and Evaluation}
 			The black-box model described in the previous section was trained on the first portion
-			of the dataset, differing depending on the exact experiment (more details are provided
-			in the next section). Evaluation was then performed on the remaining samples in the
-			dataset. Training batches consisted of 100 samples each with every window position for
-			each sample and an upper limit of 1,000,000 lines per batch. For each batch, either
-			one or two epochs were performed. Because a single sample can have multiple input
-			lines, evaluation cannot be performed on a per-line basis, but must instead be
-			summarized. Two methods are possible: median and mean, with the difference in results
-			being negligible in our experiments. The default threshold is 0.5, meaning that a
-			result under 0.5 is a negative result and over 0.5 is a positive result. This
-			threshold can however be adjusted, useful for computing certain metrics.
+			of the dataset, with the exact size of the training set differing depending on the
+			exact experiment (more details are provided in the next section). Evaluation was then
+			performed on the remaining samples in the dataset. Training batches consisted of 100
+			samples each with every window position for each sample and an upper limit of
+			1,000,000 lines per batch. For each batch, either one or two epochs were performed.
+			Because a single sample can have multiple input lines, evaluation cannot be performed
+			on a per-line basis, but must instead be summarized. Two methods are possible: median
+			and mean, with the difference in results being negligible in our experiments. The
+			default threshold is 0.5, meaning that a result under 0.5 is a negative result and
+			over 0.5 is a positive result. This threshold can however be adjusted, useful for
+			computing certain metrics.
 		\subsection{Explanations}
 		The explanations using the previously described surrogate model are generated with the
 		Local Interpretable Model-agnostic Explanation (LIME) method \cite{ribeiro_why_2016}. This
