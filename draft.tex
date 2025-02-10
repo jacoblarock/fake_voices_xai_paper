@@ -236,7 +236,7 @@
 			of synthetic while others are more specific and are cited accordingly. The features
 			that are not summarized for a whole sample are extracted using a sliding window method,
 			preventing a loss of fidelity that can be caused by compression of the feature to a
-			standard size. A more detailed description of the individual features used follows:
+			standard size. The features we considered perceptible are as follows:
 			\begin{itemize}
 				\item
 					\sloppy
@@ -253,15 +253,6 @@
 					residual energy in a given fundamental frequency cycle, the HNR at that cycle
 					is calculated as follows:
 					\[ 20log\frac{\gamma_{i}}{\iota_{i}} \]
-				\item
-					Mel-spectrograms: A widely-used imperceptible feature in synthetic audio
-					detection, the mel-spectrogram is a spectrographic representation of an audio
-					sample transformed in a manner to better represent human perception of
-					frequencies \cite{qais_deepfake_2022}.
-				\item
-					Mel-frequency cepstral coefficients: The derivative cepstral coefficients of
-					the mel-spectrogram also considered imperceptible, also widely-seen in
-					research on synthetic audio detection.
 				\item
 					Fundamental frequency lengths: Considered a perceptible feature, the
 					fundamental frequency lengths (f0 lengths) are the lengths of every
@@ -316,6 +307,18 @@
 					\[ \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|A_{i}
 						(\frac{1}{x}\sum_{n=i-m}^{i+m}A_{n})|}
 					{\frac{1}{N}\sum_{i=1}^{N}A_{i}} \]
+			\end{itemize}
+			The features we consider imperceptible are described as follow:
+			\begin{itemize}
+				\item
+					Mel-spectrograms: A widely-used imperceptible feature in synthetic audio
+					detection, the mel-spectrogram is a spectrographic representation of an audio
+					sample transformed in a manner to better represent human perception of
+					frequencies \cite{qais_deepfake_2022}.
+				\item
+					Mel-frequency cepstral coefficients: The derivative cepstral coefficients of
+					the mel-spectrogram also considered imperceptible, also widely-seen in
+					research on synthetic audio detection.
 			\end{itemize}
 			\subsubsection{Model Architecture}
 			The general architecture is designed to allow the combination of diverse features into
