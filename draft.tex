@@ -131,30 +131,66 @@
 	even promoted by regulatory bodies such as the European Union with the "right to explain"
 	\cite{goodman_european_2017}.
 	\par
-	In this work, we will make a distinction of two main categories of input features for a
-	synthetic voice detection model: perceptible and imperceptible features. Perceptible features
-	are features that can be perceived by the human ear, often vocal qualities such as jitter,
-	shimmer or pitch fluctuation that have a wide range of uses even outside of audio
-	classification such as diagnosis of disease \cite{chaiwongyen_deepfake-speech_2023}, while
-	imperceptible features are typically out of the range of human hearing, and may not be
-	directly reflect a vocal quality, otherwise referred to as "speaker-independent" features
-	\cite{liu_hidden--wave_2023}. We use a new combination of features for our method, with an
-	emphasis being placed on perceptible features, as we believe these to be the most likely to be
-	understood by the layperson.
+	In this work, we make a distinction of two main categories of input features for a synthetic
+	voice detection model: perceptible and imperceptible features. Perceptible features are
+	features that can be perceived by the human ear, often vocal qualities such as jitter, shimmer
+	or pitch fluctuation that have a wide range of uses even outside of audio classification such
+	as diagnosis of disease \cite{chaiwongyen_deepfake-speech_2023}, while imperceptible features
+	are typically out of the range of human hearing, and may not be directly reflect a vocal
+	quality, otherwise referred to as "speaker-independent" features \cite{liu_hidden--wave_2023}.
+	We use a new combination of features for our method, with an emphasis being placed on
+	perceptible features, as we believe these to be the most likely to be understood by the
+	layperson.
 	\par
-	We then combine these features together using a novel model architecture, with separate
-	sub-models for each input feature that are combined and processed in a final model, referred
-	to as the terminus model, allowing us to process different kinds of features separately and
-	avoid unnecessary, costly preprocessing.
+	We introduce a hybrid deep-learning model, with the purpose of combining these
+	multidimensional features into a single output. The hybrid model consists firstly of a
+	component sub-model for each of the input features, in order to address the problem of varying
+	dimensionality of the extracted features without the drawbacks of costly transformations in
+	the pre-processing phase. The final part of our hybrid model is what we will refer to as the
+	terminus model, a model that uses the concatenated outputs of the individual sub-models as
+	inputs and distills down to a singular output with a classic multi-layer perceptron
+	architecture, allowing for an effective combination of the features into a final singular
+	classification result.
 	\par
-	Explanations are generated using the LIME method \cite{ribeiro_why_2016}, which allows us to,
-	for an individual classification assess the impact of each input feature on the final result.
-	In order to assess how useful the average local explanation is to a potential end user, and
-	due to a lack of such assessments in previous research, we also introduce two metrics for
-	aggregate evaluation of large number of generated LIME explanations, which we use to make a
-	conclusion about the value of the selected feature set for the purpose of sensible
+	In order to introduce explainability into our method, we generate explanations using a method
+	that first generated the intermediate output data from the sub-models and then applies the
+	Local Interpretable Model-agnostic Explanations (LIME) \cite{ribeiro_why_2016} on the terminus
+	model, which allows us to, for an individual classification, assess the impact of each input
+	feature on the final result through the local explanation, as, due the independence of the
+	sub-models from one another, the importance of their outputs directly correlates with the
+	importance of their inputs when it comes to the end-classification made by the terminus model.
+	\par
+	We then stood before the problem of assessing our explanations, more specifically, assessing
+	the impact of the input features on the average local explanation, in order to make a
+	conclusion about the usefulness or promise of our chosen features for providing understandable
+	explanations of our model's classifications. In order to tackle the problem with our local
+	explanations, and due to a lack of metrics to assess the aggregated average value of local
+	explanations, we also introduce two metrics for such an aggregate evaluation of large number
+	of generated LIME explanations, importance and trust, on a per-feature basis, which we use to
+	make a conclusion about the value of the selected feature set for the purpose of sensible
 	explanations.
+	\par
+	The contributions of this work are in summary: Our hybrid model-architecture and modified
+	LIME-based method for generating explanations of classifications of audio voice samples as
+	synthetic or bona-fide and the two metrics that we introduce in order to assess the impact of
+	individual features over numerous local explanations.
+	\par
+	This paper is divided into the following sections:
+	\begin{itemize}
+		\item §\ref{sec:related} Related Work, where we discuss the most relevant related
+			research in the field, in order to create a picture of the current state-of-the-art
+		\item §\ref{sec:method} Method, where we describe the general model implementation, as
+			well as the implementation of our LIME-based method for generating explanations in
+			more detail.
+		\item §\ref{sec:experimental_results} Experimental Results, where we discuss how we performed our
+			experiments, how our hybrid model performs, as well as use our proposed metrics in
+			order to assess the feature impact in the average explanation.
+		\item §\ref{sec:discussion} Discussion, where we discuss the implication of the results of
+			our experiments, including the potential of the explanations as well as the
+			shortcomings and limitations of our method.
+	\end{itemize}
 	\section{Related Work}
+	\label{sec:related}
 	Several researchers have already followed similar or relevant directions to that of this work.
 	This section will summarize some efforts in previous research divided into categories of
 	perceptible and imperceptible features, as well as previous efforts at explainability in this
@@ -217,6 +253,7 @@
 	dataset \cite{sankaranarayanan_presidential_nodate}, they achieve impressive results in
 	comparison to the standing benchmark on the dataset at the time.
 	\section{Method}
+	\label{sec:method}
 		\subsection{Black-Box Model}
 		The model used for this experiment was made, trained and evaluated using the tools
 		available in the TensorFlow and Keras libraries \cite{tensorflow2015-whitepaper}. This
@@ -438,6 +475,7 @@
 			be defined as follows:
 			\[\frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}\]
 	\section{Experimental Results}
+	\label{sec:experimental_results}
 	Using the methods described in the previous section, we performed experiments training and
 	testing the surrogate model, as well as generating many explanations for the purpose of
 	aggregate evaluation. This section will first discuss the results and performance of the
@@ -621,6 +659,7 @@
 		pitch fluctuations having no influence on the outcome whatsoever. Unlike the previous
 		examples, the trust value of the intensities feature was negative here.
 	\section{Discussion}
+	\label{sec:discussion}
 	In this section, we will discuss the implications of the experimental results of the previous
 	sections with a special focus being placed on the results of the explanation tests as it
 	relates to the potential explainability for potential end users of such a system.
