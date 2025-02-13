@@ -474,11 +474,11 @@
 			the explanations, summarized along the sample axis, delivering one value per feature.
 			We will further refer to this metric as importance, and it can be mathematically
 			defined as follows for every \(f \in F\):
-			\[\frac{\sum_{s \in S} |w_{fs}|}{|S|}\]
+			\[I(f) = \frac{\sum_{s \in S} |w_{fs}|}{|S|}.\]
 			The second metric we will define is the average aggregate correctness on a per-feature
 			basis, which we will further refer to as trust. The trust per feature \(f \in F\) can
 			be defined as follows:
-			\[\frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}\]
+			\[T(f) = \frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}.\]
 	\section{Experimental Results}
 	\label{sec:experimental_results}
 	Using the methods described in the previous section, we performed experiments training and
