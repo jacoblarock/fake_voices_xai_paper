@@ -348,18 +348,16 @@
 					fundamental frequency cycles in the sample and \(m\) is once again 
 					\(\lfloor \frac{x}{2} \rfloor\)
 			\end{itemize}
-			The features we consider imperceptible are described as follows:
-			\begin{itemize}
-				\item
-					Mel-spectrograms: A widely-used imperceptible feature in synthetic audio
-					detection, the mel-spectrogram is a spectrographic representation of an audio
-					sample transformed in a manner to better represent human perception of
-					frequencies \cite{qais_deepfake_2022}.
-				\item
-					Mel-frequency cepstral coefficients: The derivative cepstral coefficients of
-					the mel-spectrogram also considered imperceptible, also widely-seen in
-					research on synthetic audio detection.
-			\end{itemize}
+			We also chose to include two perceptible features in our hybrid model, due to the
+			performance-enhancing impact that perceptible features can have
+			\cite{chaiwongyen_deepfake-speech_2023} when paired with perceptible features. These
+			features are the mel-spectrogram and their derivative mel-frequency cepstral
+			coefficients. We choose these features because they are well established in the
+			research and have demonstrated consistent good performance in other examples,
+			\cite{qais_deepfake_2022,anagha_audio_2023,fathan_mel-spectrogram_2022,
+			altalahin_unmasking_2023,hamza_deepfake_2022,yan_initial_2022}. They allow for a
+			spectrographic representation and analysis of an audio sample transformed in a way to
+			better represent human perception of frequencies \cite{qais_deepfake_2022}.
 			\subsubsection{Model Architecture}
 			The general architecture is designed to allow the combination of diverse features into
 			one final prediction, regardless of whether the individual features have the same

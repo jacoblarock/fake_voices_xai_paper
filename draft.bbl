@@ -53,6 +53,75 @@
       \verb PDF:/home/jacob/Zotero/storage/8VKR24HG/Albahar and Almalki - 2005 - DEEPFAKES THREATS AND COUNTERMEASURES SYSTEMATIC REVIEW.pdf:application/pdf
       \endverb
     \endentry
+    \entry{altalahin_unmasking_2023}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=b8679b6777d48993d0f25b8e939c5739}{%
+           family={Altalahin},
+           familyi={A\bibinitperiod},
+           given={Islam},
+           giveni={I\bibinitperiod}}}%
+        {{hash=5a14a9412165d6c6cc59c1dd6d430971}{%
+           family={{AlZu}'bi},
+           familyi={A\bibinitperiod},
+           given={Shadi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6cba51fd47be16da6f1c069c352a366e}{%
+           family={Alqudah},
+           familyi={A\bibinitperiod},
+           given={Assal},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bab0c2b5126e3453473daad18d4c9616}{%
+           family={Mughaid},
+           familyi={M\bibinitperiod},
+           given={Ala},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amman, Jordan}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ad5534890aa39f1945a734570c4e8e40}
+      \strng{fullhash}{114c1a97f9a2593add8a4363a04693a0}
+      \strng{bibnamehash}{ad5534890aa39f1945a734570c4e8e40}
+      \strng{authorbibnamehash}{ad5534890aa39f1945a734570c4e8e40}
+      \strng{authornamehash}{ad5534890aa39f1945a734570c4e8e40}
+      \strng{authorfullhash}{114c1a97f9a2593add8a4363a04693a0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Deepfake content is artificially created or altered using artificial intelligence ({AI}) methods to appear real. Synthesis can include audio, video, images, and text. Deepfakes may now produce content that looks normal, making it more difficult to identify. Significant progress has been made in identifying video deep fakes in recent years; However, most of the investigations into voice deep fake detection have used the {ASVSpoof}-2019 dataset and several machine learning and deep learning algorithms. This research uses machine-based and deep-learning approaches to identify fake audio. Melted frequency cepstral coefficients ({MFCCs}) are used to extract the most useful information from the sound. We choose the 2019 {ASVSpoof} dataset, which is the latest reference dataset. Experimental results show that Convolutional Neural Networks ({CNN}): ({CNN}-{LSTM}) outperformed other machine learning ({ML}) models in terms of accuracy, achieving an accuracy of up to 88\%.}
+      \field{booktitle}{2023 International Conference on Information Technology ({ICIT})}
+      \field{day}{9}
+      \field{eventtitle}{2023 International Conference on Information Technology ({ICIT})}
+      \field{isbn}{9798350320060}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{shorttitle}{Unmasking the Truth}
+      \field{title}{Unmasking the Truth: A Deep Learning Approach to Detecting Deepfake Audio Through {MFCC} Features}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{511\bibrangedash 518}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ICIT58056.2023.10226172
+      \endverb
+      \verb{file}
+      \verb Altalahin et al. - 2023 - Unmasking the Truth A Deep Learning Approach to D.pdf:/home/jacob/Zotero/storage/BVLU8YEH/Altalahin et al. - 2023 - Unmasking the Truth A Deep Learning Approach to D.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10226172/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10226172/
+      \endverb
+    \endentry
     \entry{anagha_audio_2023}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=068314028a6b055395fc4be81734a928}{%
@@ -506,6 +575,69 @@
       \verb https://www.isca-archive.org/odyssey_2018/delgado18_odyssey.html
       \endverb
     \endentry
+    \entry{fathan_mel-spectrogram_2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=ea5ff8321398bd60353f49213cacd734}{%
+           family={Fathan},
+           familyi={F\bibinitperiod},
+           given={Abderrahim},
+           giveni={A\bibinitperiod}}}%
+        {{hash=53ca2982f084814758211124ef68c6b1}{%
+           family={Alam},
+           familyi={A\bibinitperiod},
+           given={Jahangir},
+           giveni={J\bibinitperiod}}}%
+        {{hash=83ab87dd7c38cd311b9896b63514e751}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Woo\bibnamedelima Hyun},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Taipei, Taiwan}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8eb828d738eb71c2287bdcb60bd65637}
+      \strng{fullhash}{8eb828d738eb71c2287bdcb60bd65637}
+      \strng{bibnamehash}{8eb828d738eb71c2287bdcb60bd65637}
+      \strng{authorbibnamehash}{8eb828d738eb71c2287bdcb60bd65637}
+      \strng{authornamehash}{8eb828d738eb71c2287bdcb60bd65637}
+      \strng{authorfullhash}{8eb828d738eb71c2287bdcb60bd65637}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work focuses on the problem of detecting fake audio clips. To improve current audio spoofing detection models, we propose a selection of multiple audio augmentations specially designed to resemble audio spoofing attacks. These augmentations are experimentally found to be very useful and using them achieves a notable performance of 2.8\% {EER} on the {ASVspoof} 2019 challenge evaluation set. Unlike the widely employed acoustic features, in this paper we explore the use of Mel-spectrogram image features and employ various audio codecs to achieve robustness to codec and transmission channel variability present in the {ASVspoof}2021 Evaluation set. To better handle spectral information, crucial to detect spoofing, we adopt the {WaveletCNN} and {VGG}16 architectures which outperform all baselines. Finally, we find that robustness of countermeasure systems degrades dramatically when provided with speech samples degraded through {VoIP} network transmission or mismatching audio compression.}
+      \field{booktitle}{2022 {IEEE} International Conference on Multimedia and Expo ({ICME})}
+      \field{day}{18}
+      \field{eventtitle}{2022 {IEEE} International Conference on Multimedia and Expo ({ICME})}
+      \field{isbn}{978-1-66548-563-0}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{title}{Mel-Spectrogram Image-Based End-to-End Audio Deepfake Detection Under Channel-Mismatched Conditions}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICME52920.2022.9859621
+      \endverb
+      \verb{file}
+      \verb Fathan et al. - 2022 - Mel-Spectrogram Image-Based End-to-End Audio Deepf.pdf:/home/jacob/Zotero/storage/MMZHDTXI/Fathan et al. - 2022 - Mel-Spectrogram Image-Based End-to-End Audio Deepf.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9859621/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9859621/
+      \endverb
+    \endentry
     \entry{ge_explaining_2024}{misc}{}
       \name{author}{4}{}{%
         {{hash=1cf77b92b64c78769a179d2e97d20979}{%
@@ -629,6 +761,82 @@
       \verb http://arxiv.org/abs/1606.08813
       \endverb
       \keyw{Computer Science - Machine Learning,Computer Science - Computers and Society,Statistics - Machine Learning}
+    \endentry
+    \entry{hamza_deepfake_2022}{article}{}
+      \name{author}{7}{}{%
+        {{hash=f3e39c8adac6e0eb3af0ce278629ce21}{%
+           family={Hamza},
+           familyi={H\bibinitperiod},
+           given={Ameer},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e4cefaef95551dd6b1168a85ee9e74ff}{%
+           family={Javed},
+           familyi={J\bibinitperiod},
+           given={Abdul\bibnamedelimb Rehman\bibnamedelima Rehman},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=d02b735fb63479bb1cbe11d8ea4b4a32}{%
+           family={Iqbal},
+           familyi={I\bibinitperiod},
+           given={Farkhund},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6d5e725a8cc690095f3a4353a01d343a}{%
+           family={Kryvinska},
+           familyi={K\bibinitperiod},
+           given={Natalia},
+           giveni={N\bibinitperiod}}}%
+        {{hash=53b31dbb8db798a49b81a6f4c8cb34fc}{%
+           family={Almadhor},
+           familyi={A\bibinitperiod},
+           given={Ahmad\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3aa681d7d23683e74f096b2d62849db6}{%
+           family={Jalil},
+           familyi={J\bibinitperiod},
+           given={Zunera},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0aedbe19827c967e287045e760b4e96f}{%
+           family={Borghol},
+           familyi={B\bibinitperiod},
+           given={Rouba},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{23b81b261b0b56b8d74d05edc6089d3b}
+      \strng{fullhash}{8aef046de0bb76be35d7f884cac9b146}
+      \strng{bibnamehash}{23b81b261b0b56b8d74d05edc6089d3b}
+      \strng{authorbibnamehash}{23b81b261b0b56b8d74d05edc6089d3b}
+      \strng{authornamehash}{23b81b261b0b56b8d74d05edc6089d3b}
+      \strng{authorfullhash}{8aef046de0bb76be35d7f884cac9b146}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deepfake content is created or altered synthetically using artiﬁcial intelligence ({AI}) approaches to appear real. It can include synthesizing audio, video, images, and text. Deepfakes may now produce natural-looking content, making them harder to identify. Much progress has been achieved in identifying video deepfakes in recent years; nevertheless, most investigations in detecting audio deepfakes have employed the {ASVSpoof} or {AVSpoof} dataset and various machine learning, deep learning, and deep learning algorithms. This research uses machine and deep learning-based approaches to identify deepfake audio. Mel-frequency cepstral coefﬁcients ({MFCCs}) technique is used to acquire the most useful information from the audio. We choose the Fake-or-Real dataset, which is the most recent benchmark dataset. The dataset was created with a text-to-speech model and is divided into four sub-datasets: for-rece, for-2-sec, fornorm and for-original. These datasets are classiﬁed into sub-datasets mentioned above according to audio length and bit rate. The experimental results show that the support vector machine ({SVM}) outperformed the other machine learning ({ML}) models in terms of accuracy on for-rece and for-2-sec datasets, while the gradient boosting model performed very well using for-norm dataset. The {VGG}-16 model produced highly encouraging results when applied to the for-original dataset. The {VGG}-16 model outperforms other state-of-the-art approaches.}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{{IEEE} Access}
+      \field{langid}{english}
+      \field{shortjournal}{{IEEE} Access}
+      \field{title}{Deepfake Audio Detection via {MFCC} Features Using Machine Learning}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{134018\bibrangedash 134028}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2022.3231480
+      \endverb
+      \verb{file}
+      \verb Hamza et al. - 2022 - Deepfake Audio Detection via MFCC Features Using M.pdf:/home/jacob/Zotero/storage/CEPJ2H3T/Hamza et al. - 2022 - Deepfake Audio Detection via MFCC Features Using M.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9996362/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9996362/
+      \endverb
     \endentry
     \entry{haq_multimodal_2023}{article}{}
       \name{author}{3}{}{%
