@@ -286,8 +286,8 @@
 					one value for the whole sample. Given that \(\gamma_{i}\) is the harmonic
 					energy in a given fundamental frequency cycle and \(\iota_{i}\) is the
 					residual energy in a given fundamental frequency cycle, the HNR at that cycle
-					is calculated as follows:
-					\[ 20log\frac{\gamma_{i}}{\iota_{i}} \]
+					\(hnr_{i}\) is calculated as follows:
+					\[ hnr_{i} = 20log\frac{\gamma_{i}}{\iota_{i}}. \]
 				\item
 					Fundamental frequency lengths: Considered a perceptible feature, the
 					fundamental frequency lengths (f0 lengths) are the lengths of every
@@ -317,33 +317,38 @@
 					fundamental frequency cycle \(i\) with \(h_{i} \in H_{i}\) as a frequency of
 					the set and \(s(h_{i})\) is the power of a given harmonic frequency at cycle
 					\(i\), the pitch can be estimated as follows:
-					\[p_{i} = s(max(H_{i}))\]
-					Then, given an offset \(x\), the pitch fluctuations can be calculated as
-					follows:
-					\[p_{i}-p_{i-x}\]
+					\[p_{i} = s(max(H_{i})).\]
+					Then, given an offset \(x\), the pitch fluctuation at cycle \(i\), \(pf_{i}\),
+					can be calculated as follows:
+					\[pf_{i} = p_{i}-p_{i-x}.\]
 				\item
 					Jitter features: As defined in previous attempts to identify synthetic audio
 					\cite{chaiwongyen_deepfake-speech_2023} with perceptible features,
 					jitter-based features measures the absolute variations in fundamental
-					frequency cycles in comparison to the nearest x neighbors using the following
-					method:
-					\[ \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|T_{i}
+					frequency cycles in comparison to the nearest x neighbors. The jitter of a
+					sample in relation to the nearest \(x\) samples can be described as follows:
+					\[ jitter(x) = \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|T_{i}
 						(\frac{1}{x}\sum_{n=i-m}^{i+m}T_{n})|}
-					{\frac{1}{N}\sum_{i=1}^{N}T_{i}} \]
-					where \(T_{i}\) represents the extracted fundamental frequency lengths and
-					\(N\) is the number of fundamental frequency periods.
+					{\frac{1}{N}\sum_{i=1}^{N}T_{i}}, \]
+					where \(T_{i}\) represents the extracted fundamental frequency length at cycle
+					\(i\), \(N\) is the number of fundamental frequency periods and \(m\) is
+					\(\lfloor \frac{x}{2} \rfloor\)
 				\item
 					Shimmer features: Similarly defined to the jitter features, shimmer features,
 					also considered perceptible and are used in the same research. They instead
 					make use of the amplitudes at each fundamental frequency period. Their purpose
 					is to capture irregular vocal fold vibrations which may be an indication but
-					not a guarantee of a synthetic voice.
+					not a guarantee of a synthetic voice. The shimmer of a sample in comparison to
+					the nearest \(x\) fundamental frequency cycles is calculated as follows:
 					\cite{chaiwongyen_deepfake-speech_2023}.
-					\[ \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|A_{i}
+					\[ shimmer(x) = \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|A_{i}
 						(\frac{1}{x}\sum_{n=i-m}^{i+m}A_{n})|}
-					{\frac{1}{N}\sum_{i=1}^{N}A_{i}} \]
+					{\frac{1}{N}\sum_{i=1}^{N}A_{i}}, \]
+					where \(A_{i}\) is the amplitude at cycle \(i\), \(N\) is the number of
+					fundamental frequency cycles in the sample and \(m\) is once again 
+					\(\lfloor \frac{x}{2} \rfloor\)
 			\end{itemize}
-			The features we consider imperceptible are described as follow:
+			The features we consider imperceptible are described as follows:
 			\begin{itemize}
 				\item
 					Mel-spectrograms: A widely-used imperceptible feature in synthetic audio
