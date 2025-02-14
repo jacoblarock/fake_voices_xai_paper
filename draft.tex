@@ -503,8 +503,11 @@
 		useful perspective against which we can compare our method.
 		\subsection{Black-Box Model Results}
 		\begin{table}[htbp]
+			\caption{Summary of the evaluation results of the experiments}
+			\vspace{10pt}
 			\centering\notsotiny
 			\begin{tabular}{c | c | c | c | c | c}
+				\hline
 				Terminus & Features & Training & Accuracy & EER & AUC \\
 				\hline
 				Simple & standard & 3474 & 95.02\% & 0.03702 & 0.90297 \\
@@ -516,7 +519,6 @@
 				Simple & expand pitch\-flucs & 10000 & 93.31\% & 0.05661 & 0.92727 \\
 				3 hidden layers & expand pitch\-flucs & 10000 & 93.87\% & 0.05317 & 0.83263
 			\end{tabular}
-			\caption{Summary of the evaluation results of the experiments}
 			\label{table:eval-results}
 		\end{table}
 		\begin{figure}[htbp]
@@ -563,8 +565,11 @@
 		10 percent and testing on the remaining 20 percent.
 		\subsection{Explanation Results}
 		\begin{table}[htbp]
+			\caption{Summary of the aggregated explanation results of the best performing model}
+			\vspace{10pt}
 			\centering
 			\begin{tabular}{c | c | c}
+				\hline
 				Feature & importance & trust \\
 				\hline
 				HNRs & 0.1140 & -0.0543 \\
@@ -577,7 +582,6 @@
 				jitter features & 0.1277 & 0.0250 \\
 				shimmer features & 0.1227 & 0.0017
 			\end{tabular}
-			\caption{Summary of the aggregated explanation results of the best performing model}
 			\label{table:exp-results-cterm}
 		\end{table}
 		\begin{figure}
@@ -588,8 +592,12 @@
 			\label{fig:exp_cterm}
 		\end{figure}
 		\begin{table}[htbp]
+			\caption{Summary of the aggregated explanation results of the model with expanded
+			pitch fluctuation features}
+			\vspace{10pt}
 			\centering
 			\begin{tabular}{c | c | c}
+				\hline
 				Feature & importance & trust \\
 				\hline
 				HNRs & 0.1072 & -0.0148 \\
@@ -602,8 +610,6 @@
 				jitter features & 0.2439 & 0.0019 \\
 				shimmer features & 0.1664 & 0.0070
 			\end{tabular}
-			\caption{Summary of the aggregated explanation results of the model with expanded
-			pitch fluctuation features}
 			\label{table:exp-results-more-pitch-flucs}
 		\end{table}
 		\begin{figure}
@@ -614,8 +620,12 @@
 			\label{fig:exp_mpf}
 		\end{figure}
 		\begin{table}[htbp]
+			\caption{Summary of the aggregated explanation results of the model with expanded
+			pitch fluctuation features and a terminus with three hidden layers.}
+			\vspace{10pt}
 			\centering
 			\begin{tabular}{c | c | c}
+				\hline
 				Feature & importance & trust \\
 				\hline
 				HNRs & 0.2667 & -0.0788 \\
@@ -628,8 +638,6 @@
 				jitter features & 0.1444 & 0.0118 \\
 				shimmer features & 0.1747 & 0.0116
 			\end{tabular}
-			\caption{Summary of the aggregated explanation results of the model with expanded
-			pitch fluctuation features and a terminus with three hidden layers.}
 			\label{table:exp-results-mpf-cterm}
 		\end{table}
 		\begin{figure}
