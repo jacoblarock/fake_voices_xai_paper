@@ -136,11 +136,10 @@
 	features that can be perceived by the human ear, often vocal qualities such as jitter, shimmer
 	or pitch fluctuation that have a wide range of uses even outside of audio classification such
 	as diagnosis of disease \cite{chaiwongyen_deepfake-speech_2023}, while imperceptible features
-	are typically out of the range of human hearing, and may not be directly reflect a vocal
-	quality, otherwise referred to as "speaker-independent" features \cite{liu_hidden--wave_2023}.
-	We use a new combination of features for our method, with an emphasis being placed on
-	perceptible features, as we believe these to be the most likely to be understood by the
-	layperson.
+	are typically out of the range of human hearing, and may not directly reflect a vocal quality,
+	otherwise referred to as "speaker-independent" features \cite{liu_hidden--wave_2023}. We use a
+	new combination of features for our method, with an emphasis being placed on perceptible
+	features, as we believe these to be the most likely to be understood by the layperson.
 	\par
 	We introduce a hybrid deep-learning model, with the purpose of combining these
 	multidimensional features into a single output. The hybrid model consists firstly of a
@@ -267,11 +266,11 @@
 			the model performance.
 			\par
 			Several features were used for the final version of the black-box model. Some are
-			features that can be called generic, widely used in research involving the detection
-			of synthetic while others are more specific and are cited accordingly. The features
-			that are not summarized for a whole sample are extracted using a sliding window method,
-			preventing a loss of fidelity that can be caused by compression of the feature to a
-			standard size. The features we considered perceptible are as follows:
+			features widely used in research involving the detection of synthetic while others are
+			more specific and are cited accordingly. The features that are not summarized for a
+			whole sample are extracted using a sliding window method, preventing a loss of
+			fidelity that can be caused by compression of the feature to a standard size. The
+			features we considered perceptible are as follows:
 			\begin{itemize}
 				\item
 					\sloppy
@@ -441,7 +440,7 @@
 				\item The features cannot be used directly for assessment at the terminus input
 					layer.
 			\end{itemize}
-			The first problem can be solved by taking the mean of the explanation weights of each
+			We solved the first problem by taking the mean of the explanation weights of each
 			feature produced by each row of the sample features. This results in an average
 			contribution of each feature to the classification of the model. Because the
 			end-classification of the surrogate is also a mean, the means of the LIME-results are
