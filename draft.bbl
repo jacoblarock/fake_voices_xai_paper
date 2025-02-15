@@ -2457,6 +2457,7 @@
       \strng{authorbibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
       \strng{authornamehash}{a7f36370ed5b3f955d57f66668cd8213}
       \strng{authorfullhash}{8188299b7c733e10b749f6abddfab2d1}
+      \field{extraname}{1}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
@@ -2491,6 +2492,84 @@
       \verb http://arxiv.org/abs/2202.08433
       \endverb
       \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Machine Learning}
+    \endentry
+    \entry{yi_audio_2023}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=bf27030cff5f1171bae3a61f1d7436e8}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={Jiangyan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=26b90c8cb6735654ece324f21187cd2e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chenglong},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c2d300d040a5480ff7359c84ff1b1eeb}{%
+           family={Tao},
+           familyi={T\bibinitperiod},
+           given={Jianhua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=76c4ac342426fb82f4a004c0cdbadd6d}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiaohui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f9ed1eaf7153bbafdc72a64beac71a80}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chu\bibnamedelima Yuan},
+           giveni={C\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=a4f73ac848ac3c9c063cd26132a4b7c6}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{fullhash}{e9c536b1973f45161ab21bd4ebff25a5}
+      \strng{bibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{authorbibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{authornamehash}{a7f36370ed5b3f955d57f66668cd8213}
+      \strng{authorfullhash}{e9c536b1973f45161ab21bd4ebff25a5}
+      \field{extraname}{2}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Audio deepfake detection is an emerging active topic. A growing number of literatures have aimed to study deepfake detection algorithms and achieved effective performance, the problem of which is far from being solved. Although there are some review literatures, there has been no comprehensive survey that provides researchers with a systematic overview of these developments with a unified evaluation. Accordingly, in this survey paper, we first highlight the key differences across various types of deepfake audio, then outline and analyse competitions, datasets, features, classifications, and evaluation of state-of-the-art approaches. For each aspect, the basic techniques, advanced developments and major challenges are discussed. In addition, we perform a unified comparison of representative features and classifiers on {ASVspoof} 2021, {ADD} 2023 and In-the-Wild datasets for audio deepfake detection, respectively. The survey shows that future research should address the lack of large scale datasets in the wild, poor generalization of existing detection methods to unknown fake attacks, as well as interpretability of detection results etc.}
+      \field{day}{29}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{{arXiv}:2308.14970}
+      \field{shorttitle}{Audio Deepfake Detection}
+      \field{title}{Audio Deepfake Detection: A Survey}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2308.14970
+      \endverb
+      \verb{eprint}
+      \verb 2308.14970 [cs]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/55L5KMHE/Yi et al. - 2023 - Audio Deepfake Detection A Survey.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2308.14970
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2308.14970
+      \endverb
+      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
     \endentry
   \enddatalist
 \endrefsection

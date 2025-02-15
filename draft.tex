@@ -552,16 +552,61 @@
 		\ref{fig:roc_mpf_cterm} depict the ROC curve of three of the models, which were selected
 		for use in explanation generation in the following section.
 		\par
-		The model that achieved the best results was trained on the first
-		10000 samples of the dataset and evaluated on the rest evaluated using the methods
-		previously described. It has an evaluation accuracy of 96.3\% with the default threshold
-		of 0.5, with an EER of approximately 0.03214. This outperforms other results tested in the
-		original paper on this dataset \cite{muller_does_2022}. This result also exceeds some
-		other results tested on this dataset, such as an example \cite{yang_robust_2024} produced
-		using a variety of imperceptible features and trained on the ASV2019 dataset, while
-		underperforming one other method \cite{ranjan_statnet_2022} that made use of raw
-		waveform-based features, training on 70 percent of the data in the dataset, validating on
-		10 percent and testing on the remaining 20 percent.
+		The model that resulted in the best accuracy and EER had the standard feature set and was
+		paired with a terminus with three hidden perceptron layers. We trained this model on the
+		first 10000 samples of the dataset, and we evaluated it on the rest of the dataset using
+		the methods previously described. It demonstrated an evaluation accuracy of 96.3\% with
+		the default threshold of 0.5, as well as an EER of approximately 0.03214. The best AUC
+		score, however, was achieved in another experiment, where the model had expended pitch
+		fluctuations and a terminus model without hidden layers, with a value of 0.92727.
+		\subsubsection{Comparison to Other Methods}
+			\begin{table}
+				\caption{A summary of the experimental results of other methods that have been
+				evaluated against the same dataset. (When multiple experiments with one method
+				were done, the best result was used for this table. The results only include
+				evaluations on the full length samples, and not cropped versions, as we tested on
+				the full-length samples)}
+				\vspace{10pt}
+				\centering
+				\begin{tabular}{c | c}
+					\hline
+					Model Architecture & EER \\
+					\hline
+					RawGAT-ST \cite{muller_does_2022} & 0.37154 \\
+					RawNet2 \cite{muller_does_2022} & 0.37819 \\
+					MesoInception \cite{muller_does_2022} & 0.37414 \\
+					LCNN \cite{muller_does_2022} & 0.65559 \\
+					LCNN-Attention \cite{muller_does_2022} & 0.66684 \\
+					LCNN-LSTM \cite{muller_does_2022} & 0.61500 \\
+					LSTM \cite{muller_does_2022} & 0.53711 \\
+					MesoNet \cite{muller_does_2022} & 0.46939 \\
+					ResNet18 \cite{muller_does_2022} & 0.49759 \\
+					Transformer \cite{muller_does_2022} & 0.43775 \\
+					CRNNSpoof \cite{muller_does_2022} & 0.44500 \\
+					RawPC \cite{muller_does_2022} & 0.45715 \\
+					ResNet18 \cite{yang_robust_2024} & 0.2748 \\
+					Selection \cite{yang_robust_2024} & 0.2598 \\
+					Fusion \cite{yang_robust_2024} & 0.2427 \\
+					STATNet \cite{ranjan_statnet_2022} & \textbf{0.00199} \\
+					ASSERT \cite{yi_audio_2023} & 0.2473 \\
+					LCNN \cite{yi_audio_2023} & 0.3514 \\
+					GMM \cite{yi_audio_2023} & 0.3749 \\
+				\end{tabular}
+				\label{table:other_results}
+			\end{table}
+			In order to contextualize our results, we will compare them to other results produced
+			using tests on the same dataset. Table \ref{table:other_results} presents some
+			experimental results that other methods have achieved on this dataset, sorted by
+			source and model architecture. The results are given in EER, and the best result is in
+			bold. In comparison to the other methods, our method performs very well, only beaten
+			out by one other \cite{ranjan_statnet_2022}, which uses an expanded RawNet2-based
+			network, taking the raw waveform as an input. They trained their method on 70\% of the
+			dataset, used 10\% for validation and the remaining 20\% for testing. This indicates a
+			potential for raw-waveform based learned feature in the accurate detection of audio
+			deepfakes, but does not offer a clear path for explainability, as the model does not
+			make any intrinsic distinction of audio characteristics that humans are able to perceive.
+			Our model remains, however, competitive, indicating that it can provide a good base
+			for trustworthy explanations.
 		\subsection{Explanation Results}
 		\begin{table}[htbp]
 			\caption{Summary of the aggregated explanation results of the best performing model}
@@ -660,7 +705,7 @@
 		and \ref{table:exp-results-mpf-cterm}. The same statistics are also represented graphically
 		in the figures \ref{fig:exp_cterm}, \ref{fig:exp_mpf} and \ref{fig:exp_mpf_cterm}
 		respectively.
-		\subsubsection{Best-Performing Model}
+		\subsubsection{Model with Standard Feature Set and Complex Terminus}
 		Measuring by both metrics, the MFCCs had the most positive and the most correct influence
 		on the classification results of the model, With the jitter features as a distant second
 		for trust and importance. This indicates that the MFCCs had not only the most influence,
