@@ -213,6 +213,13 @@
 	Other researchers, such as in the work of Qais et al. \cite{qais_deepfake_2022} make use of
 	Fourier transforms, such as the short term Fourier transform (STFT) to achieve accurate
 	reuslts on the ASVSpoof2017 dataset \cite{delgado_asvspoof_2018}.
+	\par
+	Yang et al. \cite{yang_robust_2024} demonstrate a multi-feature comparison, as well as a
+	feature selection method, with the goal of maximizing model efficiency. They run experiments
+	with several hand-crafted features as well as learned features. They train and test using
+	three datasets, ASVSpoof2019 \cite{wang_asvspoof_2020}, ASV2021 \cite{liu_asvspoof_2023} and
+	In-the-Wild \cite{muller_does_2022}, presenting their results for each features, as well as
+	the results of their selection and classification fusion methods.
 	\subsection{Synthetic Voice Detection With Perceptible Features}
 	There is also a smaller but still notable body of work encompassing the use of perceptible
 	features for the detection of synthetic voices, making use of a variety of features, some of
@@ -225,17 +232,21 @@
 	which were performed on a combination of synthetic and real audio datasets.
 	\par
 	Chaiwongyen et al. \cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023} also
-	approach using perceptible features for classification in their works. They trained and tested
-	using the dataset of the ADD2022 Challenge \cite{yi_add_2024} and a simple model with a single
-	hidden layer, resulting in lackluster performance in 2022, with better results using an
-	expanded and improved feature set in 2023.
+	approach using perceptible features for classification in their works. They developed a
+	perceptron-architecture with a single hidden layer, and trained and tested using the dataset
+	of the ADD2022 Challenge \cite{yi_add_2024}, resulting in lackluster performance in 2022, with
+	better results using an expanded and improved feature set in 2023.
 	\par
 	Li et al. \cite{li_comparative_2022} also approach perceptible features in their work,
 	combining them with imperceptible (referred to as physical in the work) features and using
-	various neural networks in their experiments. Overall, the combination of perceptible and
-	imperceptible features was able to produce the best performance results of the experiments,
-	which were performed as well on the dataset of the ASV2022 Challenge \cite{yi_add_2024}.
+	various neural networks in their experiments. With their combination of perceptible and
+	imperceptible features, they were able to produce the best performance results of their
+	experiments, which were performed as well on the dataset of the ASV2022 Challenge
+	\cite{yi_add_2024}.
 	\subsection{Explainable Models}
+	There have also been some efforts in the previous research to pair synthetic voice detection
+	models with explainable methods.
+	\par
 	One previous example of an implementation of an explainable model for use in audio deepfake
 	detection came from Ge et al. \cite{ge_explaining_2024}, who explain feature influence on
 	models using the SHAP (SHapley Additive exPlanations) method. They apply this method using
