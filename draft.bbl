@@ -1126,6 +1126,7 @@
       \strng{authorbibnamehash}{e58ef8f444141f003125d39d6d0449b7}
       \strng{authornamehash}{e58ef8f444141f003125d39d6d0449b7}
       \strng{authorfullhash}{854c5f4a6ea8e5f05d1221ad9db0c597}
+      \field{extraname}{1}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -1159,6 +1160,109 @@
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/10301243/
       \endverb
+    \endentry
+    \entry{liu_asvspoof_2023}{article}{}
+      \name{author}{11}{}{%
+        {{hash=cb7010b03479c3e03fed67ae8f637348}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xuechen},
+           giveni={X\bibinitperiod}}}%
+        {{hash=03d3e23852937fa39b0e34246c4ecd1d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=5312114af60e272aa8e7acde6e72a1a3}{%
+           family={Sahidullah},
+           familyi={S\bibinitperiod},
+           given={Md},
+           giveni={M\bibinitperiod}}}%
+        {{hash=defbfe996a7c96e54a0fafcbc696e57a}{%
+           family={Patino},
+           familyi={P\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d2e27df6f9b4a74274d968103b276375}{%
+           family={Delgado},
+           familyi={D\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0adea8b988e4a3eac751bcf14a5edf11}{%
+           family={Kinnunen},
+           familyi={K\bibinitperiod},
+           given={Tomi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d9746848fcce379f30da4fa8db258240}{%
+           family={Todisco},
+           familyi={T\bibinitperiod},
+           given={Massimiliano},
+           giveni={M\bibinitperiod}}}%
+        {{hash=64bfb2b1761cc3077e7b25f2eaa562ee}{%
+           family={Yamagishi},
+           familyi={Y\bibinitperiod},
+           given={Junichi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e4022cbee16cd294b79b020fa73f9b9c}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=24d798af6af6148c6db71152253615f1}{%
+           family={Nautsch},
+           familyi={N\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4b1c8475d6ba863aeabd315d2f10c9cf}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kong\bibnamedelima Aik},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{20e81ef39cc534cca4c0063b63e4f7a5}
+      \strng{fullhash}{266f8bcc3f758fecd180050e760bbaea}
+      \strng{bibnamehash}{20e81ef39cc534cca4c0063b63e4f7a5}
+      \strng{authorbibnamehash}{20e81ef39cc534cca4c0063b63e4f7a5}
+      \strng{authornamehash}{20e81ef39cc534cca4c0063b63e4f7a5}
+      \strng{authorfullhash}{266f8bcc3f758fecd180050e760bbaea}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Benchmarking initiatives support the meaningful comparison of competing solutions to prominent problems in speech and language processing. Successive benchmarking evaluations typically reflect a progressive evolution from ideal lab conditions towards to those encountered in the wild. {ASVspoof}, the spoofing and deepfake detection initiative and challenge series, has followed the same trend. This article provides a summary of the {ASVspoof} 2021 challenge and the results of 54 participating teams that submitted to the evaluation phase. For the logical access ({LA}) task, results indicate that countermeasures are robust to newly introduced encoding and transmission effects. Results for the physical access ({PA}) task indicate the potential to detect replay attacks in real, as opposed to simulated physical spaces, but a lack of robustness to variations between simulated and real acoustic environments. The Deepfake ({DF}) task, new to the 2021 edition, targets solutions to the detection of manipulated, compressed speech data posted online. While detection solutions offer some resilience to compression effects, they lack generalization across different source datasets. In addition to a summary of the top-performing systems for each task, new analyses of influential data factors and results for hidden data subsets, the article includes a review of post-challenge results, an outline of the principal challenge limitations and a road-map for the future of {ASVspoof}.}
+      \field{eprinttype}{arxiv}
+      \field{issn}{2329-9290, 2329-9304}
+      \field{journaltitle}{{IEEE}/{ACM} Transactions on Audio, Speech, and Language Processing}
+      \field{langid}{english}
+      \field{shortjournal}{{IEEE}/{ACM} Trans. Audio Speech Lang. Process.}
+      \field{shorttitle}{{ASVspoof} 2021}
+      \field{title}{{ASVspoof} 2021: Towards Spoofed and Deepfake Speech Detection in the Wild}
+      \field{urlday}{18}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{31}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2507\bibrangedash 2522}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/TASLP.2023.3285283
+      \endverb
+      \verb{eprint}
+      \verb 2210.02437 [cs]
+      \endverb
+      \verb{file}
+      \verb PDF:/home/jacob/Zotero/storage/W76DJHWR/Liu et al. - 2023 - ASVspoof 2021 Towards Spoofed and Deepfake Speech Detection in the Wild.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2210.02437
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2210.02437
+      \endverb
+      \keyw{Computer Science - Cryptography and Security,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Multimedia}
     \endentry
     \entry{tensorflow2015-whitepaper}{misc}{}
       \name{author}{40}{}{%
