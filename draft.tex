@@ -403,26 +403,27 @@
 			\begin{figure}[htbp]
 				\begin{center}
 					\includegraphics[width=0.7\textwidth]{images/model_fig.png}
-					\caption{The general architecture format for the models used in these
-					experiments. In every feature, as well as in the terminus, there can be
-					various kinds of hidden layers.}
+					\caption{The general architecture for the models used in these experiments,
+					containing \(n\) features. The features are processed in their tailored
+					sub-models before being processed together in the terminus model.}
 					\label{fig:model_plot}
 				\end{center}
 			\end{figure}
 			\begin{figure}[htbp]
 				\begin{center}
-					\includegraphics[width=0.4\textwidth]{images/submodel.png}
+					\includegraphics[width=0.7\textwidth]{images/submodel.png}
 					\caption{A generalized representation of a sub-model, with the input as either
 					a vector or a matrix followed by alternating convolutional and pooling layers,
-					with the output as a flattened vector.}
+					with the output as a flattened vector. Here, \(n\) is the number of
+					convolutional-pooling pairs.}
 					\label{fig:submodel}
 				\end{center}
 			\end{figure}
 			\begin{figure}[htbp]
 				\begin{center}
-					\includegraphics[width=0.4\textwidth]{images/term_model.png}
-					\caption{A generalized representation of a terminus model, which can have a
-					varying amount of hidden layers.}
+					\includegraphics[width=0.7\textwidth]{images/term_model.png}
+					\caption{A generalized representation of the terminus model paired with \(n\)
+					sub-models and containing \(m\) hidden layers.}
 					\label{fig:term_model}
 				\end{center}
 			\end{figure}
