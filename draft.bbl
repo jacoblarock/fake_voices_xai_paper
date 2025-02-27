@@ -42,16 +42,13 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Deepfake, a machine learning-based software tool, has made it easy to alter or manipulate images and videos. Images are frequently used as evidence in investigations and in court. However, technological developments, and deepfake in particular, have potentially made these pieces of evidence unreliable. Altered images and videos are not only surprisingly convincing but are also difficult to identify as fake or real. Deepfakes have been used to blackmail, fake terrorism events, disseminate fake news, defame individuals, and to create political distress. To gain in-depth insight into the deepfake technology, the present research examines its origin and history while assessing how deepfake videos and photos are created. Moreover, the research also focuses on the impact deepfake has made on society in terms of how it has been applied. Different methods have been developed for detecting deepfakes including face detection, multimedia forensics, watermarking, and convolutional neural networks ({CNNs}). Each method uses machine learning, a technique from the field of artificial intelligence, to detect any kind of manipulation in photos and videos.}
-      \field{journaltitle}{. Vol.}
-      \field{langid}{english}
+      \field{journaltitle}{Journal of Theoretical and Applied Information Technology}
       \field{number}{22}
-      \field{title}{{DEEPFAKES}: {THREATS} {AND} {COUNTERMEASURES} {SYSTEMATIC} {REVIEW}}
-      \field{year}{2005}
-      \field{dateera}{ce}
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/8VKR24HG/Albahar and Almalki - 2005 - DEEPFAKES THREATS AND COUNTERMEASURES SYSTEMATIC REVIEW.pdf:application/pdf
-      \endverb
+      \field{title}{Deepfakes: Threats and countermeasures systematic review}
+      \field{volume}{97}
+      \field{year}{2019}
+      \field{pages}{3242\bibrangedash 3250}
+      \range{pages}{9}
     \endentry
     \entry{altalahin_unmasking_2023}{inproceedings}{}
       \name{author}{4}{}{%
@@ -61,7 +58,7 @@
            given={Islam},
            giveni={I\bibinitperiod}}}%
         {{hash=5a14a9412165d6c6cc59c1dd6d430971}{%
-           family={{AlZu}'bi},
+           family={AlZu'bi},
            familyi={A\bibinitperiod},
            given={Shadi},
            giveni={S\bibinitperiod}}}%
@@ -76,10 +73,7 @@
            given={Ala},
            giveni={A\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Amman, Jordan}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{ad5534890aa39f1945a734570c4e8e40}
@@ -91,69 +85,42 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Deepfake content is artificially created or altered using artificial intelligence ({AI}) methods to appear real. Synthesis can include audio, video, images, and text. Deepfakes may now produce content that looks normal, making it more difficult to identify. Significant progress has been made in identifying video deep fakes in recent years; However, most of the investigations into voice deep fake detection have used the {ASVSpoof}-2019 dataset and several machine learning and deep learning algorithms. This research uses machine-based and deep-learning approaches to identify fake audio. Melted frequency cepstral coefficients ({MFCCs}) are used to extract the most useful information from the sound. We choose the 2019 {ASVSpoof} dataset, which is the latest reference dataset. Experimental results show that Convolutional Neural Networks ({CNN}): ({CNN}-{LSTM}) outperformed other machine learning ({ML}) models in terms of accuracy, achieving an accuracy of up to 88\%.}
-      \field{booktitle}{2023 International Conference on Information Technology ({ICIT})}
-      \field{day}{9}
-      \field{eventtitle}{2023 International Conference on Information Technology ({ICIT})}
-      \field{isbn}{9798350320060}
-      \field{langid}{english}
-      \field{month}{8}
-      \field{shorttitle}{Unmasking the Truth}
-      \field{title}{Unmasking the Truth: A Deep Learning Approach to Detecting Deepfake Audio Through {MFCC} Features}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 International Conference on Information Technology (ICIT)}
+      \field{title}{Unmasking the truth: A deep learning approach to detecting deepfake audio through mfcc features}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{511\bibrangedash 518}
       \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/ICIT58056.2023.10226172
-      \endverb
-      \verb{file}
-      \verb Altalahin et al. - 2023 - Unmasking the Truth A Deep Learning Approach to D.pdf:/home/jacob/Zotero/storage/BVLU8YEH/Altalahin et al. - 2023 - Unmasking the Truth A Deep Learning Approach to D.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10226172/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10226172/
-      \endverb
     \endentry
     \entry{anagha_audio_2023}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=068314028a6b055395fc4be81734a928}{%
            family={Anagha},
            familyi={A\bibinitperiod},
-           given={R.},
+           given={R},
            giveni={R\bibinitperiod}}}%
         {{hash=25890cf63f979014cbb30787414d3087}{%
            family={Arya},
            familyi={A\bibinitperiod},
-           given={A.},
+           given={A},
            giveni={A\bibinitperiod}}}%
         {{hash=4945a263c18154e16d542cd8df8041c7}{%
            family={Narayan},
            familyi={N\bibinitperiod},
-           given={V.\bibnamedelimi Hari},
+           given={V\bibnamedelima Hari},
            giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
         {{hash=79493ac2c653c752ed126f00f9321265}{%
            family={Abhishek},
            familyi={A\bibinitperiod},
-           given={S.},
+           given={S},
            giveni={S\bibinitperiod}}}%
         {{hash=e8e813210f20828030aadabfe419727d}{%
            family={Anjali},
            familyi={A\bibinitperiod},
-           given={T.},
+           given={T},
            giveni={T\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Moradabad, India}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{e7c05049f5d6e0fa1303350a1e1210d3}
@@ -166,36 +133,13 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The capacity to identify real audio recordings from their modified counterparts is essential in the age of sophisticated digital manipulation for maintaining security and trust in a vari- ety of applications, from media forensics to voice authentication systems. This research aims to create a deep learning model that can distinguish between authentic and altered audio files, with an emphasis on identifying audio deepfakes. The study uses Mel spectrogram representations and data augmentation techniques to effectively extract features from the {ASVspoof} 2019 dataset and train models. Convolutional neural networks ({CNNs}) comprising a number of layers, including convolutional, pooling, batch normalization, {ReLU} activation, dropout, global average pooling, and a dense classification layer are used as the foundation of the design. The Adam optimizer is used to optimize the model once it has been trained using binary cross-entropy loss, and a variety of metrics, such as accuracy, F1 score, {ROC} curve, and {AUC}, are used to track its performance. By making it easier to identify audio deepfakes, this project will ultimately increase the security and integrity of audio data in the digital world.}
-      \field{booktitle}{2023 12th International Conference on System Modeling \& Advancement in Research Trends ({SMART})}
-      \field{day}{22}
-      \field{eventtitle}{2023 12th International Conference on System Modeling \& Advancement in Research Trends ({SMART})}
-      \field{isbn}{9798350369861 9798350369885}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{title}{Audio Deepfake Detection Using Deep Learning}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{booktitle}{2023 12th International Conference on System Modeling \& Advancement in Research Trends (SMART)}
+      \field{title}{Audio deepfake detection using deep learning}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{176\bibrangedash 181}
       \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/SMART59791.2023.10428163
-      \endverb
-      \verb{file}
-      \verb Anagha et al. - 2023 - Audio Deepfake Detection Using Deep Learning.pdf:/home/jacob/Zotero/storage/V9CKUJXV/Anagha et al. - 2023 - Audio Deepfake Detection Using Deep Learning.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10428163/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10428163/
-      \endverb
     \endentry
-    \entry{barrington_single_2023}{misc}{}
+    \entry{barrington_single_2023}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=68f52f5b350593deaf409c79c5b0a485}{%
            family={Barrington},
@@ -218,8 +162,8 @@
            given={Hany},
            giveni={H\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
+      \list{organization}{1}{%
+        {IEEE}%
       }
       \strng{namehash}{a0dfffb7120c4f9c02da39d0bcce62e9}
       \strng{fullhash}{05e0418574a275276d882d1a3c2673e2}
@@ -230,37 +174,12 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Synthetic-voice cloning technologies have seen significant advances in recent years, giving rise to a range of potential harms. From small- and large-scale financial fraud to disinformation campaigns, the need for reliable methods to differentiate real and synthesized voices is imperative. We describe three techniques for differentiating a real from a cloned voice designed to impersonate a specific person. These three approaches differ in their feature extraction stage with lowdimensional perceptual features offering high interpretability but lower accuracy, to generic spectral features, and end-to-end learned features offering less interpretability but higher accuracy. We show the efficacy of these approaches when trained on a single speaker’s voice and when trained on multiple voices. The learned features consistently yield an equal error rate between 0\% and 4\%, and are reasonably robust to adversarial laundering.}
-      \field{day}{27}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{number}{{arXiv}:2307.07683}
-      \field{shorttitle}{Single and Multi-Speaker Cloned Voice Detection}
-      \field{title}{Single and Multi-Speaker Cloned Voice Detection: From Perceptual to Learned Features}
-      \field{urlday}{18}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 IEEE International Workshop on Information Forensics and Security (WIFS)}
+      \field{title}{Single and multi-speaker cloned voice detection: From perceptual to learned features}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2307.07683
-      \endverb
-      \verb{eprint}
-      \verb 2307.07683 [cs]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/EIMG2L3I/Barrington et al. - 2023 - Single and Multi-Speaker Cloned Voice Detection From Perceptual to Learned Features.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2307.07683
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2307.07683
-      \endverb
-      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Computation and Language}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
     \endentry
     \entry{chaiwongyen_contribution_2022}{inproceedings}{}
       \name{author}{6}{}{%
@@ -295,10 +214,7 @@
            given={Masashi},
            giveni={M\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Chiang Mai, Thailand}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
@@ -312,34 +228,11 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{ÐAdvanced deep-learning techniques can generate natural and synthetic voices that might be close to someone’s voice. Nevertheless, misuse of such technologies is of great concern. Hence, researchers focus on detecting these malicious synthetic voices, called ªdeepfake speech.º Although many feature extractions and classifications have been proposed, the accuracy of deepfake detection is still unreliable. In addition, most of the current features are computed in the frequency domain. To this end, we conducted experiments to investigate the contribution of two acoustic features and deepfake speech signals. The acoustic features are timbre and shimmer, which represent our auditory perception in the time domain. We point out that eight timbre components and four shimmer components significantly contribute to discriminating deepfake speech from genuine speech. We also propose a method for detecting deepfake speech based on these timbre and shimmer features. The method was evaluated by using a dataset from the Audio Deep Synthesis Detection Challenge ({ADD} 2022). The results suggest that combining these eight timbre components and four shimmer components with a simple classifier using multilayer perceptron neural networks can enable deepfake speech to be detected potentially effectively.}
-      \field{booktitle}{2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
-      \field{day}{7}
-      \field{eventtitle}{2022 Asia Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
-      \field{isbn}{978-616-590-477-3}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{title}{Contribution of Timbre and Shimmer Features to Deepfake Speech Detection}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{booktitle}{2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)}
+      \field{title}{Contribution of timbre and shimmer features to deepfake speech detection}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{97\bibrangedash 103}
       \range{pages}{7}
-      \verb{doi}
-      \verb 10.23919/APSIPAASC55919.2022.9980281
-      \endverb
-      \verb{file}
-      \verb Chaiwongyen et al. - 2022 - Contribution of Timbre and Shimmer Features to Dee.pdf:/home/jacob/Zotero/storage/PK9YUPJB/Chaiwongyen et al. - 2022 - Contribution of Timbre and Shimmer Features to Dee.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/9980281/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/9980281/
-      \endverb
     \endentry
     \entry{chaiwongyen_deepfake-speech_2023}{inproceedings}{}
       \name{author}{5}{}{%
@@ -369,10 +262,7 @@
            given={Masashi},
            giveni={M\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Taipei, Taiwan}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{0534ef57957fda62ea3cd9b5b62bc1b6}
@@ -386,34 +276,11 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Deepfake speech, a misuse of speech technology, is of great concern since it seems natural and is difﬁcult to detect. Although many methods using various speech features have been proposed, deepfake-speech detection accuracy must be improved, especially in real-world scenarios. Therefore, this paper presents a method for detecting deepfake speech on the basis of pathological features used by pathologists for assessing voice quality. The six-pathological features, including jitter, shimmer, harmonicsto-noise ratio, cepstral-harmonics-to-noise ratio, normalized noise energy, and glottal-to-noise excitation ratio, are fed to a multilayer perceptron neural network. We evaluated the proposed method using the Audio Deep Synthesis Detection Challenge dataset. The results indicate that the proposed model can be used for detecting deepfake speech. The proposed method’s accuracy, precision, recall, and F1-score were over 98\% on the development set, and it outperformed the baseline method on the adaptation set.}
-      \field{booktitle}{2023 Asia Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
-      \field{day}{31}
-      \field{eventtitle}{2023 Asia Pacific Signal and Information Processing Association Annual Summit and Conference ({APSIPA} {ASC})}
-      \field{isbn}{9798350300673}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{title}{Deepfake-speech Detection with Pathological Features and Multilayer Perceptron Neural Network}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{booktitle}{2023 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)}
+      \field{title}{Deepfake-speech detection with pathological features and multilayer perceptron neural network}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{2182\bibrangedash 2188}
       \range{pages}{7}
-      \verb{doi}
-      \verb 10.1109/APSIPAASC58517.2023.10317331
-      \endverb
-      \verb{file}
-      \verb Chaiwongyen et al. - 2023 - Deepfake-speech Detection with Pathological Featur.pdf:/home/jacob/Zotero/storage/JPYE4FYL/Chaiwongyen et al. - 2023 - Deepfake-speech Detection with Pathological Featur.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10317331/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10317331/
-      \endverb
     \endentry
     \entry{cuccovillo_open_2022}{inproceedings}{}
       \name{author}{7}{}{%
@@ -453,6 +320,9 @@
            given={Dimitrios},
            giveni={D\bibinitperiod}}}%
       }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
       \strng{namehash}{25e6d5946ba68828802a9b616158b9ff}
       \strng{fullhash}{0ecb608398ad9a61462cbfe87e7b181b}
       \strng{bibnamehash}{25e6d5946ba68828802a9b616158b9ff}
@@ -463,37 +333,11 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In this paper the current status and open challenges of synthetic speech detection are addressed. The work comprises an initial analysis of available open datasets and of existing detection methods, a description of the requirements for new research datasets compliant with regulations and better representing real-case scenarios, and a discussion of the desired characteristics of future trustworthy detection methods in terms of both functional and non-functional requirements. Compared to other works, based on speciﬁc detection solutions or presenting single dataset of synthetic speeches, our paper is meant to orient future state-of-the-art research in the domain, to quickly lessen the current gap between synthesis and detection approaches.}
-      \field{booktitle}{2022 {IEEE} International Workshop on Information Forensics and Security ({WIFS})}
-      \field{day}{12}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{title}{Open Challenges in Synthetic Speech Detection}
-      \field{urlday}{18}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
+      \field{booktitle}{2022 IEEE International Workshop on Information Forensics and Security (WIFS)}
+      \field{title}{Open challenges in synthetic speech detection}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/WIFS55849.2022.9975433
-      \endverb
-      \verb{eprint}
-      \verb 2209.07180 [eess]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/93FTPZLY/Cuccovillo et al. - 2022 - Open Challenges in Synthetic Speech Detection.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2209.07180
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2209.07180
-      \endverb
-      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
     \endentry
     \entry{delgado_asvspoof_2018}{inproceedings}{}
       \name{author}{7}{}{%
@@ -533,7 +377,7 @@
            given={Junichi},
            giveni={J\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {ISCA}%
       }
       \strng{namehash}{f21be5da98babb4344eb956c7a79da9c}
@@ -545,35 +389,12 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{The now-acknowledged vulnerabilities of automatic speaker veriﬁcation ({ASV}) technology to spooﬁng attacks have spawned interests to develop so-called spooﬁng countermeasures. By providing common databases, protocols and metrics for their assessment, the {ASVspoof} initiative was born to spearhead research in this area. The ﬁrst competitive {ASVspoof} challenge held in 2015 focused on the assessment of countermeasures to protect {ASV} technology from voice conversion and speech synthesis spooﬁng attacks. The second challenge switched focus to the consideration of replay spooﬁng attacks and countermeasures. This paper describes Version 2.0 of the {ASVspoof} 2017 database which was released to correct data anomalies detected post-evaluation. The paper contains as-yet unpublished meta-data which describes recording and playback devices and acoustic environments. These support the analysis of replay detection performance and limits. Also described are new results for the ofﬁcial {ASVspoof} baseline system which is based upon a constant Q cesptral coefﬁcient frontend and a Gaussian mixture model backend. Reported are enhancements to the baseline system in the form of log-energy coefﬁcients and cepstral mean and variance normalisation in addition to an alternative i-vector backend. The best results correspond to a 48\% relative reduction in equal error rate when compared to the original baseline system.}
-      \field{booktitle}{The Speaker and Language Recognition Workshop (Odyssey 2018)}
-      \field{day}{26}
-      \field{eventtitle}{The Speaker and Language Recognition Workshop (Odyssey 2018)}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{shorttitle}{{ASVspoof} 2017 Version 2.0}
-      \field{title}{{ASVspoof} 2017 Version 2.0: meta-data analysis and baseline enhancements}
-      \field{urlday}{7}
-      \field{urlmonth}{2}
-      \field{urlyear}{2025}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Speaker and Language Recognition Workshop}
+      \field{title}{ASVspoof 2017 Version 2.0: meta-data analysis and baseline enhancements}
       \field{year}{2018}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{296\bibrangedash 303}
       \range{pages}{8}
-      \verb{doi}
-      \verb 10.21437/Odyssey.2018-42
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/4H6MBJSX/Delgado et al. - 2018 - ASVspoof 2017 Version 2.0 meta-data analysis and baseline enhancements.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.isca-archive.org/odyssey_2018/delgado18_odyssey.html
-      \endverb
-      \verb{url}
-      \verb https://www.isca-archive.org/odyssey_2018/delgado18_odyssey.html
-      \endverb
     \endentry
     \entry{fathan_mel-spectrogram_2022}{inproceedings}{}
       \name{author}{3}{}{%
@@ -593,10 +414,7 @@
            given={Woo\bibnamedelima Hyun},
            giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Taipei, Taiwan}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{8eb828d738eb71c2287bdcb60bd65637}
@@ -609,36 +427,13 @@
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This work focuses on the problem of detecting fake audio clips. To improve current audio spoofing detection models, we propose a selection of multiple audio augmentations specially designed to resemble audio spoofing attacks. These augmentations are experimentally found to be very useful and using them achieves a notable performance of 2.8\% {EER} on the {ASVspoof} 2019 challenge evaluation set. Unlike the widely employed acoustic features, in this paper we explore the use of Mel-spectrogram image features and employ various audio codecs to achieve robustness to codec and transmission channel variability present in the {ASVspoof}2021 Evaluation set. To better handle spectral information, crucial to detect spoofing, we adopt the {WaveletCNN} and {VGG}16 architectures which outperform all baselines. Finally, we find that robustness of countermeasure systems degrades dramatically when provided with speech samples degraded through {VoIP} network transmission or mismatching audio compression.}
-      \field{booktitle}{2022 {IEEE} International Conference on Multimedia and Expo ({ICME})}
-      \field{day}{18}
-      \field{eventtitle}{2022 {IEEE} International Conference on Multimedia and Expo ({ICME})}
-      \field{isbn}{978-1-66548-563-0}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{title}{Mel-Spectrogram Image-Based End-to-End Audio Deepfake Detection Under Channel-Mismatched Conditions}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{booktitle}{2022 IEEE international conference on multimedia and expo (ICME)}
+      \field{title}{Mel-spectrogram image-based end-to-end audio deepfake detection under channel-mismatched conditions}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ICME52920.2022.9859621
-      \endverb
-      \verb{file}
-      \verb Fathan et al. - 2022 - Mel-Spectrogram Image-Based End-to-End Audio Deepf.pdf:/home/jacob/Zotero/storage/MMZHDTXI/Fathan et al. - 2022 - Mel-Spectrogram Image-Based End-to-End Audio Deepf.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/9859621/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/9859621/
-      \endverb
     \endentry
-    \entry{ge_explaining_2024}{misc}{}
+    \entry{ge_explaining_2024}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=1cf77b92b64c78769a179d2e97d20979}{%
            family={Ge},
@@ -661,8 +456,8 @@
            given={Nicholas},
            giveni={N\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
+      \list{organization}{1}{%
+        {IEEE}%
       }
       \strng{namehash}{3a19713eddc87d6e478473387dce1e34}
       \strng{fullhash}{7e094fa84551b1bc02c0e84c134e0d7a}
@@ -674,35 +469,11 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Substantial progress in spoofing and deepfake detection has been made in recent years. Nonetheless, the community has yet to make notable inroads in providing an explanation for how a classifier produces its output. The dominance of black box spoofing detection solutions is at further odds with the drive toward trustworthy, explainable artificial intelligence. This paper describes our use of {SHapley} Additive {exPlanations} ({SHAP}) to gain new insights in spoofing detection. We demonstrate use of the tool in revealing unexpected classifier behaviour, the artefacts that contribute most to classifier outputs and differences in the behaviour of competing spoofing detection models. The tool is both efficient and flexible, being readily applicable to a host of different architecture models in addition to related, different applications. All results reported in the paper are reproducible using open-source software.}
-      \field{day}{26}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{4}
-      \field{number}{{arXiv}:2110.03309}
-      \field{title}{Explaining deep learning models for spoofing and deepfake detection with {SHapley} Additive {exPlanations}}
-      \field{urlday}{18}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2110.03309
-      \endverb
-      \verb{eprint}
-      \verb 2110.03309 [eess]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/9R26CPNM/Ge et al. - 2024 - Explaining deep learning models for spoofing and deepfake detection with SHapley Additive exPlanatio.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2110.03309
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2110.03309
-      \endverb
-      \keyw{Electrical Engineering and Systems Science - Audio and Speech Processing}
+      \field{booktitle}{ICASSP 2022-2022 IEEE international conference on acoustics, speech and signal processing (ICASSP)}
+      \field{title}{Explaining deep learning models for spoofing and deepfake detection with SHapley Additive exPlanations}
+      \field{year}{2022}
+      \field{pages}{6387\bibrangedash 6391}
+      \range{pages}{5}
     \endentry
     \entry{goodman_european_2017}{article}{}
       \name{author}{2}{}{%
@@ -727,40 +498,13 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{We summarize the potential impact that the European Union’s new General Data Protection Regulation will have on the routine use of machine learning algorithms. Slated to take effect as law across the {EU} in 2018, it will restrict automated individual decision-making (that is, algorithms that make decisions based on userlevel predictors) which “signiﬁcantly affect” users. The law will also effectively create a “right to explanation,” whereby a user can ask for an explanation of an algorithmic decision that was made about them. We argue that while this law will pose large challenges for industry, it highlights opportunities for computer scientists to take the lead in designing algorithms and evaluation frameworks which avoid discrimination and enable explanation.}
-      \field{eprinttype}{arxiv}
-      \field{issn}{0738-4602, 2371-9621}
-      \field{journaltitle}{{AI} Magazine}
-      \field{langid}{english}
-      \field{month}{9}
+      \field{journaltitle}{AI magazine}
       \field{number}{3}
-      \field{shortjournal}{{AI} Magazine}
-      \field{title}{European Union regulations on algorithmic decision-making and a "right to explanation"}
-      \field{urlday}{18}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
+      \field{title}{European Union regulations on algorithmic decision-making and a “right to explanation”}
       \field{volume}{38}
       \field{year}{2017}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{50\bibrangedash 57}
       \range{pages}{8}
-      \verb{doi}
-      \verb 10.1609/aimag.v38i3.2741
-      \endverb
-      \verb{eprint}
-      \verb 1606.08813 [stat]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/92FH2PJU/Goodman and Flaxman - 2017 - European Union regulations on algorithmic decision-making and a right to explanation.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/1606.08813
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1606.08813
-      \endverb
-      \keyw{Computer Science - Machine Learning,Computer Science - Computers and Society,Statistics - Machine Learning}
     \endentry
     \entry{hamza_deepfake_2022}{article}{}
       \name{author}{7}{}{%
@@ -787,7 +531,7 @@
         {{hash=53b31dbb8db798a49b81a6f4c8cb34fc}{%
            family={Almadhor},
            familyi={A\bibinitperiod},
-           given={Ahmad\bibnamedelima S.},
+           given={Ahmad\bibnamedelima S},
            giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
         {{hash=3aa681d7d23683e74f096b2d62849db6}{%
            family={Jalil},
@@ -800,6 +544,9 @@
            given={Rouba},
            giveni={R\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
       \strng{namehash}{23b81b261b0b56b8d74d05edc6089d3b}
       \strng{fullhash}{8aef046de0bb76be35d7f884cac9b146}
       \strng{bibnamehash}{23b81b261b0b56b8d74d05edc6089d3b}
@@ -810,33 +557,12 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Deepfake content is created or altered synthetically using artiﬁcial intelligence ({AI}) approaches to appear real. It can include synthesizing audio, video, images, and text. Deepfakes may now produce natural-looking content, making them harder to identify. Much progress has been achieved in identifying video deepfakes in recent years; nevertheless, most investigations in detecting audio deepfakes have employed the {ASVSpoof} or {AVSpoof} dataset and various machine learning, deep learning, and deep learning algorithms. This research uses machine and deep learning-based approaches to identify deepfake audio. Mel-frequency cepstral coefﬁcients ({MFCCs}) technique is used to acquire the most useful information from the audio. We choose the Fake-or-Real dataset, which is the most recent benchmark dataset. The dataset was created with a text-to-speech model and is divided into four sub-datasets: for-rece, for-2-sec, fornorm and for-original. These datasets are classiﬁed into sub-datasets mentioned above according to audio length and bit rate. The experimental results show that the support vector machine ({SVM}) outperformed the other machine learning ({ML}) models in terms of accuracy on for-rece and for-2-sec datasets, while the gradient boosting model performed very well using for-norm dataset. The {VGG}-16 model produced highly encouraging results when applied to the for-original dataset. The {VGG}-16 model outperforms other state-of-the-art approaches.}
-      \field{issn}{2169-3536}
-      \field{journaltitle}{{IEEE} Access}
-      \field{langid}{english}
-      \field{shortjournal}{{IEEE} Access}
-      \field{title}{Deepfake Audio Detection via {MFCC} Features Using Machine Learning}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Deepfake audio detection via MFCC features using machine learning}
       \field{volume}{10}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{134018\bibrangedash 134028}
       \range{pages}{11}
-      \verb{doi}
-      \verb 10.1109/ACCESS.2022.3231480
-      \endverb
-      \verb{file}
-      \verb Hamza et al. - 2022 - Deepfake Audio Detection via MFCC Features Using M.pdf:/home/jacob/Zotero/storage/CEPJ2H3T/Hamza et al. - 2022 - Deepfake Audio Detection via MFCC Features Using M.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/9996362/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/9996362/
-      \endverb
     \endentry
     \entry{haq_multimodal_2023}{article}{}
       \name{author}{3}{}{%
@@ -856,6 +582,9 @@
            given={Khan},
            giveni={K\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {ACM New York, NY}%
+      }
       \strng{namehash}{e58e09b32a50b5f70fb183772c482801}
       \strng{fullhash}{e58e09b32a50b5f70fb183772c482801}
       \strng{bibnamehash}{e58e09b32a50b5f70fb183772c482801}
@@ -866,34 +595,13 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Deepfake detection has become increasingly important in recent years owing to the widespread availability of deepfake generation technologies. Existing deepfake detection methods present two primary limitations i.e., trained on a specific type of deepfake dataset, which renders them vulnerable to unseen deepfakes; and they regard deepfakes as a black-box with limited explainability, making it difficult for non-{AI} experts to understand and trust the decisions. Hence, this paper proposes a novel neurosymbolic deepfake detection framework that exploits the fact that human emotions cannot be imitated easily owing to their complex nature. We argue that deep fakes typically exhibit inter- or intra- modality inconsistencies in the emotional expressions of the person being manipulated. Thus, the proposed framework performs inter- and intra- modality reasoning on emotions extracted from audio and visual modalities using a psychological and arousalvalence model for deepfake detection. In addition to fake detection, the proposed framework provides textual explanations for its decisions. The results obtained using Presidential Deepfakes Dataset and World Leaders Dataset of real and manipulated videos demonstrate the effectiveness of our approach in detecting deepfakes and highlight the potential of neurosymbolic approach for expandability.}
-      \field{day}{20}
-      \field{issn}{1551-6857, 1551-6865}
-      \field{journaltitle}{{ACM} Transactions on Multimedia Computing, Communications, and Applications}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{shortjournal}{{ACM} Trans. Multimedia Comput. Commun. Appl.}
-      \field{title}{Multimodal Neurosymbolic Approach for Explainable Deepfake Detection}
-      \field{urlday}{11}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{3624748}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1145/3624748
-      \endverb
-      \verb{file}
-      \verb Haq et al. - 2023 - Multimodal Neurosymbolic Approach for Explainable .pdf:/home/jacob/Zotero/storage/2XAC7A5W/Haq et al. - 2023 - Multimodal Neurosymbolic Approach for Explainable .pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3624748
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3624748
-      \endverb
+      \field{journaltitle}{ACM Transactions on Multimedia Computing, Communications and Applications}
+      \field{number}{11}
+      \field{title}{Multimodal neurosymbolic approach for explainable deepfake detection}
+      \field{volume}{20}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
     \endentry
     \entry{hind_explaining_2019}{article}{}
       \name{author}{1}{}{%
@@ -902,6 +610,9 @@
            familyi={H\bibinitperiod},
            given={Michael},
            giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
       }
       \strng{namehash}{79965ab18066c72febb431453b9c5292}
       \strng{fullhash}{79965ab18066c72febb431453b9c5292}
@@ -913,36 +624,13 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{How good are you at explaining your decisions? Are you better than a machine? Today, {AI} systems are being asked to explain their decisions. This article explores the challenges in solving this problem and approaches researchers are pursuing.}
-      \field{day}{10}
-      \field{issn}{1528-4972, 1528-4980}
-      \field{journaltitle}{{XRDS}: Crossroads, The {ACM} Magazine for Students}
-      \field{langid}{english}
-      \field{month}{4}
+      \field{journaltitle}{XRDS: Crossroads, The ACM Magazine for Students}
       \field{number}{3}
-      \field{shortjournal}{{XRDS}}
-      \field{title}{Explaining explainable {AI}}
-      \field{urlday}{5}
-      \field{urlmonth}{6}
-      \field{urlyear}{2024}
+      \field{title}{Explaining explainable AI}
       \field{volume}{25}
       \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{16\bibrangedash 19}
       \range{pages}{4}
-      \verb{doi}
-      \verb 10.1145/3313096
-      \endverb
-      \verb{file}
-      \verb Hind - 2019 - Explaining explainable AI.pdf:/home/jacob/Zotero/storage/MGIAIRCD/Hind - 2019 - Explaining explainable AI.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3313096
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3313096
-      \endverb
     \endentry
     \entry{khanjani_learning_2023}{inproceedings}{}
       \name{author}{6}{}{%
@@ -974,13 +662,10 @@
         {{hash=e7edee1b36ef8cc0859f777181c19de2}{%
            family={Janeja},
            familyi={J\bibinitperiod},
-           given={Vandana\bibnamedelima P.},
+           given={Vandana\bibnamedelima P},
            giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Charlotte, {NC}, {USA}}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{f6dc1213e588b707599535a8739400fc}
@@ -992,36 +677,12 @@
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Spoofed audio, both human or machine generated, causes deception and disinformation and as such is a societal challenge. This study advances the detection of spoofed audio through a novel approach that augments knowledge about audio data by incorporating linguistic information. Using perceptual methods, for English audio samples, experts in sociolinguistics listened for audio cues, and used binary labels to indicate the perceived authenticity of a set of speech samples, based on phonetic and phonological features that occur frequently in spoken English. These Expert Defined Linguistic Features ({EDLFs}) were then used in supervised spoofed audio detection methods to augment {AI} models. An ensemble method based on multi-domain features both from the audio data itself and the {EDLFs} was also created to evaluate the spoofed audio detection, and to demonstrate how {EDLFs} can improve traditional methods of spoofed audio detection. We found that augmenting the audio data with expertinformed linguistic annotation increased the accuracy of spoofed audio detection significantly in both the training and testing datasets across the evaluated single and ensemble models. Our findings indicate the promising avenue of augmenting audio data with perceptual linguistic techniques, as a method of human discernment, to enhance {AI}-based approaches for spoofed audio detection. These features also establish a foundation for direct linguistic annotations on new audio clips for robust spoofed audio detection.}
-      \field{booktitle}{2023 {IEEE} International Conference on Intelligence and Security Informatics ({ISI})}
-      \field{day}{2}
-      \field{eventtitle}{2023 {IEEE} International Conference on Intelligence and Security Informatics ({ISI})}
-      \field{isbn}{9798350337730}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{shorttitle}{Learning to Listen and Listening to Learn}
-      \field{title}{Learning to Listen and Listening to Learn: Spoofed Audio Detection Through Linguistic Data Augmentation}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 IEEE International Conference on Intelligence and Security Informatics (ISI)}
+      \field{title}{Learning to listen and listening to learn: Spoofed audio detection through linguistic data augmentation}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{01\bibrangedash 06}
       \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ISI58743.2023.10297267
-      \endverb
-      \verb{file}
-      \verb Khanjani et al. - 2023 - Learning to Listen and Listening to Learn Spoofed.pdf:/home/jacob/Zotero/storage/MDJK3BG3/Khanjani et al. - 2023 - Learning to Listen and Listening to Learn Spoofed.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10297267/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10297267/
-      \endverb
     \endentry
     \entry{li_comparative_2022}{inproceedings}{}
       \name{author}{3}{}{%
@@ -1041,12 +702,6 @@
            given={Xiao-Ping},
            giveni={X\bibinithyphendelim P\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Lisboa Portugal}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
       \strng{namehash}{7822ce3266f2cb42c73c9bc26cfc5755}
       \strng{fullhash}{7822ce3266f2cb42c73c9bc26cfc5755}
       \strng{bibnamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
@@ -1057,34 +712,11 @@
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Audio content synthesis has stepped into a new era and brought a great threat to daily life since the development of deep learning techniques. The {ASVSpoof} Challenge and the {ADD} Challenge have been launched to motivate the development of Deepfake audio detection algorithms. Currently, the detection models, which consist of front-end feature extractors and back-end classifiers, utilize the physical features mainly, rather than the perceptual features that relate to natural emotions or breathiness. Therefore, we provide a comprehensive study on 16 physical and perceptual features and evaluate their effectiveness in both Track 1 and Track 2 of the {ADD} Challenge. Based on results, {PLP}, as a perceptual feature, outperforms the rest of the features in Track 1, while {CQCC} has the best performance in Track 2. Our experiments demonstrate the significance of perceptual features in detecting Deepfake audios. We also seek to explore the underlying characteristics of features that can distinguish Deepfake audio from a real one. We perform statistical analysis on each feature to show its distribution differences on real and synthesized audios. This paper will provide a potential direction in selecting appropriate feature extraction methods for the future implementation of detection models.}
       \field{booktitle}{Proceedings of the 1st International Workshop on Deepfake Detection for Audio Multimedia}
-      \field{day}{14}
-      \field{eventtitle}{{MM} '22: The 30th {ACM} International Conference on Multimedia}
-      \field{isbn}{978-1-4503-9496-3}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{title}{A Comparative Study on Physical and Perceptual Features for Deepfake Audio Detection}
-      \field{urlday}{11}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{title}{A comparative study on physical and perceptual features for deepfake audio detection}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{35\bibrangedash 41}
       \range{pages}{7}
-      \verb{doi}
-      \verb 10.1145/3552466.3556523
-      \endverb
-      \verb{file}
-      \verb Li et al. - 2022 - A Comparative Study on Physical and Perceptual Fea.pdf:/home/jacob/Zotero/storage/RPQU57UG/Li et al. - 2022 - A Comparative Study on Physical and Perceptual Fea.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3552466.3556523
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3552466.3556523
-      \endverb
     \endentry
     \entry{liu_hidden--wave_2023}{inproceedings}{}
       \name{author}{5}{}{%
@@ -1114,10 +746,7 @@
            given={Qingguo},
            giveni={Q\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Florence, Italy}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{e58ef8f444141f003125d39d6d0449b7}
@@ -1130,39 +759,17 @@
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Voice is an essential medium for human communication and collaboration, and its trustworthiness is of great importance to humans. Synthesizing fake voices and detecting synthesized voices are two sides of a coin. Both sides have made great strides with the recently prospering deep learning techniques. Attackers started using {AI} techniques to synthesize, even clone, human voices. Researchers also proposed a series of {AIsynthesized} voice detection approaches and achieved promising results in laboratory environments.}
-      \field{booktitle}{2023 {IEEE} 34th International Symposium on Software Reliability Engineering ({ISSRE})}
-      \field{day}{9}
-      \field{eventtitle}{2023 {IEEE} 34th International Symposium on Software Reliability Engineering ({ISSRE})}
-      \field{isbn}{9798350315943}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{shorttitle}{Hidden-in-Wave}
-      \field{title}{Hidden-in-Wave: A Novel Idea to Camouflage {AI}-Synthesized Voices Based on Speaker-Irrelative Features}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 IEEE 34th International Symposium on Software Reliability Engineering (ISSRE)}
+      \field{title}{Hidden-in-wave: A novel idea to camouflage ai-synthesized voices based on speaker-irrelative features}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{786\bibrangedash 794}
       \range{pages}{9}
-      \verb{doi}
-      \verb 10.1109/ISSRE59848.2023.00029
-      \endverb
-      \verb{file}
-      \verb Liu et al. - 2023 - Hidden-in-Wave A Novel Idea to Camouflage AI-Synt.pdf:/home/jacob/Zotero/storage/URMFNINV/Liu et al. - 2023 - Hidden-in-Wave A Novel Idea to Camouflage AI-Synt.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10301243/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10301243/
-      \endverb
     \endentry
     \entry{liu_asvspoof_2023}{article}{}
-      \name{author}{11}{}{%
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
         {{hash=cb7010b03479c3e03fed67ae8f637348}{%
            family={Liu},
            familyi={L\bibinitperiod},
@@ -1213,56 +820,27 @@
            familyi={N\bibinitperiod},
            given={Andreas},
            giveni={A\bibinitperiod}}}%
-        {{hash=4b1c8475d6ba863aeabd315d2f10c9cf}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Kong\bibnamedelima Aik},
-           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
       }
       \strng{namehash}{20e81ef39cc534cca4c0063b63e4f7a5}
-      \strng{fullhash}{266f8bcc3f758fecd180050e760bbaea}
+      \strng{fullhash}{87fab5021be3778f1980ffe67b3533be}
       \strng{bibnamehash}{20e81ef39cc534cca4c0063b63e4f7a5}
       \strng{authorbibnamehash}{20e81ef39cc534cca4c0063b63e4f7a5}
       \strng{authornamehash}{20e81ef39cc534cca4c0063b63e4f7a5}
-      \strng{authorfullhash}{266f8bcc3f758fecd180050e760bbaea}
+      \strng{authorfullhash}{87fab5021be3778f1980ffe67b3533be}
       \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Benchmarking initiatives support the meaningful comparison of competing solutions to prominent problems in speech and language processing. Successive benchmarking evaluations typically reflect a progressive evolution from ideal lab conditions towards to those encountered in the wild. {ASVspoof}, the spoofing and deepfake detection initiative and challenge series, has followed the same trend. This article provides a summary of the {ASVspoof} 2021 challenge and the results of 54 participating teams that submitted to the evaluation phase. For the logical access ({LA}) task, results indicate that countermeasures are robust to newly introduced encoding and transmission effects. Results for the physical access ({PA}) task indicate the potential to detect replay attacks in real, as opposed to simulated physical spaces, but a lack of robustness to variations between simulated and real acoustic environments. The Deepfake ({DF}) task, new to the 2021 edition, targets solutions to the detection of manipulated, compressed speech data posted online. While detection solutions offer some resilience to compression effects, they lack generalization across different source datasets. In addition to a summary of the top-performing systems for each task, new analyses of influential data factors and results for hidden data subsets, the article includes a review of post-challenge results, an outline of the principal challenge limitations and a road-map for the future of {ASVspoof}.}
-      \field{eprinttype}{arxiv}
-      \field{issn}{2329-9290, 2329-9304}
-      \field{journaltitle}{{IEEE}/{ACM} Transactions on Audio, Speech, and Language Processing}
-      \field{langid}{english}
-      \field{shortjournal}{{IEEE}/{ACM} Trans. Audio Speech Lang. Process.}
-      \field{shorttitle}{{ASVspoof} 2021}
-      \field{title}{{ASVspoof} 2021: Towards Spoofed and Deepfake Speech Detection in the Wild}
-      \field{urlday}{18}
-      \field{urlmonth}{2}
-      \field{urlyear}{2025}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/ACM Transactions on Audio, Speech, and Language Processing}
+      \field{title}{Asvspoof 2021: Towards spoofed and deepfake speech detection in the wild}
       \field{volume}{31}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{2507\bibrangedash 2522}
       \range{pages}{16}
-      \verb{doi}
-      \verb 10.1109/TASLP.2023.3285283
-      \endverb
-      \verb{eprint}
-      \verb 2210.02437 [cs]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/W76DJHWR/Liu et al. - 2023 - ASVspoof 2021 Towards Spoofed and Deepfake Speech Detection in the Wild.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2210.02437
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2210.02437
-      \endverb
-      \keyw{Computer Science - Cryptography and Security,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Multimedia}
     \endentry
     \entry{tensorflow2015-whitepaper}{misc}{}
       \name{author}{40}{}{%
@@ -1409,12 +987,12 @@
       \verb https://www.tensorflow.org/
       \endverb
     \endentry
-    \entry{muller_does_2022}{misc}{}
+    \entry{muller_does_2022}{article}{}
       \name{author}{5}{}{%
         {{hash=ce747f3997da09ee5aba78667560b86e}{%
            family={Müller},
            familyi={M\bibinitperiod},
-           given={Nicolas\bibnamedelima M.},
+           given={Nicolas\bibnamedelima M},
            giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=01ed7f2ae125ce1a0bb6783f2ec3e2f8}{%
            family={Czempin},
@@ -1437,9 +1015,6 @@
            given={Konstantin},
            giveni={K\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
       \strng{namehash}{dae489c334e9ad367b2a2470ffb1409a}
       \strng{fullhash}{e88dcae5c7b802e2986576d9f96c0df4}
       \strng{bibnamehash}{dae489c334e9ad367b2a2470ffb1409a}
@@ -1450,32 +1025,9 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Current text-to-speech algorithms produce realistic fakes of human voices, making deepfake detection a much-needed area of research. While researchers have presented various deep learning models for audio spoofs detection, it is often unclear exactly why these architectures are successful: Preprocessing steps, hyperparameter settings, and the degree of ﬁne-tuning are not consistent across related work. Which factors contribute to success, and which are accidental? In this work, we address this problem: We systematize audio spooﬁng detection by re-implementing and uniformly evaluating twelve architectures from related work. We identify overarching features for successful audio deepfake detection, such as using cqtspec or logspec features instead of melspec features, which improves performance by 37\% {EER} on average, all other factors constant.}
-      \field{day}{21}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{4}
-      \field{number}{{arXiv}:2203.16263}
-      \field{title}{Does Audio Deepfake Detection Generalize?}
-      \field{urlday}{4}
-      \field{urlmonth}{7}
-      \field{urlyear}{2024}
+      \field{journaltitle}{arXiv preprint arXiv:2203.16263}
+      \field{title}{Does audio deepfake detection generalize?}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{eprint}
-      \verb 2203.16263 [cs, eess]
-      \endverb
-      \verb{file}
-      \verb Müller et al. - 2022 - Does Audio Deepfake Detection Generalize.pdf:/home/jacob/Zotero/storage/YBAF5V2M/Müller et al. - 2022 - Does Audio Deepfake Detection Generalize.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2203.16263
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2203.16263
-      \endverb
-      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Machine Learning}
     \endentry
     \entry{qais_deepfake_2022}{inproceedings}{}
       \name{author}{5}{}{%
@@ -1505,10 +1057,7 @@
            given={Deependra},
            giveni={D\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Hyderabad, India}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{3f8af56b47b037a630306f30ab3642d8}
@@ -1521,34 +1070,11 @@
       \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In this paper, a speech spoofing detection system based on Convolutional neural networks using different audio features has been proposed to classify the human speech and synthetic voice, Worst-case scenarios can develop using deepfake audios as threat to assets and image of a person, it can also become a threat to the whole country by unethical uses intended for loss of other party. Using a small voice clip of a person an attacker can develop similar voices. Every audio signal can be represented on a 2D graph plotted by mathematical calculations. The processing of audios into {CNN} requires a lot of computation, to make a system that can detect deepfake voices with much less computation by conversion of audios to images of audio features (Spectrogram, {MFCC}, {FFT}, {STFT} ) and then obtaining the array values as a numeric format which are most suitable to feed. Different approaches for feeding data to model are applied for prediction individually as well as in a concatenated approach.}
-      \field{booktitle}{2022 International Conference on Intelligent Controller and Computing for Smart Power ({ICICCSP})}
-      \field{day}{21}
-      \field{eventtitle}{2022 International Conference on Intelligent Controller and Computing for Smart Power ({ICICCSP})}
-      \field{isbn}{978-1-66547-258-6}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{title}{Deepfake Audio Detection with Neural Networks Using Audio Features}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{booktitle}{2022 international conference on intelligent controller and computing for smart power (ICICCSP)}
+      \field{title}{Deepfake audio detection with neural networks using audio features}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ICICCSP53532.2022.9862519
-      \endverb
-      \verb{file}
-      \verb Qais et al. - 2022 - Deepfake Audio Detection with Neural Networks Usin.pdf:/home/jacob/Zotero/storage/U4Z3ZRM3/Qais et al. - 2022 - Deepfake Audio Detection with Neural Networks Usin.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/9862519/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/9862519/
-      \endverb
     \endentry
     \entry{ranjan_statnet_2022}{inproceedings}{}
       \name{author}{3}{}{%
@@ -1568,10 +1094,7 @@
            given={Richa},
            giveni={R\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Abu Dhabi, United Arab Emirates}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{9ba6716a19b5859b47ff95c2a67e06e7}
@@ -1583,38 +1106,14 @@
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{With the rise in mobile phone users and {VoIP}, voice has emerged as an easy and accessible biometric modality for identiﬁcation or veriﬁcation tasks. Given the increasing usage of voice biometrics, the security of these systems is also of paramount importance. Researchers have demonstrated that Automatic Speaker Veriﬁcation ({ASV}) systems are prone to spooﬁng attacks like synthetic speech or fake speech, which can be used maliciously for a variety of tasks such as impersonation, fake news spreading, and opinion formation. This research proposes a deep convolutionbased multi-task network which performs both spoof detection and source identiﬁcation for synthetic speech. The proposed model is evaluated on three datasets {ASVspoof}2019 {LA}, {FOR}-Norm and In-the-Wild Audio Deepfake dataset. The results demonstrate the {EER} of 2.456\%, 0.814\%, and 0.199\% on the {ASVspoof}2019 {LA}, {FOR}-Norm, and Inthe-Wild Audio Deepfake datasets. In addition, we have also demonstrated results for cross-dataset evaluation and speech source identiﬁcation.}
-      \field{booktitle}{2022 {IEEE} International Joint Conference on Biometrics ({IJCB})}
-      \field{day}{10}
-      \field{eventtitle}{2022 {IEEE} International Joint Conference on Biometrics ({IJCB})}
-      \field{isbn}{978-1-6654-6394-2}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{shorttitle}{{STATNet}}
-      \field{title}{{STATNet}: Spectral and Temporal features based Multi-Task Network for Audio Spoofing Detection}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE International Joint Conference on Biometrics (IJCB)}
+      \field{title}{Statnet: Spectral and temporal features based multi-task network for audio spoofing detection}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 9}
       \range{pages}{9}
-      \verb{doi}
-      \verb 10.1109/IJCB54206.2022.10007949
-      \endverb
-      \verb{file}
-      \verb Ranjan et al. - 2022 - STATNet Spectral and Temporal features based Mult.pdf:/home/jacob/Zotero/storage/VXRIW4Q4/Ranjan et al. - 2022 - STATNet Spectral and Temporal features based Mult.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10007949/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10007949/
-      \endverb
     \endentry
-    \entry{ribeiro_why_2016}{misc}{}
+    \entry{ribeiro_why_2016}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=9203dc724f298030e81ba470feb309af}{%
            family={Ribeiro},
@@ -1632,9 +1131,6 @@
            given={Carlos},
            giveni={C\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
       \strng{namehash}{70906198418f30a779bc9bda0f6ae1f1}
       \strng{fullhash}{70906198418f30a779bc9bda0f6ae1f1}
       \strng{bibnamehash}{70906198418f30a779bc9bda0f6ae1f1}
@@ -1644,39 +1140,14 @@
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Despite widespread adoption, machine learning models remain mostly black boxes. Understanding the reasons behind predictions is, however, quite important in assessing trust, which is fundamental if one plans to take action based on a prediction, or when choosing whether to deploy a new model. Such understanding also provides insights into the model, which can be used to transform an untrustworthy model or prediction into a trustworthy one. In this work, we propose {LIME}, a novel explanation technique that explains the predictions of any classiﬁer in an interpretable and faithful manner, by learning an interpretable model locally around the prediction. We also propose a method to explain models by presenting representative individual predictions and their explanations in a non-redundant way, framing the task as a submodular optimization problem. We demonstrate the ﬂexibility of these methods by explaining diﬀerent models for text (e.g. random forests) and image classiﬁcation (e.g. neural networks). We show the utility of explanations via novel experiments, both simulated and with human subjects, on various scenarios that require trust: deciding if one should trust a prediction, choosing between models, improving an untrustworthy classiﬁer, and identifying why a classiﬁer should not be trusted.}
-      \field{day}{9}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{8}
-      \field{number}{{arXiv}:1602.04938}
-      \field{shorttitle}{"Why Should I Trust You?}
-      \field{title}{"Why Should I Trust You?": Explaining the Predictions of Any Classifier}
-      \field{urlday}{18}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining}
+      \field{title}{" Why should i trust you?" Explaining the predictions of any classifier}
       \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.1602.04938
-      \endverb
-      \verb{eprint}
-      \verb 1602.04938 [cs]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/KGW5D3MP/Ribeiro et al. - 2016 - Why Should I Trust You Explaining the Predictions of Any Classifier.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/1602.04938
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1602.04938
-      \endverb
-      \keyw{Computer Science - Machine Learning,Statistics - Machine Learning,Computer Science - Artificial Intelligence}
+      \field{pages}{1135\bibrangedash 1144}
+      \range{pages}{10}
     \endentry
-    \entry{sankaranarayanan_presidential_nodate}{article}{}
+    \entry{sankaranarayanan_presidential_nodate}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=6aa7faa2cf5fe4f1f6a867d424c146ef}{%
            family={Sankaranarayanan},
@@ -1699,6 +1170,9 @@
            given={Andrew},
            giveni={A\bibinitperiod}}}%
       }
+      \list{organization}{1}{%
+        {CEUR-WS}%
+      }
       \strng{namehash}{b206a3e90aa19c592e428c3b72eb1577}
       \strng{fullhash}{d10846dae3946721c5c375878ef81627}
       \strng{bibnamehash}{b206a3e90aa19c592e428c3b72eb1577}
@@ -1709,12 +1183,12 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{How do we evaluate media forensic techniques for detecting deepfakes? We present the Presidential Deepfakes Dataset ({PDD}), which consists of 32 videos, half of which are original videos and half of which are manipulated with audio impersonations, synthesized lip synchronizations, political misinformation, and situational artifacts. This dataset expands the context on which end-to-end media forensic systems can be evaluated. As an example, we evaluate the winning model of the {DeepFake} Detection Challenge on the {PDD} and find that it classifies 69\% of the videos in the {PDD} accurately. We share this dataset publicly for researchers to evaluate their techniques with the intention of pre-bunking future misinformation attempts.}
-      \field{langid}{english}
-      \field{title}{The Presidential Deepfakes Dataset}
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/BRLMG5C3/Sankaranarayanan et al. - The Presidential Deepfakes Dataset.pdf:application/pdf
-      \endverb
+      \field{booktitle}{CEUR Workshop Proceedings}
+      \field{title}{The presidential deepfakes dataset}
+      \field{volume}{2942}
+      \field{year}{2021}
+      \field{pages}{57\bibrangedash 72}
+      \range{pages}{16}
     \endentry
     \entry{sharevski_blind_2024}{inproceedings}{}
       \name{author}{4}{}{%
@@ -1739,12 +1213,6 @@
            given={Peter},
            giveni={P\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Salt Lake City {UT} {USA}}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
       \strng{namehash}{669b9d009d457ed7b9a0dfcc987f8fc9}
       \strng{fullhash}{2470f128070f166333d0b0d1dd75d295}
       \strng{bibnamehash}{669b9d009d457ed7b9a0dfcc987f8fc9}
@@ -1755,36 +1223,13 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Audio deepfakes are a form of deception where convincing speech sentences are synthesized through machine learning means to give an impression of a human speaker. Audio deepfakes emerge as an attractive vector for targeting users that rely on audio accessibility, such as individuals who are blind or low vision. The critical reliance on speech both as a medium and an affordance puts this population at an undue risk of being deceived as they rely solely on themselves to detect whether a piece of audio is a deepfake or not. To better understand the nature of this risk considering the nuanced reliance on assistive technologies such as screen readers, we conducted a user study with n=16 blind and low vision individuals from the {US}. Our participants achieved an overall discernment accuracy of 59\%, and clips identified as deep fakes were only actually deepfakes in 50.8\% of the cases (precision). The participants that self-identified as “low vision” performed slightly better (accuracy of 61\%, precision of 64\%) compared to the ones that self-identified as “blind” (accuracy of 55\%, precision of 56\%). Our qualitative results show that the participants in the “blind” group mostly considered a combination of infliction, imperfections in the voice, and the intensity in the speech delivery as discernment factors. The participants in the “low vision” group mostly used the speaker’s pitch, enunciation, emotion, and the fluency and articulation of the speaker as discernment cues. Overall, participants felt that audio deepfakes have the potential to deceive visually impaired individuals with political disinformation, impersonate their voice in authentication and smart homes, and specifically target them with voice phishing and enhanced scams.}
-      \field{booktitle}{Proceedings of the 2024 on {ACM} {SIGSAC} Conference on Computer and Communications Security}
-      \field{day}{2}
-      \field{eventtitle}{{CCS} '24: {ACM} {SIGSAC} Conference on Computer and Communications Security}
-      \field{isbn}{979-8-4007-0636-3}
-      \field{langid}{english}
-      \field{month}{12}
+      \field{booktitle}{Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security}
       \field{title}{Blind and Low-Vision Individuals' Detection of Audio Deepfakes}
-      \field{urlday}{17}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{4867\bibrangedash 4881}
       \range{pages}{15}
-      \verb{doi}
-      \verb 10.1145/3658644.3690305
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/E88FGDM8/Sharevski et al. - 2024 - Blind and Low-Vision Individuals' Detection of Audio Deepfakes.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3658644.3690305
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3658644.3690305
-      \endverb
     \endentry
-    \entry{veerasamy_rising_2022}{article}{}
+    \entry{veerasamy_rising_2022}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=9e5ad9f8585ec9c2a2480e48f3d5acb0}{%
            family={Veerasamy},
@@ -1797,6 +1242,9 @@
            given={Heloise},
            giveni={H\bibinitperiod}}}%
       }
+      \list{organization}{1}{%
+        {Academic Conferences International Limited}%
+      }
       \strng{namehash}{09a8ffb1d0d88e30db537bb4801181f3}
       \strng{fullhash}{09a8ffb1d0d88e30db537bb4801181f3}
       \strng{bibnamehash}{09a8ffb1d0d88e30db537bb4801181f3}
@@ -1807,39 +1255,18 @@
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Misinformation can be rapidly spread in cyberspace. It thrives in the social media landscape as well as news platforms. Misinformation can readily gain momentum in the race to influence people or intentionally deceive. With the use of bots, misinformation can be easily shared, especially in environments like Twitter and Facebook. While, some measures are taken to stop the spread of misinformation, threats like Deepfakes are posing a higher challenge. Deepfakes provide a means to generate fake digital content in order to impersonate a person. With the use of audio, images and videos, artificial intelligence is used to depict the speech and actions of people. Deepfakes are typically made of presidents or influential businessmen such as Donald Trump and Mark Zuckerberg. Deep Fakes can be very realistic and convincing as this form of synthetic media is raising concerns about its possible misuse. The effects of Deepfakes are to spread disinformation, confuse users or create influence. This can lead to further effects like political factions, blackmail, harassment and extortion. Deepfakes could lead to a distrust in digital content as many may feel that anything we see is actually just a manipulation. Deepfakes has arisen as a new generation of misinformation through the manipulation of digital media in order to create realistic videos. This paper looks at the governing, communal and technical issues relating to Deepfakes. At the technical level, the use of audio and text analysis used to create Deepfake videos is advancing at a rapid pace which has also made its affordability and accessibility easier. An evaluation of the threats stemming from Deepfakes reveals that there are various mental, monetary and group dynamics involved. In this paper, the various types of threats emanating from Deepfakes is discussed. This paper also looks at five factors in the field of Deepfakes that should be taken into consideration (Technical Source Dissemination Victim Viewers). The paper discussed these five factors in order to help identify measures to help curb the spread of Deepfakes. A combination of these measures can help limit the spread of Deepfakes and support mitigation of the threat. Due to prominence and power that digital media has, it is imperative that this threat not be overlooked. The paper provides a holistic approach to understanding the risk and impact of Deepfakes, as well measures to help mitigate abuse thereof.}
-      \field{day}{2}
-      \field{issn}{2048-9889, 2048-9870}
-      \field{journaltitle}{International Conference on Cyber Warfare and Security}
-      \field{langid}{english}
-      \field{month}{3}
+      \field{booktitle}{International Conference on Cyber Warfare and Security}
       \field{number}{1}
-      \field{shortjournal}{iccws}
-      \field{title}{Rising Above Misinformation and Deepfakes}
-      \field{urlday}{23}
-      \field{urlmonth}{9}
-      \field{urlyear}{2024}
+      \field{title}{Rising above misinformation and deepfakes}
       \field{volume}{17}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{340\bibrangedash 348}
       \range{pages}{9}
-      \verb{doi}
-      \verb 10.34190/iccws.17.1.25
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/CQRFPGQR/Veerasamy and Pieterse - 2022 - Rising Above Misinformation and Deepfakes.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://papers.academic-conferences.org/index.php/iccws/article/view/25
-      \endverb
-      \verb{url}
-      \verb https://papers.academic-conferences.org/index.php/iccws/article/view/25
-      \endverb
     \endentry
-    \entry{wang_asvspoof_2020}{misc}{}
-      \name{author}{40}{}{%
+    \entry{wang_asvspoof_2020}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
         {{hash=03d3e23852937fa39b0e34246c4ecd1d}{%
            family={Wang},
            familyi={W\bibinitperiod},
@@ -1855,10 +1282,10 @@
            familyi={T\bibinitperiod},
            given={Massimiliano},
            giveni={M\bibinitperiod}}}%
-        {{hash=fe73c417f1a9889ba1609cb08d1a3f40}{%
+        {{hash=d2e27df6f9b4a74274d968103b276375}{%
            family={Delgado},
            familyi={D\bibinitperiod},
-           given={Hector},
+           given={Héctor},
            giveni={H\bibinitperiod}}}%
         {{hash=24d798af6af6148c6db71152253615f1}{%
            family={Nautsch},
@@ -1890,200 +1317,31 @@
            familyi={L\bibinitperiod},
            given={Kong\bibnamedelima Aik},
            giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=f8d23260ca0e7ae53de0c06aa353af80}{%
-           family={Juvela},
-           familyi={J\bibinitperiod},
-           given={Lauri},
-           giveni={L\bibinitperiod}}}%
-        {{hash=593ac9d9e9596471923b7e3953a8acff}{%
-           family={Alku},
-           familyi={A\bibinitperiod},
-           given={Paavo},
-           giveni={P\bibinitperiod}}}%
-        {{hash=66009706e73f16f43ef977431dd73c71}{%
-           family={Peng},
-           familyi={P\bibinitperiod},
-           given={Yu-Huai},
-           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
-        {{hash=86f883b13f572aae6ae7839a8b7c4f8c}{%
-           family={Hwang},
-           familyi={H\bibinitperiod},
-           given={Hsin-Te},
-           giveni={H\bibinithyphendelim T\bibinitperiod}}}%
-        {{hash=1f4dedf9b9690e5648804ba97f7dbbdd}{%
-           family={Tsao},
-           familyi={T\bibinitperiod},
-           given={Yu},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=47e384462ad03a0c03ae0b911f31f833}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Hsin-Min},
-           giveni={H\bibinithyphendelim M\bibinitperiod}}}%
-        {{hash=81229e9b50c4868b106bde00a9c6125a}{%
-           family={Maguer},
-           familyi={M\bibinitperiod},
-           given={Sebastien\bibnamedelima Le},
-           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=289f7783ec708dc87fc345ccf5c8fb25}{%
-           family={Becker},
-           familyi={B\bibinitperiod},
-           given={Markus},
-           giveni={M\bibinitperiod}}}%
-        {{hash=9522dd3758c72de383ac0ad7713a02b9}{%
-           family={Henderson},
-           familyi={H\bibinitperiod},
-           given={Fergus},
-           giveni={F\bibinitperiod}}}%
-        {{hash=8a4fb1a2f5260b08591cc3ee76e638ab}{%
-           family={Clark},
-           familyi={C\bibinitperiod},
-           given={Rob},
-           giveni={R\bibinitperiod}}}%
-        {{hash=9a4f4a1ff661cd600eb26523a5ba8bb4}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Yu},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=e2068259fc5297e154f92a417136c922}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Quan},
-           giveni={Q\bibinitperiod}}}%
-        {{hash=d3a49a660fa8a6c8a93b5273a70eae29}{%
-           family={Jia},
-           familyi={J\bibinitperiod},
-           given={Ye},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=3f119bb862e5bd7e1a358b23ab351e8a}{%
-           family={Onuma},
-           familyi={O\bibinitperiod},
-           given={Kai},
-           giveni={K\bibinitperiod}}}%
-        {{hash=c3fb1b1a9eca04a76c56038684f0918d}{%
-           family={Mushika},
-           familyi={M\bibinitperiod},
-           given={Koji},
-           giveni={K\bibinitperiod}}}%
-        {{hash=835bb591625e9b3c96059154497d2886}{%
-           family={Kaneda},
-           familyi={K\bibinitperiod},
-           given={Takashi},
-           giveni={T\bibinitperiod}}}%
-        {{hash=9796d9d3026f7277441de027ffa0a107}{%
-           family={Jiang},
-           familyi={J\bibinitperiod},
-           given={Yuan},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=852ab61307cf97f4dbfcc919ba392164}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Li-Juan},
-           giveni={L\bibinithyphendelim J\bibinitperiod}}}%
-        {{hash=a14d0dfd650de219f2ad7ae72657ffa3}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Yi-Chiao},
-           giveni={Y\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=ec17bfcf1b4f3219ae7da4e83dcaa9fc}{%
-           family={Huang},
-           familyi={H\bibinitperiod},
-           given={Wen-Chin},
-           giveni={W\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=d0fb328bc36d1a9a42b9a721d7909992}{%
-           family={Toda},
-           familyi={T\bibinitperiod},
-           given={Tomoki},
-           giveni={T\bibinitperiod}}}%
-        {{hash=9a1de45c3184e849f0058a5404ce0c97}{%
-           family={Tanaka},
-           familyi={T\bibinitperiod},
-           given={Kou},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3bf91fd111e898901fb917bb72176535}{%
-           family={Kameoka},
-           familyi={K\bibinitperiod},
-           given={Hirokazu},
-           giveni={H\bibinitperiod}}}%
-        {{hash=a0f85eecc9026cbe95688ccd19ded274}{%
-           family={Steiner},
-           familyi={S\bibinitperiod},
-           given={Ingmar},
-           giveni={I\bibinitperiod}}}%
-        {{hash=cda4a2ff26ac3bb713ade97f26692b42}{%
-           family={Matrouf},
-           familyi={M\bibinitperiod},
-           given={Driss},
-           giveni={D\bibinitperiod}}}%
-        {{hash=8f3f7385c858767657c651692feb000a}{%
-           family={Bonastre},
-           familyi={B\bibinitperiod},
-           given={Jean-Francois},
-           giveni={J\bibinithyphendelim F\bibinitperiod}}}%
-        {{hash=900353279e4b66796b0ea6c0ae98070f}{%
-           family={Govender},
-           familyi={G\bibinitperiod},
-           given={Avashna},
-           giveni={A\bibinitperiod}}}%
-        {{hash=20255f490ac740cbcd21c24b2b67a2fc}{%
-           family={Ronanki},
-           familyi={R\bibinitperiod},
-           given={Srikanth},
-           giveni={S\bibinitperiod}}}%
-        {{hash=3bff7ef13028e86d3d749795d8fd7ef0}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Jing-Xuan},
-           giveni={J\bibinithyphendelim X\bibinitperiod}}}%
-        {{hash=6141208900447ed2b4f6d8bea7eae834}{%
-           family={Ling},
-           familyi={L\bibinitperiod},
-           given={Zhen-Hua},
-           giveni={Z\bibinithyphendelim H\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {arXiv}%
+        {Elsevier}%
       }
       \strng{namehash}{aeaae95a3851acdb0d7c761eee05b973}
-      \strng{fullhash}{bda8c7335ce8b8c3c9b7d0639085d976}
+      \strng{fullhash}{38fbdb730826ebc5db0f1bc91adee962}
       \strng{bibnamehash}{aeaae95a3851acdb0d7c761eee05b973}
       \strng{authorbibnamehash}{aeaae95a3851acdb0d7c761eee05b973}
       \strng{authornamehash}{aeaae95a3851acdb0d7c761eee05b973}
-      \strng{authorfullhash}{bda8c7335ce8b8c3c9b7d0639085d976}
+      \strng{authorfullhash}{38fbdb730826ebc5db0f1bc91adee962}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Automatic speaker veriﬁcation ({ASV}) is one of the most natural and convenient means of biometric person recognition. Unfortunately, just like all other biometric systems, {ASV} is vulnerable to spooﬁng, also referred to as “presentation attacks.” These vulnerabilities are generally unacceptable and call for spooﬁng countermeasures or “presentation attack detection” systems. In addition to impersonation, {ASV} systems are vulnerable to replay, speech synthesis, and voice conversion attacks.}
-      \field{day}{14}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{number}{{arXiv}:1911.01601}
-      \field{shorttitle}{{ASVspoof} 2019}
-      \field{title}{{ASVspoof} 2019: A large-scale public database of synthesized, converted and replayed speech}
-      \field{urlday}{3}
-      \field{urlmonth}{7}
-      \field{urlyear}{2024}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Speech \& Language}
+      \field{title}{ASVspoof 2019: A large-scale public database of synthesized, converted and replayed speech}
+      \field{volume}{64}
       \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{eprint}
-      \verb 1911.01601 [cs, eess]
-      \endverb
-      \verb{file}
-      \verb Wang et al. - 2020 - ASVspoof 2019 A large-scale public database of sy.pdf:/home/jacob/Zotero/storage/JVRQ5PHZ/Wang et al. - 2020 - ASVspoof 2019 A large-scale public database of sy.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/1911.01601
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1911.01601
-      \endverb
-      \keyw{Computer Science - Cryptography and Security,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Electrical Engineering and Systems Science - Signal Processing}
+      \field{pages}{101114}
+      \range{pages}{1}
     \endentry
     \entry{warren_better_2024}{inproceedings}{}
-      \name{author}{11}{}{%
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
         {{hash=ea47048153a63777c256e21e5c92ba80}{%
            family={Warren},
            familyi={W\bibinitperiod},
@@ -2134,57 +1392,22 @@
            familyi={G\bibinitperiod},
            given={Carrie},
            giveni={C\bibinitperiod}}}%
-        {{hash=43a512b300bbaed90787c310b5ddeb6b}{%
-           family={Traynor},
-           familyi={T\bibinitperiod},
-           given={Patrick},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Salt Lake City {UT} {USA}}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
       }
       \strng{namehash}{b9744c3c31f76b6fedc97f80ebe7380b}
-      \strng{fullhash}{25fe4065999c1545f380155fe42db196}
+      \strng{fullhash}{ff79d9876e4eaf2dfa03c0f6776c51a2}
       \strng{bibnamehash}{b9744c3c31f76b6fedc97f80ebe7380b}
       \strng{authorbibnamehash}{b9744c3c31f76b6fedc97f80ebe7380b}
       \strng{authornamehash}{b9744c3c31f76b6fedc97f80ebe7380b}
-      \strng{authorfullhash}{25fe4065999c1545f380155fe42db196}
+      \strng{authorfullhash}{ff79d9876e4eaf2dfa03c0f6776c51a2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Audio deepfakes represent a rising threat to trust in our daily communications. In response to this, the research community has developed a wide array of detection techniques aimed at preventing such attacks from deceiving users. Unfortunately, the creation of these defenses has generally overlooked the most important element of the system - the user themselves. As such, it is not clear whether current mechanisms augment, hinder, or simply contradict human classification of deepfakes. In this paper, we perform the first large-scale user study on deepfake detection. We recruit over 1,200 users and present them with samples from the three most widely-cited deepfake datasets. We then quantitatively compare performance and qualitatively conduct thematic analysis to motivate and understand the reasoning behind user decisions and differences from machine classifications. Our results show that users correctly classify human audio at significantly higher rates than machine learning models, and rely on linguistic features and intuition when performing classification. However, users are also regularly misled by pre-conceptions about the capabilities of generated audio (e.g., that accents and background sounds are indicative of humans). Finally, machine learning models suffer from significantly higher ∗The title comes from the free response portion of our study. Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org.}
-      \field{booktitle}{Proceedings of the 2024 on {ACM} {SIGSAC} Conference on Computer and Communications Security}
-      \field{day}{2}
-      \field{eventtitle}{{CCS} '24: {ACM} {SIGSAC} Conference on Computer and Communications Security}
-      \field{isbn}{979-8-4007-0636-3}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{shorttitle}{"Better Be Computer or I'm Dumb"}
-      \field{title}{"Better Be Computer or I'm Dumb": A Large-Scale Evaluation of Humans as Audio Deepfake Detectors}
-      \field{urlday}{13}
-      \field{urlmonth}{2}
-      \field{urlyear}{2025}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security}
+      \field{title}{" Better Be Computer or I'm Dumb": A Large-Scale Evaluation of Humans as Audio Deepfake Detectors}
       \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{2696\bibrangedash 2710}
       \range{pages}{15}
-      \verb{doi}
-      \verb 10.1145/3658644.3670325
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/JVHDXXYF/Warren et al. - 2024 - Better Be Computer or I'm Dumb A Large-Scale Evaluation of Humans as Audio Deepfake Detectors.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3658644.3670325
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3658644.3670325
-      \endverb
     \endentry
     \entry{xue_audio_2022}{inproceedings}{}
       \name{author}{9}{}{%
@@ -2234,12 +1457,6 @@
            given={Shegang},
            giveni={S\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Lisboa Portugal}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
       \strng{namehash}{e4f2d60673c6249493a55c99553663ac}
       \strng{fullhash}{e93b95494254a610c382311e9d8ca6ad}
       \strng{bibnamehash}{e4f2d60673c6249493a55c99553663ac}
@@ -2250,33 +1467,11 @@
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 1st International Workshop on Deepfake Detection for Audio Multimedia}
-      \field{day}{14}
-      \field{eventtitle}{{MM} '22: The 30th {ACM} International Conference on Multimedia}
-      \field{isbn}{978-1-4503-9496-3}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{title}{Audio Deepfake Detection Based on a Combination of F0 Information and Real Plus Imaginary Spectrogram Features}
-      \field{urlday}{11}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{booktitle}{Proceedings of the 1st international workshop on deepfake detection for audio multimedia}
+      \field{title}{Audio deepfake detection based on a combination of f0 information and real plus imaginary spectrogram features}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{19\bibrangedash 26}
       \range{pages}{8}
-      \verb{doi}
-      \verb 10.1145/3552466.3556526
-      \endverb
-      \verb{file}
-      \verb Xue et al. - 2022 - Audio Deepfake Detection Based on a Combination of.pdf:/home/jacob/Zotero/storage/H7BIS2GL/Xue et al. - 2022 - Audio Deepfake Detection Based on a Combination of.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3552466.3556526
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3552466.3556526
-      \endverb
     \endentry
     \entry{yan_initial_2022}{inproceedings}{}
       \name{author}{8}{}{%
@@ -2321,12 +1516,6 @@
            given={Ruibo},
            giveni={R\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Lisboa Portugal}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
       \strng{namehash}{cce4deddbfcb73083877e358355df5aa}
       \strng{fullhash}{def0d32ac8bde944cb0f531d2cea0731}
       \strng{bibnamehash}{cce4deddbfcb73083877e358355df5aa}
@@ -2337,34 +1526,11 @@
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Many effective attempts have been made for fake audio detection. However, they can only provide detection results but no countermeasures to curb this harm. For many related practical applications, what model or algorithm generated the fake audio also is needed. Therefore, We propose a new problem for detecting vocoder fingerprints of fake audio. Experiments are conducted on the datasets synthesized by eight state-of-the-art vocoders. We have preliminarily explored the features and model architectures. The t-{SNE} visualization shows that different vocoders generate distinct vocoder fingerprints.}
       \field{booktitle}{Proceedings of the 1st International Workshop on Deepfake Detection for Audio Multimedia}
-      \field{day}{14}
-      \field{eventtitle}{{MM} '22: The 30th {ACM} International Conference on Multimedia}
-      \field{isbn}{978-1-4503-9496-3}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{title}{An Initial Investigation for Detecting Vocoder Fingerprints of Fake Audio}
-      \field{urlday}{11}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{title}{An initial investigation for detecting vocoder fingerprints of fake audio}
       \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{61\bibrangedash 68}
       \range{pages}{8}
-      \verb{doi}
-      \verb 10.1145/3552466.3556525
-      \endverb
-      \verb{file}
-      \verb Yan et al. - 2022 - An Initial Investigation for Detecting Vocoder Fin.pdf:/home/jacob/Zotero/storage/7369Q38A/Yan et al. - 2022 - An Initial Investigation for Detecting Vocoder Fin.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3552466.3556525
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3552466.3556525
-      \endverb
     \endentry
     \entry{yang_robust_2024}{inproceedings}{}
       \name{author}{7}{}{%
@@ -2404,10 +1570,7 @@
            given={Yunhe},
            giveni={Y\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Seoul, Korea, Republic of}%
-      }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
       \strng{namehash}{56d421b632075b416a3a95cc89ba4dab}
@@ -2420,37 +1583,16 @@
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{With the advancement of generative modeling techniques, synthetic human speech becomes increasingly indistinguishable from real, and tricky challenges are elicited for the audio deepfake detection ({ADD}) system. In this paper, we exploit audio features to improve the generalizability of {ADD} systems. Investigation of the {ADD} task performance is conducted over a broad range of audio features, including various handcrafted features and learning-based features. Experiments show that learning-based audio features pretrained on a large amount of data generalize better than hand-crafted features on out-of-domain scenarios. Subsequently, we further improve the generalizability of the {ADD} system using proposed multi-feature approaches to incorporate complimentary information from features of different views. The model trained on {ASV}2019 data achieves an equal error rate of 24.27\% on the In-the-Wild dataset. The code will be released as soon 1.}
-      \field{booktitle}{{ICASSP} 2024 - 2024 {IEEE} International Conference on Acoustics, Speech and Signal Processing ({ICASSP})}
-      \field{day}{14}
-      \field{eventtitle}{{ICASSP} 2024 - 2024 {IEEE} International Conference on Acoustics, Speech and Signal Processing ({ICASSP})}
-      \field{isbn}{979-8-3503-4485-1}
-      \field{langid}{english}
-      \field{month}{4}
-      \field{title}{A Robust Audio Deepfake Detection System via Multi-View Feature}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{booktitle}{ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}
+      \field{title}{A robust audio deepfake detection system via multi-view feature}
       \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{13131\bibrangedash 13135}
       \range{pages}{5}
-      \verb{doi}
-      \verb 10.1109/ICASSP48485.2024.10446560
-      \endverb
-      \verb{file}
-      \verb Yang et al. - 2024 - A Robust Audio Deepfake Detection System via Multi.pdf:/home/jacob/Zotero/storage/W9YJ42T9/Yang et al. - 2024 - A Robust Audio Deepfake Detection System via Multi.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10446560/
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10446560/
-      \endverb
     \endentry
-    \entry{yi_add_2024}{misc}{}
-      \name{author}{20}{}{%
+    \entry{yi_add_2024}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
         {{hash=bf27030cff5f1171bae3a61f1d7436e8}{%
            family={Yi},
            familyi={Y\bibinitperiod},
@@ -2491,11 +1633,6 @@
            familyi={T\bibinitperiod},
            given={Zhengkun},
            giveni={Z\bibinitperiod}}}%
-        {{hash=76c4ac342426fb82f4a004c0cdbadd6d}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Xiaohui},
-           giveni={X\bibinitperiod}}}%
         {{hash=c48c0fadc73abe7dbb186ce085b6de50}{%
            family={Bai},
            familyi={B\bibinitperiod},
@@ -2506,98 +1643,28 @@
            familyi={F\bibinitperiod},
            given={Cunhang},
            giveni={C\bibinitperiod}}}%
-        {{hash=f1d3af1a93e0011adb0689f9802f30cd}{%
-           family={Liang},
-           familyi={L\bibinitperiod},
-           given={Shan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=57008eb0fe8160dddbf1414ee8290504}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Shiming},
-           giveni={S\bibinitperiod}}}%
-        {{hash=53eda2415f95a1d1f76572f661905aab}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Shuai},
-           giveni={S\bibinitperiod}}}%
-        {{hash=361b9840ac6987598c0099a7a4497198}{%
-           family={Yan},
-           familyi={Y\bibinitperiod},
-           given={Xinrui},
-           giveni={X\bibinitperiod}}}%
-        {{hash=0e4b43cc503b4583d4023aa2af56f914}{%
-           family={Xu},
-           familyi={X\bibinitperiod},
-           given={Le},
-           giveni={L\bibinitperiod}}}%
-        {{hash=91eb29740e2405d069a3462dbb5ec1b2}{%
-           family={Wen},
-           familyi={W\bibinitperiod},
-           given={Zhengqi},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=f397ee85433a25b75738faa0b764e496}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Haizhou},
-           giveni={H\bibinitperiod}}}%
-        {{hash=5850ca95706865f0a04cef086dedd166}{%
-           family={Lian},
-           familyi={L\bibinitperiod},
-           given={Zheng},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=97396b63631c7b5155fe9e624a564950}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Bin},
-           giveni={B\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
+      \list{organization}{1}{%
+        {IEEE}%
       }
       \strng{namehash}{a7f36370ed5b3f955d57f66668cd8213}
-      \strng{fullhash}{8188299b7c733e10b749f6abddfab2d1}
+      \strng{fullhash}{e23e7ac8d46fa4a7ee49dbe9c8561185}
       \strng{bibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
       \strng{authorbibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
       \strng{authornamehash}{a7f36370ed5b3f955d57f66668cd8213}
-      \strng{authorfullhash}{8188299b7c733e10b749f6abddfab2d1}
+      \strng{authorfullhash}{e23e7ac8d46fa4a7ee49dbe9c8561185}
       \field{extraname}{1}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Audio deepfake detection is an emerging topic, which was included in the {ASVspoof} 2021. However, the recent shared tasks have not covered many real-life and challenging scenarios. The ﬁrst Audio Deep synthesis Detection challenge ({ADD}) was motivated to ﬁll in the gap. The {ADD} 2022 includes three tracks: low-quality fake audio detection ({LF}), partially fake audio detection ({PF}) and audio fake game ({FG}). The {LF} track focuses on dealing with bona ﬁde and fully fake utterances with various real-world noises etc. The {PF} track aims to distinguish the partially fake audio from the real. The {FG} track is a rivalry game, which includes two tasks: an audio generation task and an audio fake detection task. In this paper, we describe the datasets, evaluation metrics, and protocols. We also report major ﬁndings that reﬂect the recent advances in audio deepfake detection tasks. The {ADD} 2022 dataset is publicly available, see Train\&Dev1, Adaption2, Track1 eval3, Track2 eval4, Track3.2 R1 eval5, Track3.2 R2 eval6.}
-      \field{day}{2}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{number}{{arXiv}:2202.08433}
-      \field{shorttitle}{{ADD} 2022}
-      \field{title}{{ADD} 2022: the First Audio Deep Synthesis Detection Challenge}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2202.08433
-      \endverb
-      \verb{eprint}
-      \verb 2202.08433 [cs]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/XI7CX9R9/Yi et al. - 2024 - ADD 2022 the First Audio Deep Synthesis Detection Challenge.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2202.08433
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2202.08433
-      \endverb
-      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,Computer Science - Machine Learning}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}
+      \field{title}{Add 2022: the first audio deep synthesis detection challenge}
+      \field{year}{2022}
+      \field{pages}{9216\bibrangedash 9220}
+      \range{pages}{5}
     \endentry
-    \entry{yi_audio_2023}{misc}{}
+    \entry{yi_audio_2023}{article}{}
       \name{author}{6}{}{%
         {{hash=bf27030cff5f1171bae3a61f1d7436e8}{%
            family={Yi},
@@ -2630,9 +1697,6 @@
            given={Yan},
            giveni={Y\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
       \strng{namehash}{a7f36370ed5b3f955d57f66668cd8213}
       \strng{fullhash}{e9c536b1973f45161ab21bd4ebff25a5}
       \strng{bibnamehash}{a7f36370ed5b3f955d57f66668cd8213}
@@ -2643,37 +1707,10 @@
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Audio deepfake detection is an emerging active topic. A growing number of literatures have aimed to study deepfake detection algorithms and achieved effective performance, the problem of which is far from being solved. Although there are some review literatures, there has been no comprehensive survey that provides researchers with a systematic overview of these developments with a unified evaluation. Accordingly, in this survey paper, we first highlight the key differences across various types of deepfake audio, then outline and analyse competitions, datasets, features, classifications, and evaluation of state-of-the-art approaches. For each aspect, the basic techniques, advanced developments and major challenges are discussed. In addition, we perform a unified comparison of representative features and classifiers on {ASVspoof} 2021, {ADD} 2023 and In-the-Wild datasets for audio deepfake detection, respectively. The survey shows that future research should address the lack of large scale datasets in the wild, poor generalization of existing detection methods to unknown fake attacks, as well as interpretability of detection results etc.}
-      \field{day}{29}
-      \field{eprinttype}{arxiv}
-      \field{langid}{english}
-      \field{month}{8}
-      \field{number}{{arXiv}:2308.14970}
-      \field{shorttitle}{Audio Deepfake Detection}
-      \field{title}{Audio Deepfake Detection: A Survey}
-      \field{urlday}{15}
-      \field{urlmonth}{2}
-      \field{urlyear}{2025}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2308.14970}
+      \field{title}{Audio deepfake detection: A survey}
       \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2308.14970
-      \endverb
-      \verb{eprint}
-      \verb 2308.14970 [cs]
-      \endverb
-      \verb{file}
-      \verb PDF:/home/jacob/Zotero/storage/55L5KMHE/Yi et al. - 2023 - Audio Deepfake Detection A Survey.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2308.14970
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2308.14970
-      \endverb
-      \keyw{Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
     \endentry
   \enddatalist
 \endrefsection
