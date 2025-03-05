@@ -7,7 +7,7 @@
 \usepackage{subfig}
 \usepackage{multirow}
 
-\title{Creating More Meaningful Explanations for Audio Deepfake Detection}
+\title{Interpretable Deepfake Voice Detection: A Hybrid Deep-Learning Model and Explanation Evaluation}
 \date{2024-10-01} 
 \author{Jacob LaRock\\1667321}
 \linespread{1.5}
@@ -17,17 +17,19 @@
 \def\Studiengang{Wirtschaftsinformatik}
 \def\Fakultaet{Fakultät III: Wirtschaftswissenschaften, Wirtschaftsinformatik und Wirtschaftsrecht}
  
-\def\Title{Explaining Audio Deepfake Detection with Perceptible Features and LIME}
+\def\Title{Interpretable Deepfake Voice Detection: A Hybrid Deep-Learning Model and Explanation Evaluation}
 \def\Subtitle{}
  
-\def\student{Jaocb LaRock}
+\def\student{Jacob LaRock}
 \def\studentno{1667321}
 \def\place{Siegen}
 \def\Date{17.03.2025} 
 \def\semester{6}
  
-\def\erstpruefer{Gunnar Stevens}
+\def\erstpruefer{Univ.-Prof. Dr. Gunnar Stevens}
 \def\erstprueferMail{Gunnar.Stevens@uni-siegen.de}
+\def\zweitpruefer{Univ.-Prof. Dr. Volker Wulf}
+\def\zweitprueferMail{Gunnar.Stevens@uni-siegen.de}
 
 \makeatletter
 \newcommand\notsotiny{\@setfontsize\notsotiny\@vipt\@viipt}
@@ -46,11 +48,11 @@
 
 		{\Large\bfseries \Title\par}
 		{\large\bfseries \Subtitle\par}
-		\vspace{2cm}
+		\vspace{1.5cm}
 
 		{\large \textbf{\KindOfWork}\par}
 
-		\vspace{1.5cm}
+		\vspace{1cm}
 
 		{\normalsize im Studiengang \\
 			\Studiengang \ im \semester. Semester \\
@@ -68,12 +70,13 @@
 		{\Institute} \par
 		{\Fakultaet}\par
 
-		\vspace{1cm}
+		\vspace{0.5cm}
 
-    {\begin{table}[h]
-			\centering
+    {\begin{table}[ht]
+			\centering\small
 			\begin{tabular}{lll}
 				{Erstprüfer:} & \erstpruefer & \erstprueferMail \\
+				{Zweitprüfer:} & \zweitpruefer & \zweitprueferMail \\
 			\end{tabular}
 		\end{table}}     
 		\vfill
