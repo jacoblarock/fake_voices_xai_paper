@@ -250,14 +250,14 @@ In order to contextualize the metrics, we will make the following definitions.
     \end{itemize}
 The first metric we propose is the mean of the absolute values of the weights of each feature within a set of explanations.
 % The first metric we will define is the mean of the absolute values of the weights of the explanations, summarized along the sample axis, delivering one value per feature. 
-We will further refer to this metric as importance, and we define it mathematically as follows for every feature \(f \in F\):
+We will further refer to this metric as importance, and we define it mathematically as follows for every feature \(f \in F\) extracted from sample \(s \in S\):
 \begin{equation}
-    Imp(f) = \frac{\sum_{s \in S} |w_{fs}|}{|S|}.
+    Imp(f, s) = \frac{\sum_{s \in S} |w_{fs}|}{|S|}.
 \end{equation}
 			
-The second metric we will define is the average aggregate correctness on a per-feature basis, which we will further refer to as trust. The trust per feature \(f \in F\) can be defined as follows:
+The second metric we will define is the average aggregate correctness on a per-feature basis, which we will further refer to as trust. The trust per feature \(f \in F\) extracted from sample \(s \in S \) can be defined as follows:
 \begin{equation}
-    Trust(f) = \frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}.
+    Trust(f, s) = \frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}.
 \end{equation}
 			
             
