@@ -4,6 +4,8 @@
 \addbibresource{references.bib}
 \usepackage{changepage}
 \usepackage{parskip}
+\usepackage{subfig}
+\usepackage{multirow}
 
 \title{Creating More Meaningful Explanations for Audio Deepfake Detection}
 \date{2024-10-01} 
@@ -77,472 +79,301 @@
 		\vfill
 	\end{titlepage}
     \newpage
-    \section{Abstract}
-	\sloppy
-	With the unprecedented advancement of Generative Artificial Intelligence (GenAI), the threat
-	of voice scams using synthetic voices has become a serious concern across various sectors.
-	Recent efforts have focused on identifying fake voices through handcrafted features, deep
-	learning models, and hybrid approaches. However, most existing methods lack explainability,
-	rendering their predictions non-transparent to users. This paper proposes a novel,
-	interpretable, and transparent method for fake voice identification by introducing a hybrid
-	deep learning model that leverages multiple extracted features. The hybrid model consists of
-	two main components: the first component addresses heterogeneous feature spaces by employing
-	deep convolutional sub-models tailored to individual features, while the second component, the
-	terminus model, utilizes the concatenated representations from the final layers of each
-	sub-model as input. The terminus model follows a typical multi-layer perceptron architecture,
-	enabling effective integration and classification of the diverse feature representations. To
-	enhance interpretability, we decompose the model’s decisions using Local Interpretable
-	Model-agnostic Explanations (LIME), exploiting the identical feature representation before the
-	concatenation layers to address challenges related to multi-dimensional feature
-	representations. To evaluate the importance and trustworthiness of features in the generated
-	explanations, we propose two metrics: importance and trust. Extensive experiments are
-	conducted on the In-the-Wild dataset, which is designed to test the generalization capability
-	of synthetic audio detection methods. The experimental results demonstrate that our approach
-	achieves performance comparable to benchmark methods. Furthermore, the results based on our
-	proposed metrics conclude that certain perceptible features demonstrate promise for generating
-	explanations that are meaningful to general users. For reproducibility, the source code for
-	these experiments is available in the following repository:
-	\url{https://github.com/jacoblarock/fake_voices_xai}
-    \section{Introduction}
-    As the use of generative methods for the creation of synthetic voices becomes more widespread,
-    so grows the need for reliable and usable detection methods for the protection of the security
-    of people and businesses alike. In particular, the rise of deepfake technology has led to
-	concerns about its potential misuse in areas such as politics, entertainment and national
-	security by, for instance, potentially allowing malicious actors to create fake audio
-	recordings that appear to be genuine statements made by public figures or to create
-	genuine-seeming recordings of events that never happened, which could have significant
-	consequences if used to spread misinformation, from defaming individuals to creating political
-	tension \cite{veerasamy_rising_2022,albahar_deepfakes_2005}.
-	\par
-	The field of Explainable AI (XAI) shows promise for producing useful and interpretable results
-	from such models. Explainable AI refers to the ability of artificial intelligence systems,
-	such as machine learning models and neural networks, to provide understandable and
-	interpretable explanations for their decisions or predictions \cite{hind_explaining_2019}.
-	This means that XAI systems can articulate why they made a particular decision, what factors
-	influenced it and how confident they are in their conclusion \cite{hind_explaining_2019}. For
-	the detection of audio deepfakes, this could mean that the model can justify its
-	classification with feature-based evidence, allowing for verification of the result by the end
-	user. Much of the existing research, further discussed in the next section, follows the path
-	of producing a model with the best possible benchmarks against datasets of samples, without
-	taking into account if the results can be usefully interpreted, while existing explorations
-	into making audio deepfake detection explainable have produced results that often require a
-	lot of background knowledge to meaningfully interpret. Aside from this, explainability in the
-	area of audio deepfake detection remains an open challenge \cite{cuccovillo_open_2022}, one
-	even promoted by regulatory bodies such as the European Union with the "right to explain"
-	\cite{goodman_european_2017}.
-	\par
-	In this work, we make a distinction of two main categories of input features for a synthetic
-	voice detection model: perceptible and imperceptible features. Perceptible features are
-	features that can be perceived by the human ear, often vocal qualities such as jitter, shimmer
-	or pitch fluctuation that have a wide range of uses even outside of audio classification such
-	as diagnosis of disease \cite{chaiwongyen_deepfake-speech_2023}, while imperceptible features
-	are typically out of the range of human hearing, and may not directly reflect a vocal quality,
-	otherwise referred to as "speaker-independent" features \cite{liu_hidden--wave_2023}. We use a
-	new combination of features for our method, with an emphasis being placed on perceptible
-	features, as we believe these to be the most likely to be understood by the layperson.
-	\par
-	We introduce a hybrid deep-learning model, with the purpose of combining these
-	multidimensional features into a single output. The hybrid model consists firstly of a
-	component sub-model for each of the input features, in order to address the problem of varying
-	dimensionality of the extracted features without the drawbacks of costly transformations in
-	the pre-processing phase. The final part of our hybrid model is what we will refer to as the
-	terminus model, a model that uses the concatenated outputs of the individual sub-models as
-	inputs and distills down to a singular output with a classic multi-layer perceptron
-	architecture, allowing for an effective combination of the features into a final singular
-	classification result.
-	\par
-	In order to introduce explainability into our method, we generate explanations using a method
-	that first generated the intermediate output data from the sub-models and then applies the
-	Local Interpretable Model-agnostic Explanations (LIME) \cite{ribeiro_why_2016} on the terminus
-	model, which allows us to, for an individual classification, assess the impact of each input
-	feature on the final result through the local explanation, as, due the independence of the
-	sub-models from one another, the importance of their outputs directly correlates with the
-	importance of their inputs when it comes to the end-classification made by the terminus model.
-	\par
-	We then stood before the problem of assessing our explanations, more specifically, assessing
-	the impact of the input features on the average local explanation, in order to make a
-	conclusion about the usefulness or promise of our chosen features for providing understandable
-	explanations of our model's classifications. In order to tackle the problem with our local
-	explanations, and due to a lack of metrics to assess the aggregated average value of local
-	explanations, we also introduce two metrics for such an aggregate evaluation of large number
-	of generated LIME explanations, importance and trust, on a per-feature basis, which we use to
-	make a conclusion about the value of the selected feature set for the purpose of sensible
-	explanations.
-	\par
-	The contributions of this work are in summary: Our hybrid model-architecture and modified
-	LIME-based method for generating explanations of classifications of audio voice samples as
-	synthetic or bona-fide and the two metrics that we introduce in order to assess the impact of
-	individual features over numerous local explanations.
-	\par
-	This paper is divided into the following sections:
-	\begin{itemize}
-		\item §\ref{sec:related} Related Work, where we discuss the most relevant related
-			research in the field, in order to create a picture of the current state-of-the-art
-		\item §\ref{sec:method} Method, where we describe the general model implementation, as
-			well as the implementation of our LIME-based method for generating explanations in
-			more detail.
-		\item §\ref{sec:experimental_results} Experimental Results, where we discuss how we performed our
-			experiments, how our hybrid model performs, as well as use our proposed metrics in
-			order to assess the feature impact in the average explanation.
-		\item §\ref{sec:discussion} Discussion, where we discuss the implication of the results of
-			our experiments, including the potential of the explanations as well as the
-			shortcomings and limitations of our method.
-	\end{itemize}
-	\section{Related Work}
-	\label{sec:related}
-	Several researchers have already followed similar or relevant directions to that of this work.
-	This section will summarize some efforts in previous research divided into categories of
-	perceptible and imperceptible features, as well as previous efforts at explainability in this
-	field.
-	\subsection{Synthetic Voice Detection With Imperceptible Features}
-	The most common approach in this field makes use of either learned or hand-crafted
-	imperceptible features. Examples include spectrographic features such as the mel-spectrogram
-	and its hand-crafted derivative the mel-frequency cepstral coefficients (MFCCs), both of which
-	are present in our method due to their widespread successful use.
-	\par
-	The work of Anagha et al. \cite{anagha_audio_2023} is an example that makes use of
-	mel-spectrograms in combination with an architecture based on convolutional neural networks,
-	achieving well-performing results on the ASVSpoof2019 dataset \cite{wang_asvspoof_2020}.
-	\par
-	\sloppy
-	A further work from Yan et al. \cite{yan_initial_2022} makes use of MFCCs, in combination with
-	other hand-crafted imperceptible features such as linear frequency cepstral coefficients
-	(LFCCs) to not only classify audio samples as synthetic or authentic, but also to correctly
-	classify the vocoder used to produce the sample with nearly perfect accuracy on a handcrafted
-	dataset.
-	\par
-	Other researchers, such as in the work of Qais et al. \cite{qais_deepfake_2022} make use of
-	Fourier transforms, such as the short term Fourier transform (STFT). The aforementioned
-	example uses these features combined with others such as the aforementioned mel-spectrogram
-	based features. They also pair these features with a convolutional architecture and achieve
-	notably accurate results on the ASVSpoof2017 dataset \cite{delgado_asvspoof_2018}.
-	\par
-	Yang et al. \cite{yang_robust_2024} demonstrate a comparison of multiple features, as well as a
-	feature selection method, with the goal of maximizing model efficiency. They run experiments
-	with several hand-crafted features as well as learned features. They train and test using
-	three datasets, ASVSpoof2019 \cite{wang_asvspoof_2020}, ASV2021 \cite{liu_asvspoof_2023} and
-	In-the-Wild \cite{muller_does_2022}, presenting their results for each feature, as well as
-	the results of their selection and classification fusion methods.
-	\subsection{Synthetic Voice Detection With Perceptible Features}
-	There is also a smaller but still notable body of work encompassing the use of perceptible
-	features for the detection of synthetic voices, making use of a variety of features, some of
-	which were selected for use in our experiments.
-	\par
-	The work of Barrington et al. \cite{barrington_single_2023} explores the idea of
-	classification using perceptible features, highlighting their potential for improving
-	explainability in the space of deepfake audio detection, although they only implement a
-	classifier and not an explainer. They do, however, also demonstrate a drop in performance when
-	using perceptible features in comparison with imperceptible hand-crafted and deep-learning
-	features in their experiments, which were performed on a combination of synthetic and real
-	audio datasets.
-	\par
-	Chaiwongyen et al. \cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023} also
-	approach using perceptible features for classification in their works. They developed a
-	perceptron architecture with a single hidden layer and trained and tested using the dataset
-	of the ADD2022 Challenge \cite{yi_add_2024}, resulting in lackluster performance in 2022, with
-	better results using an expanded and improved feature set in 2023.
-	\par
-	Li et al. \cite{li_comparative_2022} also approach perceptible features in their work,
-	combining them with imperceptible (referred to as physical in the work) features and using
-	various neural networks in their experiments. With their combination of perceptible and
-	imperceptible features, they were able to produce the best performance results of their
-	experiments in comparison to experiments run with only perceptible or imperceptible features,
-	which were performed as well on the dataset of the ASV2022 Challenge \cite{yi_add_2024}.
-	\subsection{Explainable Models}
-	There have also been some efforts in the previous research to pair synthetic voice detection
-	models with explainable methods.
-	\par
-	One previous example of an implementation of an explainable model for use in audio deepfake
-	detection came from Ge et al. \cite{ge_explaining_2024}, who explain feature influence on
-	models using the SHAP (SHapley Additive exPlanations) method. They apply this method using
-	log-scaled power spectrograms as a feature, training and testing using the datasets from the
-	ASV2019 challenge \cite{wang_asvspoof_2020}, they are able to determine and graphically
-	represent areas of importance on the spectrogram, as well as globally summarize the
-	SHAP-values.
-	\par
-	Another example is presented by Haq et al. \cite{haq_multimodal_2023}, who use the changes in
-	emotional state as an input feature and represent "unlikely" changes on a graph so that it can
-	be understood by an eventual end user. In this case, they achieved their results by combining
-	the output of fake video and fake audio classifiers in order to produce a final classification
-	for a video sample with audio. Testing against the presidential deepfake dataset
-	\cite{sankaranarayanan_presidential_nodate}, they achieve impressive results in comparison to
-	the standing benchmark on the dataset at the time.
-	\section{Method}
-	\label{sec:method}
-		\subsection{Black-Box Model}
-		We created, trained and evaluated the model used for our experiments using the tools
-		available in the TensorFlow and Keras libraries \cite{tensorflow2015-whitepaper}. This
-		section will go into further detail about the experimental setup for the black-box model
-		as well as the way in which explanations were created and summarized.
-			\subsubsection{Features}
-			In order to increase the likelihood of the explanations being useful and
-			understandable to the end user, we placed a focus on using multiple perceptible
-			features as inputs for the classifier. We added used two imperceptible features with
-			the hypothesis, based on previous research \cite{barrington_single_2023,
-			chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023,li_comparative_2022},
-			that they would positively of increasing the model performance.
-			\par
-			Several features were used for the final version of the black-box model. Some are
-			features widely used in research involving the detection of synthetic while others are
-			more specific and are cited accordingly. The features that are not summarized for a
-			whole sample are extracted using a sliding window method, preventing a loss of
-			fidelity that can be caused by compression of the feature to a standard size. The
-			features we considered perceptible are as follows:
-			\begin{itemize}
-				\item
-					\sloppy
-					Harmonic-to-noise ratios: A perceptible feature inspired by previous research
-					\cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023,
-					li_comparative_2022} but done in a sliding window fashion instead of on the
-					whole file, the HNRs are the ratios of the strengths of harmonic frequencies
-					to the strengths of "noise", the total strength outside the harmonic
-					frequencies. Unlike some previously seen examples
-					\cite{chaiwongyen_contribution_2022, chaiwongyen_deepfake-speech_2023}, I
-					calculate this ratio for each fundamental frequency length, instead of using
-					one value for the whole sample. Given that \(\gamma_{i}\) is the harmonic
-					energy in a given fundamental frequency cycle and \(\iota_{i}\) is the
-					residual energy in a given fundamental frequency cycle, the HNR at that cycle
-					\(hnr_{i}\) is calculated as follows:
-					\[ hnr_{i} = 20log\frac{\gamma_{i}}{\iota_{i}}. \]
-				\item
-					Fundamental frequency lengths: Considered a perceptible feature, the
-					fundamental frequency lengths (f0 lengths) are the lengths of every
-					fundamental frequency cycle in the sample. This has also been previously used
-					in certain research on synthetic audio detection \cite{xue_audio_2022}. The
-					output is one-dimensional with time as the axis.
-				\item
-					Onset strength: As used in previous research \cite{li_comparative_2022}, this
-					perceptible feature represents the strengths of each onset in the audio
-					sample, where an onset is point where there is a sudden rise in energy across
-					the audio spectrum. This results in a one-dimensional output with time as the
-					axis.
-				\item
-					Intensity: Also inspired by previous research \cite{li_comparative_2022},
-					intensity, also a perceptible feature, is the total power at each point in the
-					audio sample, given in db. This is calculated by creating a fourrier
-					transformation of the sample and then summing across the frequency-axis for
-					every point on the time-axis. Resulting in a one-dimensional output.
-				\item
-					Pitch-fluctuations: Also classified as a perceptible feature, the pitch
-					fluctuations are calculated for every sample in the audio as the difference
-					between pitch at the given point and the pitch at the previous point. Pitch is
-					estimated based on the maximum power harmonics. This feature is similar to the
-					use of summarized pitch fluctuations in previous research
-					\cite{khanjani_learning_2023}. This feature is also one-dimensional with time
-					as the axis. Given that \(H_{i}\) is the set of harmonic frequencies at
-					fundamental frequency cycle \(i\) with \(h_{i} \in H_{i}\) as a frequency of
-					the set and \(s(h_{i})\) is the power of a given harmonic frequency at cycle
-					\(i\), the pitch can be estimated as follows:
-					\[p_{i} = s(max(H_{i})).\]
-					Then, given an offset \(x\), the pitch fluctuation at cycle \(i\), \(pf_{i}\),
-					can be calculated as follows:
-					\[pf_{i} = p_{i}-p_{i-x}.\]
-				\item
-					Jitter features: As defined in previous attempts to identify synthetic audio
-					\cite{chaiwongyen_deepfake-speech_2023} with perceptible features,
-					jitter-based features measures the absolute variations in fundamental
-					frequency cycles in comparison to the nearest x neighbors. The jitter of a
-					sample in relation to the nearest \(x\) samples can be described as follows:
-					\[ jitter(x) = \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|T_{i}
+\section{Abstract}
+\sloppy
+With the unprecedented advancement of Generative Artificial Intelligence (GenAI), the threat of voice scams using synthetic voices has become a serious concern across various sectors. Recent efforts have focused on identifying fake voices through handcrafted features, deep learning models, and hybrid approaches. However, most existing methods lack explainability, rendering their predictions non-transparent to users. This paper proposes a novel, interpretable, and transparent method for fake voice identification by introducing a hybrid deep learning model that leverages multiple extracted features. The hybrid model consists of two main components: the first component addresses heterogeneous feature spaces by employing deep convolutional sub-models tailored to individual features, while the second component, the terminus model, utilizes the concatenated representations from the final layers of each sub-model as input. The terminus model follows a typical multi-layer perceptron architecture, enabling effective integration and classification of the diverse feature representations. To enhance interpretability, we decompose the model’s decisions using Local Interpretable Model-agnostic Explanations (LIME), taking advantage of the identical feature representation before the concatenation layers to address challenges related to multidimensional feature representations. To evaluate the features and assess the quality of the generated explanations, we propose two metrics: importance and trust. Extensive experiments are conducted on the In-the-Wild dataset, which is designed to test the generalization capability of synthetic audio detection methods. The experimental results demonstrate that our approach achieves performance comparable to benchmark methods. Furthermore, the results based on our proposed metrics conclude that certain perceptible features demonstrate promise for generating explanations that are meaningful to general users. For reproducibility, the source code for these experiments is available in the following repository: \url{https://github.com/jacoblarock/fake_voices_xai}
+
+\section{Introduction}
+Since the use of generative methods for creating synthetic voices has become more widespread, the need for reliable and usable detection methods to protect the security of individuals and businesses has grown. In particular, the rise of deepfake technology has raised concerns about its potential misuse in areas such as politics, entertainment, and national security. For instance, malicious actors could exploit this technology to create fake audio recordings that appear to be genuine statements made by public figures or to fabricate recordings of events that never occurred. Such misuse could have significant consequences, including the spread of misinformation, defamation of individuals, and the escalation of political tensions \cite{veerasamy_rising_2022,albahar_deepfakes_2005}.
+
+There has been considerable attention on identifying audio deepfakes using classical and sophisticated deep learning models~\cite{wang2020deepsonar,becker2024audiomnist,muller_does_2022,yang_robust_2024,wang_asvspoof_2020}. Methods for fake voice identification can be broadly categorized into two classes: methods with handcrafted feature extraction and methods with end-to-end deepfake detectors~\cite{dixit2023review,li2025survey}. In the former, detection approaches first extract various features from the voices, including perceptible features and Mel-spectrograms. These high-dimensional feature values are then passed through complex deep learning models to determine whether the voice is real or synthesized (i.e., fake). End-to-end fake voice identification methods generally optimize the feature extraction process and classification task jointly. However, in recent times, these methods have become more popular than the former category.
+
+The field of Explainable AI (XAI) shows promise for producing useful and interpretable results from such models. Explainable AI refers to the ability of artificial intelligence systems, such as machine learning models and neural networks, to provide understandable and interpretable explanations for their decisions or predictions~\cite{hind_explaining_2019}. This means that XAI systems can articulate why they made a particular decision, what factors influenced it, and how confident they are in their conclusion \cite{hind_explaining_2019}. Although the application of XAI has increased exponentially in other domains, including health informatics, natural language processing, and image processing, its use in fake voice identification is less frequent. One probable reason is that voice consists of signals, and explanations leveraging signals might not be as meaningful compared to other domains. For example, explanations highlighting objects in object identification or relevant words in text sentiment classification can make sense to users.
+
+For the detection of audio deepfakes, this could mean that the model can justify its classification with feature-based evidence, allowing for verification of the result by the end user. Much of the existing research, further discussed in the next section, focuses on producing models with the best possible benchmarks against datasets of samples, without considering whether the results can be usefully interpreted. Existing explorations into making audio deepfake detection explainable have produced results that often require significant background knowledge to interpret meaningfully. Aside from this, explainability in the area of audio deepfake detection remains an open challenge \cite{cuccovillo_open_2022}, one even promoted by regulatory bodies such as the European Union with the "right to explain"~\cite{goodman_european_2017}.
+
+One popular method to detect synthetic voices is to use images consisting of Mel-spectrograms derived from voice signals. Deep learning classifiers then utilize these generated images to predict whether the voice is original or fake. However, applying XAI to such methods is not meaningful because explanations considering pixels as elements would not be understandable to general users. Such explanations can help AI practitioners understand the problem and modify models to achieve higher accuracy. An alternative solution for explaining predictions in fake voice identification is a feature extraction-based approach. In this case, predictions can be explained using understandable features.
+
+In this work, we introduce a hybrid deep learning model leveraging perceptible features extracted from voice signals. The dimensions of each perceptible feature are not the same. Therefore, our hybrid model consists of a component sub-model for each input feature to address the problem of varying dimensionality of the extracted features without the drawbacks of costly transformations in the pre-processing phase. The concatenation of the sub-models' outputs is followed by a terminus model. The terminus model, which uses the concatenated outputs of the individual sub-models as inputs, distills them into a singular output using a classic multi-layer perceptron architecture, allowing for an effective combination of the features into a final classification result.
+
+Since Mel-spectrogram-based representations are not suitable for explaining predictions to users, we make use of perceptible features. Perceptible features are features that can be perceived by the human ear, such as jitter, shimmer, or pitch fluctuation, which have a wide range of uses even outside of audio classification, such as in disease diagnosis \cite{chaiwongyen_deepfake-speech_2023}. To introduce explainability into our method, we generate explanations using the output of each sub-model before the concatenation layers and then apply Local Interpretable Model-agnostic Explanations (LIME) \cite{ribeiro_why_2016} on the terminus model. This allows us to assess the impact of each input feature on the final result through local explanations. Due to the independence of the sub-models, the importance of their outputs directly correlates with the importance of their inputs for the end classification made by the terminus model.
+
+We then faced the problem of assessing our explanations, specifically evaluating the impact of the input features on the average local explanation to determine the usefulness of our chosen features for providing understandable explanations of our model's classifications. Other methods for assessing the global impact of features exist, such as SHAP (SHapley Additive exPlanations) \cite{lundberg2017unified}. However, because such methods use principles different from those of LIME for assessing the impact of features on a global scale, they do not necessarily represent the presence of the features within the average explanation generated by LIME. Due to this, as well as the fact that existing research lacks methods of aggregate evaluation of many LIME explanations, we therefore introduce two metrics: \textit{trust} and \textit{importance}. These metrics allow for an aggregate evaluation of a large number of generated LIME explanations on a per-feature basis, enabling us to assess the usefulness of the features within a given feature set for producing useful and understandable explanations.
+
+% To address this problem and due to a lack of metrics for assessing the aggregated average value of local explanations, we introduce two metrics: \textit{trust} and \textit{importance}. These metrics allow for an aggregate evaluation of a large number of generated LIME explanations on a per-feature basis, enabling us to assess the value of the selected feature set for producing sensible explanations.
+
+We conducted a wide range of experiments to evaluate the performance of our hybrid audio deepfake detection approach on the \textit{In-The-Wild} dataset. The experimental results demonstrate that our model performs effectively compared to state-of-the-art methods. The evaluation of the generated explanations using our proposed metrics also identifies which features have the highest impact on the model's overall predictions. The contributions of this paper are twofold:
+\begin{itemize}
+\item We propose an interpretable hybrid deep learning model to identify synthetic voices using perceptible features.
+% \item Our method can explain predictions, and based on our introduced evaluation metrics, the explanations can highlight the impact of specific features.
+\item We propose two metrics in order to perform aggregate evaluations of a large explanations from our LIME-based method, in order to assess how useful the average explanation is.
+\end{itemize}
+
+This paper is divided into the following sections: Section \ref{sec:related} presents the most relevant research conducted in this field. Section \ref{sec:method} describes our proposed hybrid deep learning model and the evaluation metrics introduced to judge the generated explanations. The next section, section \ref{sec:experimental_results} presents the experimental setup, results, and performance comparisons. Section \ref{sec:discussion} discusses the implications of the results and limitations of our method. Finally, the last section concludes the paper with possible future work.
+
+%Since the use of generative methods for the creation of synthetic voices becomes more widespread, the need for reliable and usable detection methods for the protection of the security of people and businesses grows. In particular, the rise of deepfake technology has led to concerns about its potential misuse. There are several areas where the misuse occurs including politics, entertainment and national security by, for instance, potentially allowing malicious actors to create fake audio recordings that appear to be genuine statements made by public figures or to create genuine-seeming recordings of events that never happened, which could have significant consequences if used to spread misinformation, from defaming individuals to creating political tension\cite{veerasamy2022rising,albahar_deepfakes_2005}.
+
+%we proposed a hybrid explainable fake voice detection model leveraging perceptible features extracted from the voice signal. Since the dimension of the different features are not same (i.e., multidimensional), we first pass through the every single feature values through individual sub-models. In other words, the hybrid model has first individual sub-model of every features and the concatenation of the similar representation is going through a terminus model. At the output layer of such sub-model, we have similar representation of the features values with same dimension. Next the terminus model process the concatenation of the output from all sub-models.
+
+%we make a distinction of two main categories of input features for a synthetic voice detection model: perceptible and imperceptible features. Perceptible features are features that can be perceived by the human ear, often vocal qualities such as jitter, shimmer or pitch fluctuation that have a wide range of uses even outside of audio classification such as diagnosis of disease \cite{chaiwongyen_deepfake-speech_2023}, while imperceptible features are typically out of the range of human hearing, and may not directly reflect a vocal quality, otherwise referred to as "speaker-independent" features~\cite{liu_hidden--wave_2023}. We use a new combination of features for our method, with an emphasis being placed on perceptible features, as we believe these to be the most likely to be understood by the layperson.
+
+
+%The contributions of this work are in summary: Our hybrid model-architecture and modified LIME-based method for generating explanations of classifications of audio voice samples as synthetic or bona-fide and the two metrics that we introduce in order to assess the impact of individual features over numerous local explanations.
+	%\begin{itemize}
+	%	\item §\ref{sec:related} Related Work, where we discuss the most relevant related research in the field, in order to create a picture of the current state-of-the-art
+	%	\item §\ref{sec:method} Method, where we describe the general model implementation, as well as the implementation of our LIME-based method for generating explanations in more detail.
+	%	\item §\ref{sec:experimental_results} Experimental Results, where we discuss how we performed our experiments, how our hybrid model performs, as well as use our proposed metrics in order to assess the feature impact in the average explanation.
+        %\item §\ref{sec:discussion} Discussion, where we discuss the implication of the results of our experiments, including the potential of the explanations as well as the	shortcomings and limitations of our method.
+	%\end{itemize}
+
+\section{Related Work} \label{sec:related}
+
+The detection of fake voices has received significant attention in recent years. This section presents relevant research that utilizes hand-crafted features, both perceptible and imperceptible. Additionally, we highlight efforts within the research community to enhance the explainability of fake voice identification methods.
+
+\subsection{Synthetic Voice Detection with Imperceptible Features}
+
+The most common approach in this domain involves using either learned or hand-crafted imperceptible features. Examples include spectrographic features such as mel-spectrograms and their hand-crafted derivatives, such as mel-frequency cepstral coefficients (MFCCs), both of which are widely used due to their effectiveness.
+
+Anagha et al.~\cite{anagha_audio_2023} utilized mel-spectrograms in combination with a convolutional neural network (CNN)-based architecture, achieving strong performance on the ASVSpoof2019 dataset~\cite{wang_asvspoof_2020}. Similarly, Yan et al.~~\cite{yan_initial_2022} leveraged MFCCs alongside other hand-crafted imperceptible features such as linear frequency cepstral coefficients (LFCCs) to classify audio samples as synthetic or authentic. Their approach also identified the vocoder used to generate the sample with near-perfect accuracy on a handcrafted dataset.
+
+\sloppy
+Qais et al.~\cite{qais_deepfake_2022} explored Fourier transforms, particularly the short-term Fourier transform (STFT), in combination with mel-spectrogram-based features. Their CNN-based approach demonstrated high accuracy on the ASVSpoof2017 dataset~\cite{delgado_asvspoof_2018}. Müller et al.~\cite{muller_does_2022} introduced the In-the-Wild dataset to assess the generalizability of deepfake voice detection methods. Their evaluation of various features and architectures revealed that existing methods struggle with generalization.
+
+Yang et al.~\cite{yang_robust_2024} conducted a comparative analysis of multiple features and a feature selection method aimed at improving model efficiency. Their experiments, conducted on ASVSpoof2019\cite{wang_asvspoof_2020}, ASV2021~\cite{liu_asvspoof_2023}, and In-the-Wild~\cite{muller_does_2022} datasets, demonstrated the impact of different features on model performance and emphasized the benefits of feature selection and classification fusion techniques.
+
+Ranjan et al.~\cite{ranjan_statnet_2022} proposed a deep convolutional network designed for both spoof detection and source identification. Their evaluation across ASVSpoof2019\cite{wang_asvspoof_2020}, the FOR-Norm dataset~\cite{reimao_for_2019}, and the In-the-Wild dataset~\cite{muller_does_2022} showed high accuracy in individual dataset evaluations. However, cross-dataset evaluations revealed limitations in generalizability. Yi et al.~\cite{yi_audio_2023} provided a comprehensive comparison of features and model architectures for synthetic voice detection. Their study, conducted on ASVSpoof2019~\cite{wang_asvspoof_2020} and In-the-Wild~\cite{muller_does_2022} datasets, reinforced the observation that existing methods struggle with generalization across datasets.
+
+\subsection{Synthetic Voice Detection with Perceptible Features}
+
+Although less explored, several studies have investigated the use of perceptible features for detecting synthetic voices. Some of these features were incorporated into our experiments.
+
+Barrington et al.~\cite{barrington_single_2023} examined the potential of perceptible features in deepfake audio classification, emphasizing their role in improving explainability. However, while they implemented a classifier, they did not develop an explainer. Their findings indicated a performance drop when using perceptible features compared to imperceptible hand-crafted and deep-learning-based features.
+
+Chaiwongyen et al.~\cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023} explored perceptible feature-based classification. Their initial perceptron model, trained and tested on the ADD2022 Challenge dataset~\cite{yi_add_2024}, showed limited performance in 2022. However, with an expanded feature set in 2023, they achieved improved results. Li et al.~\cite{li_comparative_2022} investigated a hybrid approach combining perceptible and imperceptible (referred to as "physical" in their work) features. Their experiments, conducted using various neural networks on the ASV2022 Challenge dataset~\cite{yi_add_2024}, demonstrated that integrating both feature types yielded the best performance, outperforming models trained on only one type of feature.
+
+\subsection{Explainable Models}
+
+Efforts have also been made to integrate explainability into synthetic voice detection models. Ge et al.~\cite{ge_explaining_2024} applied the SHAP (SHapley Additive exPlanations) method to analyze feature influence in deepfake audio detection. Using log-scaled power spectrograms as input features, they trained and tested their model on the ASV2019 dataset~\cite{wang_asvspoof_2020}. Their approach enabled graphical representation of feature importance on spectrograms and a global summary of SHAP values.
+
+Haq et al.~\cite{haq_multimodal_2023} proposed an explainable approach by leveraging emotional state changes as input features. Their method visually represented "unlikely" emotional shifts to enhance interpretability for end users. By combining fake video and fake audio classifiers, they produced a final classification for video samples with audio. Their model, tested on the Presidential Deepfake dataset~\cite{sankaranarayanan_presidential_nodate}, achieved superior results compared to existing benchmarks.
+    
+%\section{Related Work}	\label{sec:related}
+%There has been a significant attention to detect fake voices in recent years. This section presents related research which makes use of hand-crafted features, both perceptible and imperceptible features. In the end, we present the effort of the research community to make fake voice identification methods explainable. 
+
+%\subsection{Synthetic Voice Detection with Imperceptible Features}
+%The most common approach in this field makes use of either learned or hand-crafted imperceptible features. Examples include spectrographic features such as the mel-spectrogram and its hand-crafted derivative the mel-frequency cepstral coefficients (MFCCs), both of which are present in our method due to their widespread successful use. 
+
+%The work of Anagha et al. \cite{anagha_audio_2023} is an example that makes use of mel-spectrograms in combination with an architecture based on convolutional neural networks, achieving well-performing results on the ASVSpoof2019 dataset \cite{wang_asvspoof_2020}. A further work from Yan et al. \cite{yan_initial_2022} makes use of MFCCs, in combination with other hand-crafted imperceptible features such as linear frequency cepstral coefficients (LFCCs) to not only classify audio samples as synthetic or authentic, but also to correctly classify the vocoder used to produce the sample with nearly perfect accuracy on a handcrafted dataset.
+
+%Other researchers, such as in the work of Qais et al. \cite{qais_deepfake_2022} make use of Fourier transforms, such as the short term Fourier transform (STFT). The aforementioned example uses these features combined with others such as the aforementioned mel-spectrogram based features. They also pair these features with a convolutional architecture and achieve notably accurate results on the ASVSpoof2017 dataset \cite{delgado_asvspoof_2018}. With their work, Müller et al. \cite{muller_does_2022} introduce the In-the-Wild dataset, in an attempt to answer the question if -- and to what extent -- previously proposed methods of deepfake voice detection can generalize. They test a range of features and architectures on their dataset, concluding that there is still work to be done in the field, due to a generally lackluster performance.
+
+%Yang et al. \cite{yang_robust_2024} demonstrate a comparison of multiple features, as well as a feature selection method, with the goal of maximizing model efficiency. They run experiments with several hand-crafted features as well as learned features. They train and test using three datasets, ASVSpoof2019 \cite{wang_asvspoof_2020}, ASV2021 \cite{liu_asvspoof_2023} and In-the-Wild \cite{muller_does_2022}, presenting their results for each feature, as well as the results of their selection and classification fusion methods.
+
+%The work of Ranjan et al. \cite{ranjan_statnet_2022} introduces a deep convolutional network that is designed not only for spoof detection, but also for the purpose of source detection. They perform experiments on several datasets, including ASVSpoof2019 \cite{wang_asvspoof_2020}, the FOR-Norm dataset \cite{reimao_for_2019} and the In-the-Wild dataset \cite{muller_does_2022}. In the experiments run on each dataset, their method was able to achieve high evaluation performance, but they were not able to achieve high-performance in cross-dataset evaluations, indicating a lack of generalizability.
+
+%Yi et al. \cite{yi_audio_2023} present in their work a comprehensive comparison of features and model architectures used for detection methods, giving results from both the ASVSpoof2019 \cite{wang_asvspoof_2020} and In-the-Wild \cite{muller_does_2022} datasets, once again demonstrating a lack of generalizability of existing methods, consistent across various kinds of features and architectures.
+
+%\subsection{Synthetic Voice Detection With Perceptible Features}
+%There is also a smaller but still notable body of work encompassing the use of perceptible features for the detection of synthetic voices, making use of a variety of features, some of which were selected for use in our experiments.
+
+%The work of Barrington et al.~\cite{barrington_single_2023} explores the idea of classification using perceptible features, highlighting their potential for improving explainability in the space of deepfake audio detection, although they only implement a classifier and not an explainer. They do, however, also demonstrate a drop in performance when using perceptible features in comparison with imperceptible hand-crafted and deep-learning features in their experiments, which were performed on a combination of synthetic and real audio datasets.
+
+%Chaiwongyen et al.~\cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023} also approach using perceptible features for classification in their works. They developed a perceptron architecture with a single hidden layer and trained and tested using the dataset of the ADD2022 Challenge~\cite{yi_add_2024}, resulting in lackluster performance in 2022, with better results using an expanded and improved feature set in 2023. Li et al.~\cite{li_comparative_2022} also approach perceptible features in their work, combining them with imperceptible (referred to as physical in the work) features and using various neural networks in their experiments. With their combination of perceptible and imperceptible features, they were able to produce the best performance results of their experiments in comparison to experiments run with only perceptible or imperceptible features, which were performed as well on the dataset of the ASV2022 Challenge~\cite{yi_add_2024}.
+
+%\subsection{Explainable Models}
+%There have also been some efforts in the previous research to pair synthetic voice detection models with explainable methods.
+
+%One previous example of an implementation of an explainable model for use in audio deepfake detection came from Ge et al.~\cite{ge_explaining_2024}, who explain feature influence on models using the SHAP (SHapley Additive exPlanations) method. They apply this method using log-scaled power spectrograms as a feature, training and testing using the datasets from the ASV2019 challenge~\cite{wang_asvspoof_2020}, they are able to determine and graphically represent areas of importance on the spectrogram, as well as globally summarize the SHAP-values.
+
+%Another example is presented by Haq et al.~\cite{haq_multimodal_2023}, who use the changes in emotional state as an input feature and represent "unlikely" changes on a graph so that it can be understood by an eventual end user. In this case, they achieved their results by combining the output of fake video and fake audio classifiers in order to produce a final classification for a video sample with audio. Testing against the presidential deepfake dataset \cite{sankaranarayanan_presidential_nodate}, they achieve impressive results in comparison to the standing benchmark on the dataset at the time.
+ \begin{figure}[t]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/Picture1.png}
+    \caption{A high level building-block of our proposed hybrid fake voice identification model, where \(m\) and \(k\) represent the dimensionality of the given input feature.}
+    \label{fig:overview}
+\end{figure}
+\section{Method}\label{sec:method}
+Our proposed fake voice identification method consists of three major components including feature extractor, hybrid detection model, and the generation of explanations by modified LIME. After extracting features, we pass them individually through sub-models to overcome the multidimensionality problem. Then the concatenation of the outputs from the output layers of the sub-models are then passed through the \textit{terminus} models. For generating explanations, we make use of the feature values returned from the output layers of the sub-models, which has same representation of every feature. 
+
+The high-level buidling-blocks of our hybrid interpretable deep fake voice identification model are presented in Fig.~\ref{fig:overview}.
+
+
+
+\subsection{Feature Extraction}
+The extracted features from audio samples can be categorise in two different class: perceptible and imperceptible features. The perceptible features are features that can be perceived by the human ear, often vocal qualities such as jitter, shimmer or pitch fluctuation that have a wide range of uses even outside of audio classification such as diagnosis of disease~\cite{chaiwongyen_deepfake-speech_2023}, while imperceptible features are typically out of the range of human hearing, and may not directly reflect a vocal quality, otherwise referred to as ``speaker-independent'' features~\cite{liu_hidden--wave_2023}. In order to increase the likelihood that the explanations are useful and understandable to the end user, we focused on using multiple perceptible features as input to the classifier. However, we used two imperceptible features with the hypothesis, based on previous research~\cite{barrington_single_2023,chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023,li_comparative_2022}, that they would positively increase model performance. We extracted the following perceptible features:
+
+%Several features were used for the final version of the black-box model. Some are features widely used in research involving the detection of synthetic while others are more specific and are cited accordingly. The features that are not summarized for a whole sample are extracted using a sliding window method, preventing a loss of fidelity that can be caused by compression of the feature to a standard size. The features we considered perceptible are as follows:
+
+\begin{itemize}
+\item \textbf{Harmonic-to-noise ratios (HNRs)}: Inspired by previous research~\cite{chaiwongyen_contribution_2022,chaiwongyen_deepfake-speech_2023,		li_comparative_2022}, we extracted this features in a sliding window fashion instead of on the whole file. The HNRs are the ratios of the strengths of harmonic frequencies to the strengths of "noise" and the total strength outside the harmonic frequencies. Unlike previous research~\cite{chaiwongyen_contribution_2022, chaiwongyen_deepfake-speech_2023}, we computed this ratio for each fundamental frequency length, instead of using one value for the whole sample. Given that \(\gamma_{i}\) is the harmonic	energy in a given fundamental frequency cycle and \(\iota_{i}\) is the residual energy in a given fundamental frequency cycle, the HNR at that cycle \(hnr_{i}\) is calculated as follows:
+
+\begin{equation}
+    hnr_{i} = 20log\frac{\gamma_{i}}{\iota_{i}}.
+\end{equation}
+
+					
+
+\item \textbf{Fundamental frequency lengths}: The fundamental frequency lengths, f0 length, are the lengths of every fundamental frequency cycle in the sample. This has also been previously employed and found effective in synthetic audio detection~\cite{xue_audio_2022}. The output is one-dimensional with time as the axis.
+
+\item \textbf{Onset strength}: This perceptible feature represents the strengths of each onset in the audio sample, where an onset is point where there is a sudden rise in energy across the audio spectrum~\cite{li_comparative_2022}. This results in a one-dimensional output with time as the axis.
+
+\item \textbf{Intensity}: Intensity is the total power at each point in the audio sample, given in \textit{db}. This is calculated by creating a Fourrier transformation of the sample and then summing across the frequency-axis for every point on the time-axis. Resulting in a one-dimensional output~\cite{li_comparative_2022}.
+
+\item \textbf{Pitch-fluctuations}: The pitch fluctuations are calculated for every sample in the audio as the difference between pitch at the given point and the pitch at the previous point. Pitch is estimated based on the maximum power harmonics. This feature is similar to the use of summarized pitch fluctuations in previous research~\cite{khanjani_learning_2023}. This feature is also one-dimensional with time as the axis. Given that \(H_{i}\) is the set of harmonic frequencies at fundamental frequency cycle \(i\) with \(h_{i} \in H_{i}\) as a frequency of the set and \(s(h_{i})\) is the power of a given harmonic frequency at cycle \(i\), the pitch can be estimated as follows:
+					                    
+\begin{equation}
+    p_{i} = s(max(H_{i})).
+\end{equation}
+
+Given an offset \(x\), the pitch fluctuation at cycle \(i\), \(pf_{i}\), can be calculated as follows:
+
+\begin{equation}
+    pf_{i} = p_{i}-p_{i-x}.
+\end{equation}
+   
+\item \textbf{Jitter features}: Jitter~\cite{chaiwongyen_deepfake-speech_2023} measures the absolute variations in fundamental frequency cycles in comparison to the nearest \(x\) Neighbors. The jitter of a sample in relation to the nearest \(x\) samples can be described as follows:
+\begin{equation}
+    jitter(x) = \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|T_{i}
 						(\frac{1}{x}\sum_{n=i-m}^{i+m}T_{n})|}
-					{\frac{1}{N}\sum_{i=1}^{N}T_{i}}, \]
-					where \(T_{i}\) represents the extracted fundamental frequency length at cycle
-					\(i\), \(N\) is the number of fundamental frequency periods and \(m\) is
-					\(\lfloor \frac{x}{2} \rfloor\)
-				\item
-					Shimmer features: Similarly defined to the jitter features, shimmer features,
-					also considered perceptible and are used in the same research. They instead
-					make use of the amplitudes at each fundamental frequency period. Their purpose
-					is to capture irregular vocal fold vibrations which may be an indication but
-					not a guarantee of a synthetic voice. The shimmer of a sample in comparison to
-					the nearest \(x\) fundamental frequency cycles is calculated as follows:
-					\cite{chaiwongyen_deepfake-speech_2023}.
-					\[ shimmer(x) = \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|A_{i}
+					{\frac{1}{N}\sum_{i=1}^{N}T_{i}}, 
+\end{equation}
+					
+where \(T_{i}\) represents the extracted fundamental frequency length at cycle \(i\), \(N\) is the number of fundamental frequency periods and \(m\) is \(\lfloor \frac{x}{2} \rfloor\).
+
+\item \textbf{Shimmer features}: Similar to Jitter, shimmer instead make use of the amplitudes at each fundamental frequency period. The purpose is to capture irregular vocal fold vibrations which may be an indication but not a guarantee of a synthetic voice. The shimmer of a sample in comparison to the nearest \(x\) fundamental frequency cycles is calculated as follows~\cite{chaiwongyen_deepfake-speech_2023}:
+\begin{equation}
+    shimmer(x) = \frac{ \frac{1}{N-1}\sum_{i=1}^{N-1}|A_{i}
 						(\frac{1}{x}\sum_{n=i-m}^{i+m}A_{n})|}
-					{\frac{1}{N}\sum_{i=1}^{N}A_{i}}, \]
-					where \(A_{i}\) is the amplitude at cycle \(i\), \(N\) is the number of
-					fundamental frequency cycles in the sample and \(m\) is once again 
-					\(\lfloor \frac{x}{2} \rfloor\)
-			\end{itemize}
-			We also chose to include two perceptible features in our hybrid model, due to the
-			performance-enhancing impact that perceptible features can have
-			\cite{chaiwongyen_deepfake-speech_2023} when paired with perceptible features. These
-			features are the mel-spectrogram and their derivative mel-frequency cepstral
-			coefficients. We choose these features because they are well established in the
-			research and have demonstrated consistent good performance in other examples,
-			\cite{qais_deepfake_2022,anagha_audio_2023,fathan_mel-spectrogram_2022,
-			altalahin_unmasking_2023,hamza_deepfake_2022,yan_initial_2022}. They allow for a
-			spectrographic representation and analysis of an audio sample transformed in a way to
-			better represent human perception of frequencies \cite{qais_deepfake_2022}.
-			\subsubsection{Model Architecture}
-			We designed our model architecture to allow the combination of diverse features into
-			one final prediction, regardless of whether the individual features have the same
-			shape. We achieved this by using a separate model for each feature, with its own input
-			and output layers (further referred to as sub-models), which are then concatenated
-			together and processed though a model that pools into a final output value (which we
-			will further refer to as the terminus model). The modular structure allows not only
-			better performance and less memory use, due to the fact that fewer transformations are
-			required for the input preparation, but also allows for more flexibility in the
-			construction of the model, making it easy to add and remove features using pre-defined
-			functions depending on feature type. This kind of architecture also provides an
-			advantage to the generation of explanations, as only the terminus part of the hybrid
-			model must be explained to interpret the importance of each input feature. Further
-			clarification is in §\ref{sec:method_exp}.
-			\par
-			Figure \ref{fig:model_plot} depicts the meta-structure of our hybrid model, with each
-			feature first being processed in its own separate sub-model before being concatenated
-			into the terminus model at the end, which produces the final result. Figure
-			\ref{fig:submodel} offers a deeper look into the general architecture of a singular
-			sub-model in our method. The sub-models begin with an input layer, taking either a
-			vector or matrix depending on the dimensionality of the feature to which the model is
-			tailored. The inputs are then passed into alternating convolutional and pooling
-			layers, in order to increase the localized pattern detection capability within the
-			sub-models. Figure \ref{fig:term_model} is a generalized representation of the
-			terminus model, which has a classic perceptron architecture, with a varying number of
-			hidden layers, depending on the experiment.
-			\begin{figure}[htbp]
-				\begin{center}
-					\includegraphics[width=0.7\textwidth]{images/model_fig.png}
-					\caption{The general architecture for the models used in these experiments,
-					containing \(n\) features. The features are processed in their tailored
-					sub-models before being processed together in the terminus model.}
-					\label{fig:model_plot}
-				\end{center}
-			\end{figure}
-			\begin{figure}[htbp]
-				\begin{center}
-					\includegraphics[width=0.7\textwidth]{images/submodel.png}
-					\caption{A generalized representation of a sub-model, with the input as either
-					a vector or a matrix followed by alternating convolutional and pooling layers,
-					with the output as a flattened vector. Here, \(n\) is the number of
-					convolutional-pooling pairs.}
-					\label{fig:submodel}
-				\end{center}
-			\end{figure}
-			\begin{figure}[htbp]
-				\begin{center}
-					\includegraphics[width=0.7\textwidth]{images/term_model.png}
-					\caption{A generalized representation of the terminus model paired with \(n\)
-					sub-models and containing \(m\) hidden layers.}
-					\label{fig:term_model}
-				\end{center}
-			\end{figure}
-			\subsubsection{Training and Evaluation}
-			We trained the black-box model described in the previous section on the first portion
-			of the dataset, with the exact size of the training set differing depending on the
-			exact experiment (more details in §\ref{sec:experimental_results}). Evaluation was
-			then performed on the remaining samples in the dataset. Training batches consisted of
-			100 samples each with every window position for each sample and an upper limit of
-			1,000,000 lines per batch. For each batch, we performed either one or two epochs.
-			Because a single sample can have multiple input lines, evaluation cannot be performed
-			on a per-line basis, but must instead be summarized. Two methods are possible: median
-			and mean, with the difference in results being negligible in our experiments. The
-			default threshold is 0.5, meaning that a result under 0.5 is a negative result and
-			over 0.5 is a positive result. This threshold can however be adjusted, useful for
-			computing certain metrics.
-		\subsection{Explanations}
-		\label{sec:method_exp}
-		We generate the explanations using the previously described surrogate model with the Local
-		Interpretable Model-agnostic Explanation (LIME) method \cite{ribeiro_why_2016}. This
-		section will describe in detail how individual explanations are generated at a local level
-		for individual samples, as well as how we evaluate the usefulness of the explanations in
-		at a global scale.
-			\subsubsection{Generation of the Explanations}
-			Because of the multi-shaped nature and independence of the input layers of the model,
-			we cannot generate the explanations directly from the input itself. However, because
-			the sub-models are separate from one another, having no influence on each other before
-			being concatenated at the terminus, only the terminus part of the model is relevant
-			for assessing the importance of the features in a single evaluation. This does,
-			however, present two challenges:
-			\begin{itemize}
-				\item There are multiple input rows per sample.
-				\item The features cannot be used directly for assessment at the terminus input
-					layer.
-			\end{itemize}
-			We solved the first problem by taking the mean of the explanation weights of each
-			feature produced by each row of the sample features. This results in an average
-			contribution of each feature to the classification of the model. Because the
-			end-classification of the surrogate is also a mean, the means of the LIME-results are
-			an accurate representation of the aggregate influence.
-			\par
-			We approached the second problem by generating intermediate data for the
-			LIME-evaluation, the prediction outputs of the sub-models, in order to determine what
-			the input of the terminus model would be. We generate intermediate data by first
-			decomposing the surrogate model into its component models, the sub-models and the
-			terminus, and for each sub-model, running a prediction on the given input features, so
-			that we have the intermediate results of each sub-model before the processing of the
-			terminus model. We stored the results of the predictions of the sub-models and used
-			for further analysis. This was done not only for the sample explanation data but also
-			for a random sampling of the training data, so that the LIME explainer could use this
-			data to generate localized estimated of model behavior.
-			\par
-			We then summarized The results of the LIME explainer together on a per-feature basis
-			and normalized them to produce a decimal number between -1 and 1 for every feature. In
-			this case, a negative value implies that the given feature pushed the result of the
-			model in the negative direction (i.e. not fake), while a positive value indicates the
-			opposite.
-			\subsubsection{Evaluation of the Explanations}
-			In order to assess if the explanations have the potential to be useful to an end
-			user, we pursued the goal of summarizing many explanations generated using the
-			previously described method together in a meaningful way in order to make a conclusion
-			about the general usefulness of the individual features and the influence and
-			potential use of the perceptible features. However, due to a lack of existing
-			standardized metrics for the aggregate, global-scale evaluation of local explanations,
-			we propose two metrics, with which we can better assess the usefulness of our
-			method.
-			\par
-			In order to contextualize the metrics, we will make the following definitions.
-			\begin{itemize}
-				\item Let \(S\) be the set of samples with \(s \in S\) as an element of the set.
-				\item Let \(F\) be the set of features with \(f \in F\) as an element of the set.
-				\item Let \(w_{fs}\) be the weight value of feature \(f\) of sample \(s\) as
-					produced by the explainer.
-				\item Let \(l_{s}\) be the correct label of the sample \(s\).
-			\end{itemize}
-			The first metric we will define is the mean of the absolute values of the weights of
-			the explanations, summarized along the sample axis, delivering one value per feature.
-			We will further refer to this metric as importance, and it can be mathematically
-			defined as follows for every \(f \in F\):
-			\[I(f) = \frac{\sum_{s \in S} |w_{fs}|}{|S|}.\]
-			The second metric we will define is the average aggregate correctness on a per-feature
-			basis, which we will further refer to as trust. The trust per feature \(f \in F\) can
-			be defined as follows:
-			\[T(f) = \frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}.\]
-	\section{Experimental Results}
-	\label{sec:experimental_results}
-	Using the methods described in the previous section, we performed experiments training and
-	testing the surrogate model as well as generating many explanations for the purpose of
-	aggregate evaluation. In this section, we will first discuss the dataset that we used for our
-	experiments, the results and performance of the surrogate model, followed by an evaluation of
-	the aggregated explanations.
-		\subsection{Dataset}
-		The dataset used for these experiments is the In-the-Wild dataset, one which focuses on
-		the generalization of audio deepfake detection models by collecting real-world data, in
-		comparison to other examples that use more controlled laboratory conditions
-		\cite{muller_does_2022}. We have chosen it for these experiments because of the
-		aforementioned focus on generalization, its relative recency compared to some others and
-		the fact that it has also been used previously by some other experiments, which provides a
-		useful perspective against which we can compare our method.
-		\subsection{Black-Box Model Results}
-		\begin{table}[htbp]
+					{\frac{1}{N}\sum_{i=1}^{N}A_{i}},
+\end{equation}
+where \(A_{i}\) is the amplitude at cycle \(i\), \(N\) is the number of fundamental frequency cycles in the sample and \(m\) is once again \(\lfloor \frac{x}{2} \rfloor\)
+			
+\end{itemize}
+
+
+We also chose to include two imperceptible features in our hybrid model, due to the performance-enhancing impact combining with the perceptible features~\cite{chaiwongyen_deepfake-speech_2023}. These features are the mel-spectrogram and their derivative mel-frequency cepstral coefficients. We select these two features as they are well established in the research and have demonstrated consistent high performance in existing state-of-the-art research~\cite{qais_deepfake_2022,anagha_audio_2023,fathan_mel-spectrogram_2022,altalahin_unmasking_2023,hamza_deepfake_2022,yan_initial_2022}. They allow for a	spectrographic representation and analysis of an audio sample transformed in a way to better represent human perception of frequencies~\cite{qais_deepfake_2022}.
+
+\subsection{Hybrid Fake Voice Detection Model}
+%We created, trained and evaluated the model used for our experiments using the tools available in the TensorFlow and Keras libraries \cite{tensorflow2015-whitepaper}. This section will go into further detail about the experimental setup for the black-box model as well as the way in which explanations were created and summarized.
+
+Fig.~\ref{fig:overview} depicts the overall architecture of our hybrid deep learning model for fake voice identification. We propose the architecture of our hybrid fake voice detection model in a way that allows features with different dimensionality, regardless of whether the individual features have the same shape. To achieve this, we hypothesize to have individual separate model for each feature and we reoffered this as \textit{sub-model}. The main objective for having the individual sub-model is to have similar representation of the features so that we can use them for generating understandable explanations. The structure of sub-model can be different based the dimension of the extracted features. For example, the dimension of convolution layers and max pooling layer would be different based on the dimension of the features. However, followed by the concatenations of the output of all sub-models, we proposed a terminus models. To have the better performance, we tried different alternative structures of the terminus models including single layer perceptron, convolutional neural networks and multi-layer perceptron. The figure (Fig.~\ref{fig:overview}) has CNN based terminus. However, it can be a single layer perceptron or multilayer perceptron also. We discuss in the experiments section about our experimental settings.
+
+The sub-models begin with an input layer, taking either a vector or matrix depending on the dimensionality of the feature to which the model is tailored. The inputs are then passed into either a series of convolutional layers if the input feature is in the form of a vector or alternating convolutional and pooling layers if the input feature is in the form of a matrix. We make use of convolution in our sub-models in order to increase the localized pattern detection capability within the sub-models. %Figure \ref{fig:term_model} is a generalized representation of the terminus model, which has a classic perceptron architecture, with a varying number of hidden layers, depending on the experiment.
+
+%a separate model for each feature, with its own input and output layers (further referred to as sub-models), which are then concatenated together and processed though a model that pools into a final output value (which we will further refer to as the terminus model). The modular structure allows not only better performance and less memory use, due to the fact that fewer transformations are required for the input preparation, but also allows for more flexibility in the construction of the model, making it easy to add and remove features using pre-defined functions depending on feature type. This kind of architecture also provides an advantage to the generation of explanations, as only the terminus part of the hybrid model must be explained to interpret the importance of each input feature. Further clarification is in §\ref{sec:method_exp}.
+
+%Figure \ref{fig:model_plot} depicts the meta-structure of our hybrid model, with each feature first being processed in its own separate sub-model before being concatenated into the terminus model at the end, which produces the final result. Figure \ref{fig:submodel} offers a deeper look into the general architecture of a singular sub-model in our method. The sub-models begin with an input layer, taking either a vector or matrix depending on the dimensionality of the feature to which the model is tailored. The inputs are then passed into alternating convolutional and pooling layers, in order to increase the localized pattern detection capability within the sub-models. Figure \ref{fig:term_model} is a generalized representation of the terminus model, which has a classic perceptron architecture, with a varying number of hidden layers, depending on the experiment.
+\if false
+    \begin{figure}[htbp]
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{images/model_fig.png}
+            \caption{The general architecture for the models used in these experiments,
+            containing \(n\) features. The features are processed in their tailored
+            sub-models before being processed together in the terminus model.}
+            \label{fig:model_plot}
+        \end{center}
+    \end{figure}
+    \begin{figure}[htbp]
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{images/submodel.png}
+            \caption{A generalized representation of a sub-model, with the input as either
+            a vector or a matrix followed by alternating convolutional and pooling layers,
+            with the output as a flattened vector. Here, \(n\) is the number of
+            convolutional-pooling pairs.}
+            \label{fig:submodel}
+        \end{center}
+    \end{figure}
+    \begin{figure}[htbp]
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{images/term_model.png}
+            \caption{A generalized representation of the terminus model paired with \(n\)
+            sub-models and containing \(m\) hidden layers.}
+            \label{fig:term_model}
+        \end{center}
+    \end{figure}
+\fi 			
+
+
+\subsection{Explaining the prediction}		\label{sec:method_exp}
+		
+We generate the explanations by creating an explainer with the Local Interpretable Model-agnostic Explanation (LIME) method~\cite{ribeiro_why_2016} using the previously described model as a surrogate. This section will describe in detail how individual explanations are generated at a local level for individual samples, as well as how we evaluate the usefulness of the explanations at a global scale.
+
+\subsubsection{Generation of the Explanations}
+Because of the multi-shaped nature and independence of the input layers of the model, we cannot generate the explanations directly from the input itself. However, being that the sub-models are separate from one another, having no influence on each other before being concatenated at the terminus, only the terminus part of the model is relevant for assessing the importance of the features in a single evaluation. Therefore, we make use of the processed features' values after the output layers of individual sub-models. This does, however, poses two challenges: i) there are multiple input rows per sample because a sliding-window is used across each audio sample and ii) the features cannot be used directly for assessment at the terminus input layer.
+
+We solved the first problem by taking the mean of the weights returned by the LIME explainer of each feature produced by each row of the sample features. This results in an average contribution of each feature to the classification of the model. This is due to the fact that the end-classification of the surrogate is also a mean. Therefore, the averages of the weights from the LIME explainer represent aggregated influences of the features.
+
+% REWRITE
+In order to address the second problem, we needed to, for each input feature, figure out what the output of the respective sub-model would be. This would allow us to transform the input into the one-dimensional input for the terminus model from the given sample in the input layers in every sub-model. After the processing of the sub-model, we catch the representation before the processing of the terminus model, which are one-dimensional similar representations of the features. This allows us to use the explainer to find a weight of each input of the terminus model in relation to the end result, prediction. We generate the sub-model results for a random sample of the training set to use as a reference for the localized model approximations from the LIME explainer.
+% -------
+% We approached the second problem by generating intermediate data for the LIME-evaluation, the prediction outputs of the sub-models, in order to determine what the input of the terminus model would be. We generate intermediate data by first decomposing the surrogate model into its component models, the sub-models and the terminus, and for each sub-model, running a prediction on the given input features, so that we have the intermediate results of each sub-model before the processing of the terminus model. We stored the results of the predictions of the sub-models and used them for further analysis. This was done not only for the sample explanation data but also for a random sampling of the training data, so that the LIME explainer could use this data to generate localized estimated of model behaviour.
+
+            
+We then summarized the results of the LIME explainer together on a per-feature basis and normalized them to produce a decimal number between -1 and 1 for every feature. In this case, a negative value implies that the given feature pushed the result of the model in the negative direction (i.e. not fake), while a positive value indicates the opposite.
+			
+            
+\subsubsection{Evaluation of the Explanations}
+In order to make an assessment the potential of this method of generating explanations, we needed a way to measure the influence of each feature on the average explanation generated using this method. In other words, we needed a method to assess the aggregated results of many explanations. Other methods such as SHAP (SHapley Additive exPlanations) \cite{lundberg2017unified} offer ways to explain features on a global scale, but due to their differing methodology in comparison with LIME, we see aggregated evaluations of a large number of local explanations as the best way to represent and assess the usefulness of our method. However, due to the lack of existing metrics for this purpose, we propose two new metrics with the intent of aggregate evaluation features present within local explanations.
+% In order to assess if the explanations have the potential to be useful to an end user, we pursued the goal of summarizing many explanations generated using the previously described method together in a meaningful way in order to make a conclusion about the general usefulness of the individual features and the influence and potential use of the perceptible features. However, due to a lack of existing standardized metrics for the aggregate, global-scale evaluation of local explanations, we propose two metrics, with which we can better assess the usefulness of our method.
+
+In order to contextualize the metrics, we will make the following definitions.
+    \begin{itemize}
+        \item Let \(S\) be the set of samples with \(s \in S\) as an element of the set.
+        \item Let \(F\) be the set of features with \(f \in F\) as an element of the set.
+        \item Let \(w_{fs}\) be the weight value of feature \(f\) of sample \(s\) as
+            produced by the explainer.
+        \item Let \(l_{s}\) be the correct label of the sample \(s\).
+    \end{itemize}
+The first metric we propose is the mean of the absolute values of the weights of each feature within a set of explanations.
+% The first metric we will define is the mean of the absolute values of the weights of the explanations, summarized along the sample axis, delivering one value per feature. 
+We will further refer to this metric as importance, and we define it mathematically as follows for every feature \(f \in F\):
+\begin{equation}
+    Imp(f) = \frac{\sum_{s \in S} |w_{fs}|}{|S|}.
+\end{equation}
+			
+The second metric we will define is the average aggregate correctness on a per-feature basis, which we will further refer to as trust. The trust per feature \(f \in F\) can be defined as follows:
+\begin{equation}
+    Trust(f) = \frac{\sum_{s \in S} w_{fs}(2l_{s}-1)}{|S|}.
+\end{equation}
+			
+            
+\section{Experimental Results and Evaluation} \label{sec:experimental_results}
+We carried out a wide range of experiments to validate the performance of our proposed interpretable hybrid fake voice identification model. The reminder of this section present the dataset that we used, experimental settings, experimental results, comparison with existing feature based models, the generated explanations and their evaluation.
+
+%Using the methods described in the previous section, we performed experiments training and testing the surrogate model as well as generating many explanations for the purpose of aggregate evaluation. In this section, we will first discuss the dataset that we used for our experiments, the results and performance of the surrogate model, followed by an evaluation of the aggregated explanations.
+\subsection{Dataset}
+We trained and tested out model employing \textit{In-the-Wild} dataset. This dataset focuses on the generalization of audio deepfake detection models by collecting real-world data, in comparison to other research that used more controlled laboratory conditions~\cite{muller_does_2022}. We have chosen it for these experiments because of the aforementioned focus on generalization, its relative recency compared to some others and the fact that it has also been used previously by some other experiments, which provides a useful perspective against which we can compare our method.
+
+The dataset consists of a total of 37.9 hours of audio samples, labelled as either bona-fide or fake. Of the total samples, 17.2 hours are fake while 20.7 hours are bona-fide audio. The fake samples were collected from online, publicly available video and audio clips that were specifically advertised as being deepfake clips. The bona-fide clips were then manually collected from genuine instances of the same speakers speaking from sources such as podcasts, speeches and so on. The clips were then segmented and downscaled to 16,000hz for the dataset.
+
+\subsubsection{Training and Evaluation}
+We trained the black-box model described in the previous section on the first portion of the dataset -- differing depending on the experiment -- and tested the models with the rest of the samples. Training batches consist of 100 samples each with every window position for each sample and an upper limit of 1,000,000 lines per batch, after which the batch will be further split. For each batch, either one or two epochs were performed. Because a single sample can have multiple input lines, evaluation cannot be performed on a per-line basis, but must instead be summarized. Two methods are possible: median and mean, with the difference in results being negligible in our experiments. The default threshold is 0.5, meaning that a result under 0.5 is a negative result and over 0.5 is a positive result. This threshold can however be adjusted, useful for computing certain metrics. We compute the model performance by employing equal error rate (ERR) metric. The lower the value of ERR, the better the performance of the model is. However, we have different experimental settings based on the structure of terminus model, features applied and number samples to train the models. In addition to the label, the samples are also annotated with the given speaker.
+
+\subsection{Results}
+We present experimental results for all variations of our proposed model in Table~\ref{table:eval-results}. The table details the following information: The type of terminus model used, where ``perceptron'' does not include hidden layers, MPL(3) is a multi-perceptron layer model with three hidden layers and CNN (3) is a convolutional neural network with three hidden layers; we used different set of features, where ``standard" is the feature set as described above including only one pitch-fluctuation feature. However, with expanded pitch fluctuations, we combine the same feature set with the addition of more pitch fluctuation features with different comparison distances; the training batch size and the number of epochs per batch if there were more than one; followed by several performance metrics. 
+
+\begin{table}[htbp]
 			\caption{Summary of the evaluation results of the experiments}
 			\vspace{10pt}
-			\centering\notsotiny
-			\begin{tabular}{c | c | c | c | c | c}
+			\centering
+			\footnotesize
+			\begin{tabular}{|c | c | c | c | c | c|}
 				\hline
-				Terminus & Features & Training & Accuracy & EER & AUC \\
-				\hline
-				Simple & standard & 3474 & 95.02\% & 0.03702 & 0.90297 \\
-				3 hidden layers & standard & 10000 & \textbf{96.27\%} & \textbf{0.03214} & 0.81763 \\
-				Simple & standard & 23833 2 epochs & 90.07\% & 0.90069 & 0.78889 \\
-				Simple & standard & 10000 2 epochs & 94.43\% & 0.04408 & 0.89445 \\
-				Simple & standard & 10000 & 94.28\% & 0.04840 & 0.90182 \\
-				3 convolutional layers & standard & 10000 & 62.80\% & 0.37198 & 0.50051 \\
-				Simple & expand pitch\-flucs & 10000 & 93.31\% & 0.05661 & \textbf{0.92727} \\
-				3 hidden layers & expand pitch\-flucs & 10000 & 93.87\% & 0.05317 & 0.83263
+				\textbf{Terminus} & \textbf{Features} & \textbf{Training} & \textbf{Accuracy} & \textbf{EER} & \textbf{AUC} \\
+				\hline 
+				Perceptron & standard & 3474 & 95.02\% & 0.03702 & 0.90297 \\ \hline
+				MPL (3) & standard & 10000 & \textbf{96.27\%} & \textbf{0.03214} & 0.81763 \\ \hline
+				Perceptron & standard & 23833 2 epochs & 90.07\% & 0.90069 & 0.78889 \\ \hline
+				Perceptron & standard & 10000 2 epochs & 94.43\% & 0.04408 & 0.89445 \\ \hline
+				Perceptron & standard & 10000 & 94.28\% & 0.04840 & 0.90182 \\ \hline
+				CNN (3) & standard & 10000 & 62.80\% & 0.37198 & 0.50051 \\ \hline
+				Perceptron & expand pitch\-flucs & 10000 & 93.31\% & 0.05661 & \textbf{0.92727} \\ \hline
+				MPL (3) & expand pitch\-flucs & 10000 & 93.87\% & 0.05317 & 0.83263 \\ \hline
 			\end{tabular}
 			\label{table:eval-results}
 		\end{table}
+
+\if false
 		\begin{figure}[htbp]
 			\centering
 			\includegraphics[width=0.7\textwidth]{images/roc_cterm.png}
@@ -563,273 +394,196 @@
 			terminus with three hidden layers.}
 			\label{fig:roc_mpf_cterm}
 		\end{figure}
-		\sloppy
-		We provide summary of some experiments based on the method described above in table
-		\ref{table:eval-results}. The table details the following information: The type of
-		terminus model used, where a "simple" terminus model does not include hidden layers; the
-		set of features used, where "standard" is the feature set as described above including
-		only one pitch-fluctuation feature, with expanded pitch fluctuations being the same
-		feature set with the addition of more pitch fluctuation features with different comparison
-		distances; the training batch size and the number of epochs per batch if there were more
-		than one; followed by several performance metrics. Figures \ref{fig:roc_cterm},
-		\ref{fig:roc_mpf} and \ref{fig:roc_mpf_cterm} depict the ROC curve of three of the models,
-		which were selected for use in explanation generation in the following section.
-		\par
-		The model that resulted in the best accuracy and EER had the standard feature set and was
-		paired with a terminus with three hidden perceptron layers. We trained this model on the
-		first 10000 samples of the dataset, and we evaluated it on the rest of the dataset using
-		the methods previously described. It demonstrated an evaluation accuracy of 96.3\% with
-		the default threshold of 0.5, as well as an EER of approximately 0.03214. The best AUC
-		score, however, was achieved in another experiment, where the model had expended pitch
-		fluctuations and a terminus model without hidden layers, with a value of 0.92727.
-		\subsubsection{Comparison to Other Methods}
-			\begin{figure}[htbp]
-				\centering
-				\includegraphics[width=0.9\textwidth]{images/method_comparison.png}
-				\caption{A visual representation of the EER results of our method against some
-					other methods from the literature.}
-			\end{figure}
-			\begin{table}
-				\caption{A summary of the experimental results of other methods that have been
-				evaluated against the same dataset. (When multiple experiments with one method
-				were done, the best result was used for this table. The results only include
-				evaluations on the full length samples, and not cropped versions, as we tested on
-				the full-length samples)}
-				\vspace{10pt}
-				\centering
-				\begin{tabular}{c | c}
-					\hline
-					Model Architecture & EER \\
-					\hline
-					STATNet \cite{ranjan_statnet_2022} & \textbf{0.00199} \\
-					Fusion \cite{yang_robust_2024} & 0.2427 \\
-					ASSERT \cite{yi_audio_2023} & 0.2473 \\
-					Selection \cite{yang_robust_2024} & 0.2598 \\
-					ResNet18 \cite{yang_robust_2024} & 0.2748 \\
-					LCNN \cite{yi_audio_2023} & 0.3514 \\
-					RawGAT-ST \cite{muller_does_2022} & 0.37154 \\
-					MesoInception \cite{muller_does_2022} & 0.37414 \\
-					GMM \cite{yi_audio_2023} & 0.3749 \\
-					RawNet2 \cite{muller_does_2022} & 0.37819 \\
-					Transformer \cite{muller_does_2022} & 0.43775 \\
-					CRNNSpoof \cite{muller_does_2022} & 0.44500 \\
-					RawPC \cite{muller_does_2022} & 0.45715 \\
-					MesoNet \cite{muller_does_2022} & 0.46939 \\
-					ResNet18 \cite{muller_does_2022} & 0.49759 \\
-					LSTM \cite{muller_does_2022} & 0.53711 \\
-					LCNN-LSTM \cite{muller_does_2022} & 0.61500 \\
-					LCNN \cite{muller_does_2022} & 0.65559 \\
-					LCNN-Attention \cite{muller_does_2022} & 0.66684 \\
-				\end{tabular}
-				\label{table:other_results}
-			\end{table}
-			In order to contextualize our results, we compare them to other results produced using
-			tests on the same dataset. Table \ref{table:other_results} presents some experimental
-			results that other methods have achieved on this dataset, sorted by source and model
-			architecture. The results are given in EER, and the best result is in bold. In
-			comparison to the other methods, our method performs very well, only beaten out by one
-			other \cite{ranjan_statnet_2022}, which uses an expanded RawNet2-based network, taking
-			the raw waveform as an input. They trained their method on 70\% of the dataset, used
-			10\% for validation and the remaining 20\% for testing. This indicates a potential for
-			raw-waveform based learned feature in the accurate detection of audio deepfakes, but
-			does not offer a clear path for explainability, as the model does not make any
-			intrinsic distinction of audio characteristics that humans are able to perceive. Our
-			model remains, however, competitive, indicating that it can provide a good base for
-			trustworthy explanations.
-		\subsection{Explanation Results}
-		\begin{table}[htbp]
-			\caption{Summary of the aggregated explanation results of the best performing model}
+\fi 
+
+We can see that the hybrid model with an MLP terminus model trained with standard features set on first 100000 samples achieved higher accuracy (96.27\%) and ERR (0.03214). However, the model with perceptron as a terminus applying features with expanded pitch fluctuations-based features performed better than other experimental settings in terms of AUC (0.92727). The other experimental settings also performed comparatively except with terminus models based on convolutional neural networks. Percepton-based terminus models with all variation also performed effectively with (2-3)\% deviation compared to best performing model.
+
+
+\begin{figure}
+    \centering
+    \subfloat[]{\includegraphics[width=0.27\textwidth]{images/roc_cterm.png}} 
+    \subfloat[]{\includegraphics[width=0.27\textwidth]{images/roc_mpf.png}} 
+    \subfloat[]{\includegraphics[width=0.27\textwidth]{images/roc_mpf_cterm.png}}
+    \caption{ROC Curves. a) ROC for best performing model, b) ROC curve for the model with pitch fluctuation features and c) ROC curve for the model with MLP-based terminus and expanded pitch fluctuation features.}
+    \label{ROC_curves}
+\end{figure}
+
+%The model that resulted in the best accuracy and EER had the standard feature set and was paired with a terminus with three hidden perceptron layers. We trained this model on the first 10000 samples of the dataset, and we evaluated it on the rest of the dataset using the methods previously described. It demonstrated an evaluation accuracy of 96.3\% with the default threshold of 0.5, as well as an EER of approximately 0.03214. The best AUC score, however, was achieved in another experiment, where the model had expended pitch fluctuations and a terminus model without hidden layers, with a value of 0.92727. 
+
+Figure~\ref{ROC_curves} depicts the ROC curves for three of the models, which were selected for use in explanation generation in the following section.
+
+\subsubsection{Comparison with Existing Methods}
+\begin{table}
+    \caption{Performance comparison of our method with existing methods applied on the same dataset.}
+    \vspace{10pt}
+    \centering
+    \begin{tabular}{|c|c | c|}
+        \hline
+        \textbf{Author} & \textbf{Methods} & \textbf{Equal Error Rate (ERR)} \\ \hline
+        Ranjan et al.\cite{ranjan_statnet_2022} & STATNet  & \textbf{0.00199} \\ \hline
+        Our Method &\textbf{Hybrid DL} & 0.03214 \\  \hline
+        \multirow{3}{*}{Yang et al.~\cite{yang_robust_2024}} &	Fusion & 0.2427 \\ \cline{2-3}
+        &	Selection  & 0.2598 \\ \cline{2-3}
+        &	ResNet18  & 0.2748 \\ \hline
+        
+        \multirow{3}{*}{Yi et al.~\cite{yi_audio_2023}}    &	ASSERT  & 0.2473 \\ \cline{2-3}
+        &	LCNN  & 0.3514 \\ \cline{2-3}
+        &	GMM & 0.3749 \\ \hline
+
+        \multirow{12}{*}{Müller et al.~\cite{muller_does_2022}} 
+        &	RawGAT-ST \cite{muller_does_2022} & 0.37154 \\ \cline{2-3}
+        &	MesoInception \cite{muller_does_2022} & 0.37414 \\ \cline{2-3}        
+        &	RawNet2  & 0.37819 \\ \cline{2-3}
+        &	Transformer  & 0.43775 \\ \cline{2-3}
+        &	CRNNSpoof & 0.44500 \\ \cline{2-3}
+        &	RawPC  & 0.45715 \\ \cline{2-3}
+        &	MesoNet & 0.46939 \\ \cline{2-3}
+        &	ResNet18  & 0.49759 \\ \cline{2-3}
+        &	LSTM  & 0.53711 \\ \cline{2-3}
+        &	LCNN-LSTM  & 0.61500 \\ \cline{2-3}
+        &	LCNN  & 0.65559 \\ \cline{2-3}
+        &	LCNN-Attention  & 0.66684 \\ \hline
+    \end{tabular}
+    \label{table:other_results}
+\end{table}
+In order to contextualize our results, we compare them to other results produced using tests on the same dataset. Table \ref{table:other_results} presents some experimental results that other methods have achieved on this dataset, sorted by source and model architecture. When multiple experiments with one method were done, the best result was used for this table. The results only include evaluations on the full length samples, and not cropped versions, as we tested on the full-length samples. The performances are compared in terms of EER, and the best result is in bold. In comparison to the other methods, our method outperformed all other existing methods excepts one by Ranjan et al.~\cite{ranjan_statnet_2022}. Their method used an expanded RawNet2-based network, taking the raw waveform as an input. They trained their method on 70\% of the dataset, used 10\% for validation and the remaining 20\% for testing. This indicates a potential for raw-waveform based learned feature in the accurate detection of audio deepfakes, but does not offer a clear path for explainability, as the model does not make any intrinsic distinction of audio characteristics that humans are able to perceive. On contrary, we leveraged only hand-crafter features and still our method is competitive, indicating that it can provide a good base for trustworthy explanations. Since we process every feature through individual sub-models, the out representation can capture better information about the feature and that might help in the concatenation to perform better classification performance in terminus model. To visualize the performance comparison better, we present the comparison as a bar chart in Fig.~\ref{comparison_bar}.
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.95\textwidth]{images/method_comparison.png}
+        \caption{A visual representation of the EER results of our method against some other methods from the literature. The lower the value of EER, the better the method is.}
+        \label{comparison_bar}
+    \end{figure}
+
+
+            
+\subsection{Evaluating explanations generated by LIME}
+In order to obtain a comprehensive understanding of the quality of the explanations generated by LIME, we selected the three best-performing models and generated explanations for the first 500 samples of the testing data. These three models achieved the best performance in terms of Accuracy and Equal Error Rate (EER) or AUC. They include: a model using the standard feature set with a terminus model containing three hidden layers, model with expanded pitch-fluctuation features and a perceptron terminus, which achieved the best AUC result, and model with expanded pitch-fluctuation features and a terminus containing three hidden layers.
+
+We selected these models to evaluate the best-performing configurations and to observe how the inclusion of expanded pitch-fluctuation features affects the evaluation of the explanations. We then aggregated and summarized the explanations using the two previously introduced metrics: trust and importance. A summary of the evaluation in terms of these metrics, grouped by feature, is presented in Tables~\ref{table:exp-results-cterm}, \ref{table:exp-results-more-pitch-flucs}, and \ref{table:exp-results-mpf-cterm}. The same statistics are also represented graphically in Figures \ref{fig:exp_cterm}, \ref{fig:exp_mpf}, and \ref{fig:exp_mpf_cterm}, respectively.
+\begin{table}[htbp]
+	\caption{Evaluation of generated explanations in terms of \textit{trust} and \textit{importance} for best performing model in terms of EER}
 			\vspace{10pt}
 			\centering
-			\begin{tabular}{c | c | c}
+			\begin{tabular}{|c | c | c|}
 				\hline
-				Feature & importance & trust \\
+				\textbf{Feature} & \textbf{Importance} & \textbf{Trust} \\
 				\hline
-				HNRs & 0.1140 & -0.0543 \\
-				mel spectrogram & 0.1084 & -0.0378 \\
-				MFCC & \textbf{0.7029} & \textbf{0.3753} \\
-				f0 lengths & 0.0 & 0.0 \\
-				onset strengths & 0.0 & 0.0 \\
-				intensities & 0.0 & 0.0 \\
-				pitch fluctuations & 0.0 & 0.0 \\
-				jitter features & 0.1277 & 0.0250 \\
-				shimmer features & 0.1227 & 0.0017
+				HNRs & 0.1140 & -0.0543 \\  \hline
+				mel spectrogram & 0.1084 & -0.0378 \\ \hline
+				MFCC & \textbf{0.7029} & \textbf{0.3753} \\ \hline
+				f0 lengths & 0.0 & 0.0 \\ \hline
+				onset strengths & 0.0 & 0.0 \\ \hline
+				intensities & 0.0 & 0.0 \\ \hline
+				pitch fluctuations & 0.0 & 0.0 \\ \hline
+				jitter features & 0.1277 & 0.0250 \\ \hline
+				shimmer features & 0.1227 & 0.0017 \\ \hline
 			\end{tabular}
 			\label{table:exp-results-cterm}
 		\end{table}
-		\begin{figure}
+		
+\subsubsection{Model with Standard Feature Set and MLP based Terminus}
+According to both metrics, we can see that in Table~\ref{table:exp-results-cterm} and Fig.~\ref{fig:exp_cterm}, the MFCCs had the most positive and accurate influence on the classification results, with the jitter features being a distant second in terms of trust and importance. This indicates that the MFCCs not only had the greatest influence but also the most reliable impact on the classification outcomes. In contrast, other features had little, no, or even negative influence on the classification. However, the jitter features are notable as perceptible features with a positive trust value.
+\begin{figure}
 			\centering
 			\includegraphics[width=0.7\textwidth]{images/exp_cterm.png}
-			\caption{Graphical representation of the aggregated explanation results of the best
-			performing model}
+			\caption{Graphical representation of the evaluation of generated explanations in terms of \textit{trust} and \textit{importance} for best performing model in terms of EER}
 			\label{fig:exp_cterm}
 		\end{figure}
-		\begin{table}[htbp]
-			\caption{Summary of the aggregated explanation results of the model with expanded
-			pitch fluctuation features}
+        
+\begin{table}[htbp]
+			\caption{Evaluation of generated explanations in terms of \textit{trust} and \textit{importance} model with expanded pitch fluctuation features}
 			\vspace{10pt}
 			\centering
-			\begin{tabular}{c | c | c}
+			\begin{tabular}{|c | c | c|}
 				\hline
-				Feature & importance & trust \\
+				\textbf{Feature} & \textbf{Importance} & \textbf{Trust} \\
 				\hline
-				HNRs & 0.1072 & -0.0148 \\
-				mel spectrogram & 0.0428 & -0.0187 \\
-				MFCC & \textbf{0.4383} & \textbf{0.2345} \\
-				f0 lengths & 0.0340 & -0.0057 \\
-				onset strengths & 0.0101 & -0.0027 \\
-				intensities & 0.0021 & 0.0021 \\
-				pitch fluctuations & 0.0059 & 0.0020 \\
-				jitter features & 0.2439 & 0.0019 \\
-				shimmer features & 0.1664 & 0.0070
+				HNRs & 0.1072 & -0.0148 \\ \hline
+				mel spectrogram & 0.0428 & -0.0187 \\ \hline
+				MFCC & \textbf{0.4383} & \textbf{0.2345} \\ \hline
+				f0 lengths & 0.0340 & -0.0057 \\ \hline
+				onset strengths & 0.0101 & -0.0027 \\ \hline
+				intensities & 0.0021 & 0.0021 \\ \hline
+				pitch fluctuations & 0.0059 & 0.0020 \\ \hline
+				jitter features & 0.2439 & 0.0019 \\ \hline
+				shimmer features & 0.1664 & 0.0070 \\ \hline
 			\end{tabular}
 			\label{table:exp-results-more-pitch-flucs}
-		\end{table}
-		\begin{figure}
+		\end{table}	
+\subsubsection{Model with Expanded Pitch-Fluctuation Features}
+Table~\ref{table:exp-results-more-pitch-flucs} and Fig.~\ref{fig:exp_mpf} illustrate that this model produced comparable results, with the key difference being that all features had non-zero values for both metrics. This means that every feature influenced the classifications used to generate the explanations. Similar to the previous model, HNRs and mel-spectrograms had negative overall trust values, with the addition of onset strengths also showing a negative value. This implies that these features caused more harm than good in the tested classifications. Notably, both jitter and shimmer features had positive trust values, highlighting their potential as trustworthy perceptible features for explanations.
+
+	\begin{figure}
 			\centering
 			\includegraphics[width=0.7\textwidth]{images/exp_mpf.png}
-			\caption{Graphical representation of the aggregated explanation results of model with
-			expanded pitch fluctuation features.}
+			\caption{Graphical representation of the evaluation of generated explanations in terms of \textit{trust} and \textit{importance} model with expanded pitch fluctuation features.}
 			\label{fig:exp_mpf}
 		\end{figure}
-		\begin{table}[htbp]
-			\caption{Summary of the aggregated explanation results of the model with expanded
-			pitch fluctuation features and a terminus with three hidden layers.}
+\begin{table}[htbp]
+			\caption{Evvaluation of generated explanations in terms of \textit{trust} and \textit{importance} for the model with expanded pitch fluctuation features and a terminus with MLP.}
 			\vspace{10pt}
 			\centering
-			\begin{tabular}{c | c | c}
+			\begin{tabular}{|c | c | c|}
 				\hline
-				Feature & importance & trust \\
+				\textbf{Feature} & \textbf{Importance} & \textbf{Trust} \\
 				\hline
-				HNRs & 0.2667 & -0.0788 \\
-				mel spectrogram & 0.0982 & -0.0434 \\
-				MFCC & \textbf{0.2879} & \textbf{0.2408} \\
-				f0 lengths & 0.1690 & -0.0521 \\
-				onset strengths & 0.1384 & -0.0613 \\
-				intensities & 0.1576 & -0.0504 \\
-				pitch fluctuations & 0.0 & 0.0 \\
-				jitter features & 0.1444 & 0.0118 \\
-				shimmer features & 0.1747 & 0.0116
+				HNRs & 0.2667 & -0.0788 \\ \hline
+				mel spectrogram & 0.0982 & -0.0434 \\ \hline
+				MFCC & \textbf{0.2879} & \textbf{0.2408} \\ \hline
+				f0 lengths & 0.1690 & -0.0521 \\ \hline
+				onset strengths & 0.1384 & -0.0613 \\ \hline
+				intensities & 0.1576 & -0.0504 \\ \hline
+				pitch fluctuations & 0.0 & 0.0 \\ \hline
+				jitter features & 0.1444 & 0.0118 \\ \hline
+				shimmer features & 0.1747 & 0.0116 \\ \hline
 			\end{tabular}
 			\label{table:exp-results-mpf-cterm}
 		\end{table}
+
+\subsubsection{Model with Expanded Pitch-Fluctuation Features and MLP Terminus}
+Table~\ref{table:exp-results-mpf-cterm} and Fig.~\ref{fig:exp_mpf_cterm} present the results for the evaluation of the explanations for the model with pitch fluctuation features and MLP terminus. The model combining multiple pitch-fluctuation features with a terminus containing multiple hidden layers performed similarly to the other two models. However, in this case, the pitch fluctuations had no influence on the outcomes. Unlike the previous examples, the intensities feature had a negative trust value. Nevertheless, the trust values for the jitter and shimmer features remained positive, reinforcing their reliability as perceptible features for generating meaningful explanations.
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.7\textwidth]{images/exp_mpf_cterm.png}
-			\caption{Graphical representation of the aggregated explanation results of the model
-			with expanded pitch fluctuation features and a terminus with three hidden layers.}
+			\caption{Graphical representation of the evaluation of generated explanations in terms of \textit{trust} and \textit{importance} for the model with expanded pitch fluctuation features and a terminus with MLP.}
 			\label{fig:exp_mpf_cterm}
 		\end{figure}
-		In order to obtain a full picture of the quality of the explanations generated by this
-		method, we have used selected three models from the last section and generated explanations
-		on the first 500 samples of the testing data. The models selected were the model with the
-		best accuracy and EER results, with the standard features and with three hidden layers in
-		the terminus model, the model with expanded pitch-fluctuation features and a simple
-		terminus, which achieved the best AUC result, as well as the model with expanded
-		pitch-fluctuation features and a terminus with three hidden layers. We selected these
-		models were selected because we wanted to evaluate the best performing models, as well as
-		see how the changed pitch-fluctuation feature affected the evaluation of the explanations.
-		We then aggregated and summarized the explanations generated using both of the previously
-		introduced metrics. A summary of the results of both metrics summarized by the feature is
-		presented in tables \ref{table:exp-results-cterm},
-		\ref{table:exp-results-more-pitch-flucs} and \ref{table:exp-results-mpf-cterm}. The same
-		statistics are also represented graphically in the figures \ref{fig:exp_cterm},
-		\ref{fig:exp_mpf} and \ref{fig:exp_mpf_cterm} respectively.
-		\subsubsection{Model with Standard Feature Set and Complex Terminus}
-		Measuring by both metrics, the MFCCs had the most positive and the most correct influence
-		on the classification results of the model, With the jitter features as a distant second
-		for trust and importance. This indicates that the MFCCs had not only the most influence,
-		but also the most correct influence on the result of the classification, while the other
-		features had either little, no or negative influence on the classification. Jitter
-		features are, however, still notable for being perceptible features with a positive trust
-		value.
-		\subsubsection{Model with Expanded Pitch-Fluctuation Features}
-		This model had comparable results, with the main difference being that all metrics have
-		non-zero values, meaning that all the present features had an influence on the
-		classifications which were used to generate the explanations. As with the previous model,
-		HNRs and mel-spectrograms had negative overall trust values, with the addition of the
-		onset strengths also presenting a negative value, implying that these features have caused
-		more harm than good in the tested classifications. In this example, both jitter and
-		shimmer features are notable for their positive trust values indicating their potential as
-		trustworthy perceptible features for explanations.
-		\subsubsection{Model with Expanded Pitch-Fluctuation Features and Complex Terminus}
-		The model with multiple pitch-fluctuation features in combination with a terminus
-		containing multiple hidden layers fared similarly to the other two, this time with the
-		pitch fluctuations having no influence on the outcome whatsoever. Unlike the previous
-		examples, the trust value of the intensities feature was negative here. The trust of the
-		jitter and shimmer features, however, remain positive.
-	\section{Discussion}
-	\label{sec:discussion}
-	In this section, we will discuss the implications of the experimental results of the previous
-	sections with a special focus being placed on the results of the explanation tests as it
-	relates to the potential explainability for potential end users of such a system.
-		\subsection{Viability and Potential of the Explanations}
-		Because of these models' inclusion of several perceptible features, we made the hypothesis
-		that this method has the potential to produce explanations that can be used as the basis
-		for results more presentable to an end user. As can be seen in the previous section in
-		the tables \ref{table:exp-results-cterm} \ref{table:exp-results-more-pitch-flucs}, the
-		perceptible features did not contribute as much to the end result of the classification as
-		their imperceptible counterparts, in spite of their increased presence in the overall set
-		of input features. Two features, the HNRs and the mel-spectrograms even consistently had a
-		net-negative impact on the correctness of the classifications in the experiments,
-		according to our trust metric, leaving the question open, if future experiments may
-		perform better without these features. In the case of the model without expanded
-		pitch-fluctuations, four perceptible features, f0 lengths, onset strengths, intensities
-		and pitch fluctuations had an overall average influence on the classification of 0,
-		measured on both metrics, indicating that the model did not learn a meaningful correlation
-		between these features and the authenticity of audio samples in the dataset. These
-		features did have an impact on the performance of the model with expanded pitch
-		fluctuations, but the difference was still minimal. In the case of perceptible features
-		with a positive trust score, the potential remains for their potential use in
-		understandable explanations as, even though the classification needle of the model was not
-		moved significantly by these features, they still demonstrate a certain reliability. In
-		spite of this, we believe that it is still worth investigating if other kinds of
-		perceptible features will have more of an influence on the overall classification or if
-		there are other imperceptible features that could be used in the place of MFCCs that may
-		provide a better balance between classification correctness and a proportional influence
-		on the end result, so that the usefulness of the explanations can be even stronger than
-		the method using the above feature combinations, and we believe that this kind of model
-		architecture paired with LIME and evaluated with the presented metrics has the potential
-		to be a backbone for future research.
-		\subsection{Limitations}
-		In spite of the potential that we see with this method, it does also present some
-		limitations when it comes to its real-world use, aside from the shortfalls of the
-		perceptible features discussed in the previous section. The first such limitation is in
-		the computational performance of the model. Because of its relative size, the model
-		requires relatively capable hardware in addition to several gigabytes of memory in order
-		to classify samples. This means that the devices this or a similar model can run on are
-		limited, and the possibility of running this or a similar model locally on a handheld
-		device such as a smartphone is limited to none at the time of writing. Another limitation
-		with this method is that, even though it is known that perceptible features such as the
-		ones used in our method are able to be heard by the human ear and are even used in
-		medicine, for example, for diagnoses \cite{chaiwongyen_deepfake-speech_2023}, it is not
-		yet clear to what extent exactly these features can be understood by the average person.
-		Cursory research \cite{warren_better_2024,sharevski_blind_2024} is already present into
-		what factors humans use to identify fake and real audio samples, as well as their
-		performance, but the named aspects of the samples have not yet been mapped to such
-		perceptible features as the ones used in this method, leaving the question of the
-		usability of such explanations open, in addition to the question of what additional
-		perceptible features can possibly be extracted to mirror what people have specifically
-		identified in fake voice samples. Finally, we have not addressed in our experiments how
-		the features can be presented to the end user. Certain implementations of LIME already
-		have means to present their results graphically, but the effectiveness of such methods has
-		yet to be studied.
-	\section{Conclusion}
-	To conclude, we have presented a model architecture using a combination of various features,
-	perceptible and imperceptible, with the hypothesis that such a model could be used to generate
-	explanations of its own results using the LIME method that are more useful to a potential end
-	user who is not already familiar with the field. This model architecture resulted in a high
-	level of performance in comparison to several other methods, indicating the potential for
-	consistent and correct classifications. The explanations, however, placed most of the weight
-	on the selected imperceptible features, with most perceptible features either having little,
-	no or negative impact on the end classification with the exception of jitter and shimmer,
-	which offer potential to be used in explanations.
-	\par
-	We believe that this is a method that offers a large potential, but is not yet in a fully
-	mature state. We suggest, however, that this method could be changed and improved in the
-	future with other features or other changes to base parameters that could potentially produce
-	more useful explanations while either holding the accuracy high like it is now or even
-	improving it further.
+%In order to obtain a full picture of the quality of the explanations generated by LIME, we have selected three best performing models and generated explanations on the first 500 samples of the testing data. Those three models achieved best performance in terms of Accuracy and EER, and applies the standard features and with three hidden layers in the terminus model, expanded pitch-fluctuation features and perceptron terminus, which achieved the best AUC result, as well as the expanded pitch-fluctuation features and a terminus with three hidden layers, respectively. We selected these models were selected because we aimed at evaluating the best performing models, as well as observing how the changed pitch-fluctuation feature affected the evaluation of the explanations. We then aggregated and summarized the explanations generated using both of the previously introduced metrics. A summary of the evaluation in terms of our proposed metric \textit{trust} and \textit{importance} score summarized by the feature is presented in tables~\ref{table:exp-results-cterm}, \ref{table:exp-results-more-pitch-flucs} and \ref{table:exp-results-mpf-cterm}. The same statistics are also represented graphically in the figures \ref{fig:exp_cterm}, \ref{fig:exp_mpf} and \ref{fig:exp_mpf_cterm} respectively.
+
+%\subsubsection{Model with Standard Feature Set and Complex Terminus}
+%Measuring by both metrics, the MFCCs had the most positive and the most correct influence on the classification results of the model, with the jitter features as a distant second for trust and importance. This indicates that the MFCCs had not only the most influence, but also the most accurate influence on the result of the classification, while the other features had either little, no or negative influence on the classification. However, jitter features are still notable for being perceptible features with a positive trust value.
+		
+        
+%\subsubsection{Model with Expanded Pitch-Fluctuation Features}
+%This model had comparable results, with the main difference being that all metrics have non-zero values, meaning that all the present features had an influence on the classifications which were used to generate the explanations. As with the previous model, HNRs and mel-spectrograms had negative overall trust values, with the addition of the onset strengths also presenting a negative value, implying that these features have caused more harm than good in the tested classifications. In this example, both jitter and shimmer features are notable for their positive trust values indicating their potential as trustworthy perceptible features for explanations.
+
+%\subsubsection{Model with Expanded Pitch-Fluctuation Features and Complex Terminus}
+%The model with multiple pitch-fluctuation features in combination with a terminus containing multiple hidden layers fared similarly to the other two, this time with the pitch fluctuations having no influence on the outcome whatsoever. Unlike the previous examples, the trust value of the intensities feature was negative here. The trust of the jitter and shimmer features, however, remain positive.
+
+\section{Discussion}\label{sec:discussion}
+In this section, we discuss the implications of the experimental results presented in the previous sections, with a special focus being placed on the evaluation of the generated explanations as it relates to the potential explainability for potential end users of such a system.
+		
+\subsection{Viability and Potential of the Explanations}
+%Because of these models' inclusion of several perceptible features, we made the hypothesis that this method has the potential to produce explanations that can be used as the basis for results more presentable to an end user. 
+
+We hypothesized that explanations leveraging perceptible features have high potential to enhance the interpretability of complex ML model predictions. Moreover, perceptible features can present explanations in a more comprehensible manner for end users. However, as shown in the previous section in Tables \ref{table:exp-results-cterm} and \ref{table:exp-results-more-pitch-flucs}, perceptible features contributed less to classification performance than their imperceptible counterparts, despite their increased presence in the overall set of input features.
+
+Two features—HNRs and mel-spectrograms—even consistently had a net-negative impact on classification accuracy in our experiments, as measured by our \textit{trust} metric. This leaves an open question as to whether future experiments might perform better without these features. In the model without expanded pitch fluctuations, four perceptible features—f0 lengths, onset strengths, intensities, and pitch fluctuations—had an overall average influence of zero on classification across both metrics. This suggests that the model did not learn a meaningful correlation between these features and the authenticity of audio samples in the dataset. Although these features did have some impact on the performance of the model with expanded pitch fluctuations, the effect remained minimal.
+
+For perceptible features with a positive \textit{trust} score, there remains potential for their use in generating understandable explanations. Even though these features did not significantly influence the model’s predictions, they still demonstrate a certain level of reliability. Nevertheless, we believe it is worth investigating whether other types of perceptible features might exert a stronger influence on classification or whether alternative imperceptible features—potentially replacing MFCCs—could achieve a better balance between classification accuracy and proportional influence on the final result. This would enhance the usefulness of explanations beyond those produced using the current feature combinations. Furthermore, we believe that this model architecture, when paired with LIME and evaluated using the proposed metrics, has the potential to serve as a foundation for future research.
+
+\subsection{Limitations}
+Despite the potential of this method, it also presents certain limitations regarding real-world applicability, beyond the shortcomings of perceptible features discussed in the previous section. The first major limitation concerns computational performance. Due to its relative size, the model requires high-performance hardware and several gigabytes of memory to classify samples. As a result, the range of devices capable of running this or a similar model is restricted, and, at the time of writing, deploying it locally on a handheld device such as a smartphone is practically infeasible.
+
+Another limitation of this method is that, while perceptible features like those used in our approach are known to be audible to the human ear and are even utilized in medical diagnoses~\cite{chaiwongyen_deepfake-speech_2023}, the extent to which these features are intuitively understandable to the average person remains unclear. Preliminary research~\cite{warren_better_2024,sharevski_blind_2024} has explored the factors humans use to differentiate real from fake audio samples and assessed their performance in doing so. However, these identified aspects have not yet been explicitly mapped to the perceptible features used in our method. This raises an open question regarding the usability of such explanations and whether additional perceptible features could be extracted to align more closely with the cues humans use to identify fake voice samples.
+
+Finally, our experiments did not address how these features should be presented to end users. While certain implementations of LIME already offer graphical representations of their results, the effectiveness of such visualizations has yet to be systematically studied.
+
+\section{Conclusion}
+To conclude, we have presented a hybrid interpretable deep learning model that leverages a combination of heterogeneous features, both perceptible and imperceptible. We hypothesized that such a model could be used to generate explanations using LIME, which might be more useful for potential end users. The experimental results demonstrated top-tier performance in accurately identifying fake voices while mitigating the dimensionality problem in the input features. We observed that explanations leveraging the representations just before the model’s final layer can generate technical insights. These explanations might be useful for improving model performance by modifying important parameters or as the basis for presenting an analysis of a sample to an end user, in the case where perceptible features have an influence on the classification, so they can understand if audible flaws in the sample are present. However, based on our proposed metrics, \textit{trust} and \textit{importance}, we did not observe a significant influence or usefulness of perceptible features, although they did contribute to explanations to some extent.
+
+A promising direction for future work would be integrating this method into different domains where feature-based local explanations have the potential to be effective. In such application domains, we could further validate both the accuracy and the usefulness of the generated explanations as well as the selected features using our proposed metrics. Additionally, it would be valuable to compare findings from a user study on the generated explanations with our metric-based evaluation.
 	\newpage
 	\sloppy
 	\printbibliography

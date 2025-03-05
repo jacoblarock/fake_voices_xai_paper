@@ -181,6 +181,60 @@
       \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
     \endentry
+    \entry{becker2024audiomnist}{article}{}
+      \name{author}{6}{}{%
+        {{hash=e1e4d3263feb450b06659e4280ca5369}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Sören},
+           giveni={S\bibinitperiod}}}%
+        {{hash=36c6f8ba974146e8d451a4ef6bbea401}{%
+           family={Vielhaben},
+           familyi={V\bibinitperiod},
+           given={Johanna},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0e751a546ebc414aee3dc8352927a72a}{%
+           family={Ackermann},
+           familyi={A\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9f1b6144a45b1967e989e74552e37ada}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Klaus-Robert},
+           giveni={K\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=ae7623274e86daf16f369161c4ae78f7}{%
+           family={Lapuschkin},
+           familyi={L\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7f49b6382ab4ca917a2aa2249f875f79}{%
+           family={Samek},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{1ba38e3fa4004e35836c858536579ace}
+      \strng{fullhash}{03360e0eeeb91b50310134c780f0b081}
+      \strng{bibnamehash}{1ba38e3fa4004e35836c858536579ace}
+      \strng{authorbibnamehash}{1ba38e3fa4004e35836c858536579ace}
+      \strng{authornamehash}{1ba38e3fa4004e35836c858536579ace}
+      \strng{authorfullhash}{03360e0eeeb91b50310134c780f0b081}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Franklin Institute}
+      \field{number}{1}
+      \field{title}{AudioMNIST: exploring explainable artificial intelligence for audio analysis on a simple benchmark}
+      \field{volume}{361}
+      \field{year}{2024}
+      \field{pages}{418\bibrangedash 428}
+      \range{pages}{11}
+    \endentry
     \entry{chaiwongyen_contribution_2022}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=42521ea24adaec882b181915a6538f01}{%
@@ -395,6 +449,45 @@
       \field{year}{2018}
       \field{pages}{296\bibrangedash 303}
       \range{pages}{8}
+    \endentry
+    \entry{dixit2023review}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c57354584adb2734da872debfd149ef1}{%
+           family={Dixit},
+           familyi={D\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62d4c0027d55d5a0f1db31a6a2bbbcbd}{%
+           family={Kaur},
+           familyi={K\bibinitperiod},
+           given={Nirmal},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4724675c3a03a08d3cc8112fece91882}{%
+           family={Kingra},
+           familyi={K\bibinitperiod},
+           given={Staffy},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{3f4d60c572ea736a3bf39abe8cf65cd3}
+      \strng{fullhash}{3f4d60c572ea736a3bf39abe8cf65cd3}
+      \strng{bibnamehash}{3f4d60c572ea736a3bf39abe8cf65cd3}
+      \strng{authorbibnamehash}{3f4d60c572ea736a3bf39abe8cf65cd3}
+      \strng{authornamehash}{3f4d60c572ea736a3bf39abe8cf65cd3}
+      \strng{authorfullhash}{3f4d60c572ea736a3bf39abe8cf65cd3}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Expert Systems}
+      \field{number}{8}
+      \field{title}{Review of audio deepfake detection techniques: Issues and prospects}
+      \field{volume}{40}
+      \field{year}{2023}
+      \field{pages}{e13322}
+      \range{pages}{-1}
     \endentry
     \entry{fathan_mel-spectrogram_2022}{inproceedings}{}
       \name{author}{3}{}{%
@@ -708,6 +801,7 @@
       \strng{authorbibnamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
       \strng{authornamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
       \strng{authorfullhash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \field{extraname}{1}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -717,6 +811,42 @@
       \field{year}{2022}
       \field{pages}{35\bibrangedash 41}
       \range{pages}{7}
+    \endentry
+    \entry{li2025survey}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5901c226c53534aca632190241eeddf8}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Menglu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eab0a54dfca9537fc95645990576b4e7}{%
+           family={Ahmadiadli},
+           familyi={A\bibinitperiod},
+           given={Yasaman},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ac8341e3048fc04a833bb65a5d1f7961}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiao-Ping},
+           giveni={X\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY}%
+      }
+      \strng{namehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{fullhash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{bibnamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{authorbibnamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{authornamehash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \strng{authorfullhash}{7822ce3266f2cb42c73c9bc26cfc5755}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{title}{A Survey on Speech Deepfake Detection}
+      \field{year}{2025}
     \endentry
     \entry{liu_hidden--wave_2023}{inproceedings}{}
       \name{author}{5}{}{%
@@ -842,150 +972,33 @@
       \field{pages}{2507\bibrangedash 2522}
       \range{pages}{16}
     \endentry
-    \entry{tensorflow2015-whitepaper}{misc}{}
-      \name{author}{40}{}{%
-        {{hash=396d6419316ec52f4c63b2f85912b61b}{%
-           family={Martín\bibnamedelima Abadi},
-           familyi={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=f337a7c116835c22bb206d2f0d7c70e0}{%
-           family={Ashish\bibnamedelima Agarwal},
-           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=84ac9fcb6c15dcd79c092bc8e20586ba}{%
-           family={Paul\bibnamedelima Barham},
-           familyi={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-        {{hash=d8574748e3086e0b279a58cdba71763d}{%
-           family={Eugene\bibnamedelima Brevdo},
-           familyi={E\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-        {{hash=c0b56f741b5a5bddfe77f1881c3cc67a}{%
-           family={Zhifeng\bibnamedelima Chen},
-           familyi={Z\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=8b8dd2e01366c855f42e47027cf23e98}{%
-           family={Craig\bibnamedelima Citro},
-           familyi={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=978a7d9601bf09e03d1bb3f6cce7a0ce}{%
-           family={Greg\bibnamedelima S.\bibnamedelimi Corrado},
-           familyi={G\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=3b500b0dfd88e6e151d29108fdcb82f0}{%
-           family={Andy\bibnamedelima Davis},
-           familyi={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=2fd376ea3b3a3da11704c0ee86753dcf}{%
-           family={Jeffrey\bibnamedelima Dean},
-           familyi={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=5b34e641dd8a00f97c6242ae0353eb90}{%
-           family={Matthieu\bibnamedelima Devin},
-           familyi={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=5b4490947d4e91359646ce3c93cbd2f7}{%
-           family={Sanjay\bibnamedelima Ghemawat},
-           familyi={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=1fdef10b94ee122ef6136197f99e3df3}{%
-           family={Ian\bibnamedelima Goodfellow},
-           familyi={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=166ae8a0b435eded68e39e9e2d2a1ee8}{%
-           family={Andrew\bibnamedelima Harp},
-           familyi={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=7e9f7006151cf312bc133568336c68c6}{%
-           family={Geoffrey\bibnamedelima Irving},
-           familyi={G\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
-        {{hash=08c1890e1c33279b8c63c71fa8f19263}{%
-           family={Michael\bibnamedelima Isard},
-           familyi={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
-        {{hash=9fce03efe6b3331a1b93ed2e7c0da9d5}{%
-           family={Jia},
-           familyi={J\bibinitperiod},
-           given={Yangqing},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=c0c0eea5379268c0c5b68732c90984b6}{%
-           family={Rafal\bibnamedelima Jozefowicz},
-           familyi={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=cff46cb4603a73d83b11ea7a9ded9d79}{%
-           family={Lukasz\bibnamedelima Kaiser},
-           familyi={L\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=d088e0f635523b8b5b18662331e4f44a}{%
-           family={Manjunath\bibnamedelima Kudlur},
-           familyi={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=1c24291ae15b979c82aa09a33790cb62}{%
-           family={Josh\bibnamedelima Levenberg},
-           familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=796a3a98ff7545fe10f6a4c17ba016fa}{%
-           family={Dandelion\bibnamedelima Mané},
-           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=1ee98d232eb1fc1208a8f8ca649e970b}{%
-           family={Rajat\bibnamedelima Monga},
-           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=b2a15ec3d90955ece50ea26d31100b9a}{%
-           family={Sherry\bibnamedelima Moore},
-           familyi={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=1494c573fadad736c58cf1119ac59239}{%
-           family={Derek\bibnamedelima Murray},
-           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=ecf58eb1684af6cba2c1f126405eedab}{%
-           family={Chris\bibnamedelima Olah},
-           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
-        {{hash=9f43befd94cd09a9aaa7ea8489405a83}{%
-           family={Mike\bibnamedelima Schuster},
-           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=4712800a228b1179529b9f6e0d1b1838}{%
-           family={Jonathon\bibnamedelima Shlens},
-           familyi={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=41ad6ff6c026d5a3730269072b31caf1}{%
-           family={Benoit\bibnamedelima Steiner},
-           familyi={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=b02f7871db6fc5524cec4ce38e104410}{%
-           family={Ilya\bibnamedelima Sutskever},
-           familyi={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=63288446e47b1d383f522ede84aa6fcc}{%
-           family={Kunal\bibnamedelima Talwar},
-           familyi={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=1dec75595b55bf77971f6a932d146b81}{%
-           family={Paul\bibnamedelima Tucker},
-           familyi={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=b6680dbb0176cb9bd87a3b26fa6f5cfb}{%
-           family={Vincent\bibnamedelima Vanhoucke},
-           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-        {{hash=e030c9d199c66657e26138be29814d81}{%
-           family={Vijay\bibnamedelima Vasudevan},
-           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-        {{hash=04426b798803cfaf3e8aa9280a5d0a58}{%
-           family={Fernanda\bibnamedelima Viégas},
-           familyi={F\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-        {{hash=fa7242e11c7d955de2ac1be94ca29073}{%
-           family={Oriol\bibnamedelima Vinyals},
-           familyi={O\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-        {{hash=8c9ee8f70a3c3d97f85efd01c4e9cbe6}{%
-           family={Pete\bibnamedelima Warden},
-           familyi={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=8e4243c228c72a5e5279e31252887b32}{%
-           family={Martin\bibnamedelima Wattenberg},
-           familyi={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=c6a6eb2597f23589fc9141bdda275996}{%
-           family={Martin\bibnamedelima Wicke},
-           familyi={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=3ea39e6dc6ef47029ae996c7e63f1a48}{%
-           family={Yuan\bibnamedelima Yu},
-           familyi={Y\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
-        {{hash=b69feb3a3d59a312b20dbef0b1d2d6de}{%
-           family={Xiaoqiang\bibnamedelima Zheng},
-           familyi={X\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+    \entry{lundberg2017unified}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2a1075150e1e1dad8127b019f7ca9031}{%
+           family={Lundberg},
+           familyi={L\bibinitperiod},
+           given={Scott\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ee964079d93879aaef2382a5fff343d3}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Su-In},
+           giveni={S\bibinithyphendelim I\bibinitperiod}}}%
       }
-      \strng{namehash}{7fdd865be502254047a3b2638dc0cfeb}
-      \strng{fullhash}{9b332dc9b33a2f6316d71d525269bd0f}
-      \strng{bibnamehash}{7fdd865be502254047a3b2638dc0cfeb}
-      \strng{authorbibnamehash}{7fdd865be502254047a3b2638dc0cfeb}
-      \strng{authornamehash}{7fdd865be502254047a3b2638dc0cfeb}
-      \strng{authorfullhash}{9b332dc9b33a2f6316d71d525269bd0f}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \strng{namehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{fullhash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{bibnamehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{authorbibnamehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{authornamehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{authorfullhash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Software available from tensorflow.org}
-      \field{title}{{TensorFlow}: Large-Scale Machine Learning on Heterogeneous Systems}
-      \field{year}{2015}
-      \verb{urlraw}
-      \verb https://www.tensorflow.org/
-      \endverb
-      \verb{url}
-      \verb https://www.tensorflow.org/
-      \endverb
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{A unified approach to interpreting model predictions}
+      \field{volume}{30}
+      \field{year}{2017}
     \endentry
     \entry{muller_does_2022}{article}{}
       \name{author}{5}{}{%
@@ -1112,6 +1125,38 @@
       \field{year}{2022}
       \field{pages}{1\bibrangedash 9}
       \range{pages}{9}
+    \endentry
+    \entry{reimao_for_2019}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b160e8d67166274eaa3f395a47a79382}{%
+           family={Reimao},
+           familyi={R\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=adeb2ac7ce324c6ccfd9d2869da10b26}{%
+           family={Tzerpos},
+           familyi={T\bibinitperiod},
+           given={Vassilios},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{10d24256030dcbe05a018b5629986617}
+      \strng{fullhash}{10d24256030dcbe05a018b5629986617}
+      \strng{bibnamehash}{10d24256030dcbe05a018b5629986617}
+      \strng{authorbibnamehash}{10d24256030dcbe05a018b5629986617}
+      \strng{authornamehash}{10d24256030dcbe05a018b5629986617}
+      \strng{authorfullhash}{10d24256030dcbe05a018b5629986617}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 International Conference on Speech Technology and Human-Computer Dialogue (SpeD)}
+      \field{title}{For: A dataset for synthetic speech detection}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
     \endentry
     \entry{ribeiro_why_2016}{inproceedings}{}
       \name{author}{3}{}{%
@@ -1263,6 +1308,61 @@
       \field{pages}{340\bibrangedash 348}
       \range{pages}{9}
     \endentry
+    \entry{wang2020deepsonar}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=f3e2470056bb08dfeecc5612dc7fe9c5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Run},
+           giveni={R\bibinitperiod}}}%
+        {{hash=756d166e5c8c8e2c0fa74b7ec0067a54}{%
+           family={Juefei-Xu},
+           familyi={J\bibinithyphendelim X\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=fcc5fba6edce0b9aaaa621c3a699ed25}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Yihao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=01961adbf1fcb4df3bbced19dbc886d4}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=be16921f99abeeefa16535f552648e67}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xiaofei},
+           giveni={X\bibinitperiod}}}%
+        {{hash=631bdce5289be54717cd74a75f516b25}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{90079d624bbea3189ecb49deb3136965}
+      \strng{fullhash}{be1a0b0b38f82cb02baba6b22c9c1df1}
+      \strng{bibnamehash}{90079d624bbea3189ecb49deb3136965}
+      \strng{authorbibnamehash}{90079d624bbea3189ecb49deb3136965}
+      \strng{authornamehash}{90079d624bbea3189ecb49deb3136965}
+      \strng{authorfullhash}{be1a0b0b38f82cb02baba6b22c9c1df1}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 28th ACM international conference on multimedia}
+      \field{title}{Deepsonar: Towards effective and robust detection of ai-synthesized fake voices}
+      \field{year}{2020}
+      \field{pages}{1207\bibrangedash 1216}
+      \range{pages}{10}
+    \endentry
     \entry{wang_asvspoof_2020}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1327,6 +1427,7 @@
       \strng{authorbibnamehash}{aeaae95a3851acdb0d7c761eee05b973}
       \strng{authornamehash}{aeaae95a3851acdb0d7c761eee05b973}
       \strng{authorfullhash}{38fbdb730826ebc5db0f1bc91adee962}
+      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
